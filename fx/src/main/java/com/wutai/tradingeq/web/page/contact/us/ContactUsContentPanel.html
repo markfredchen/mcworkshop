@@ -1,0 +1,49 @@
+<wicket:panel>
+	<div class="main-center-container">
+		<img src="/fx/static/images/contact_us_image_upper.png"/>
+		<img src="/fx/static/images/contact_us_image_bottom.png"/>
+	</div>
+	<div class="main-content-container">
+		<div class="inner">
+		<div class="contact-logo"></div>
+		<div class="contact-address">
+			<p>
+				<wicket:message key="fx.contact.us.address.title"/><br/>
+				<wicket:message key="fx.contact.us.address"/>
+			</p>
+			<p>
+				<wicket:message key="fx.contact.us.postal.code"/>
+			</p>
+			<p>
+				<wicket:message key="fx.contact.us.address.en.line1"/><br/>
+				<wicket:message key="fx.contact.us.address.en.line2"/>
+			</p>
+		</div>
+		
+		<form wicket:id="contact-us-form" class="contact-us-form" role="form">
+			<div class="label title"><wicket:message key="fx.contact.us.form.title"/></div><br/><br/>
+			<div class="field name form-group" wicket:id="name-feedback-border">
+				<div class="label"><wicket:message key="fx.contact.us.form.name"/></div>
+				<input type="text" name="name" wicket:id="name" class="form-control"></input>
+			</div>
+			<div class="field email form-group" wicket:id="email-feedback-border">
+				<div class="label"><wicket:message key="fx.contact.us.form.email"/></div>
+				<input type="text" name="email" wicket:id="email" class="form-control"></input>
+			</div>
+			<div class="field phone form-group" wicket:id="phone-feedback-border">
+				<div class="label"><wicket:message key="fx.contact.us.form.phone"/></div>
+				<input type="text" name="phone" wicket:id="phone" class="form-control"></input>
+			</div>
+            <div class="field comments form-group">
+    			<div class="label"><wicket:message key="fx.contact.us.form.comments"/></div>
+	   		<textarea type="text" rows="7" cols="37" wicket:id="comments" class="form-control"></textarea><br/>
+            </div>
+			<a href="###" class="submit-link" wicket:id="submit-link"><wicket:message key="fx.contact.us.form.submit"/></a>
+			<div wicket:id="submit-success" class="submit-success"><wicket:message key="fx.contact.us.form.success"/></div>
+			<div wicket:id="submit-fail" class="submit-fail"><wicket:message key="fx.contact.us.form.fail"/></div>
+		</form>
+	</div>
+	</div>
+	<div class="map-text hide">地图</div>
+	<div id="map-dialog" class="hide"><img src="/fx/static/images/company_map.png"/></div>
+</wicket:panel>

@@ -1,0 +1,17 @@
+<wicket:panel>
+    <form wicket:id="wizard-form" class="wizard">
+        <ul class="nav nav-tabs" wicket:id="header-container">
+            <li class="" wicket:id="tab-header-item"><a wicket:id="tab-title-link" data-toggle="tab"><span wicket:id="tab-title" /></a></li>
+        </ul>
+        <div class="tab-content content-container">
+            <div wicket:id="tab-content" class="tab-pane fade active in">
+                <div wicket:id="tab-content-panel" />
+            </div>
+        </div>
+    </form>
+    <div class="wizard-button-group" wicket:id="buttonGroup">
+        <button type="button" wicket:id="previous-step-link" class="btn btn-default">上一步</button>
+        <button type="button" wicket:id="next-step-link" class="btn btn-primary">下一步</button>
+        <button type="button" wicket:id="submit-link" class="btn btn-success">提交并创建企业基础信息</button>
+    </div>
+</wicket:panel>

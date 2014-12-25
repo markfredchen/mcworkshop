@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div wicket:id="header"></div>
+    <div class="main-container" id="main-container">
+        <div class="main-container-inner">
+            <a class="menu-toggler" id="menu-toggler" href="#"> <span class="menu-text"></span>
+            </a>
+            <div wicket:id="sidebar" class="sidebar" id="sidebar"></div>
+            <div class="main-content">
+                <wicket:child />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

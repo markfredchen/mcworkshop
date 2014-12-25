@@ -1,0 +1,32 @@
+<wicket:panel>
+    <div class="col-xs-12">
+        <h2>期货实盘数据导入</h2>
+    </div>
+    <div class="col-xs-12">
+        <div class="row">
+            <form class="form-horizontal" role="form" wicket:id="future-import">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label no-padding-right" for="future-overall-file">期货图表数据数据文件上传 </label>
+
+                        <div class="col-sm-8">
+                            <input type="file" wicket:id="future-overall-file" id="future-overall-file" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label no-padding-right" for="future-real-data-file">期货实盘数据数据文件上传 </label>
+
+                        <div class="col-sm-8">
+                            <input type="file" wicket:id="future-real-data-file" id="future-real-data-file" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <button class="btn btn-info " type="button" wicket:id="tmbox-import">上传</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</wicket:panel>
