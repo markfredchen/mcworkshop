@@ -1,0 +1,258 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+<form role="form" wicket:id="company-basic-information-form" class="form-horizontal">
+<div class="field" wicket:id="name-feedback-container">
+    <label class="control-label" for="name">企业名称<span class="required">*</span></label>
+
+    <div class="input">
+        <input id="name" type="text" class="form-control" wicket:id="name">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="companyNo">企业卡号</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="companyNo" wicket:id="companyNo"/>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="organizationCode">机构代码</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="organizationCode" wicket:id="organizationCode">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="commercialNo">工商注册号</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="commercialNo" wicket:id="commercialNo">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="taxRegNo">税务登记证号</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="taxRegNo" wicket:id="taxRegNo">
+    </div>
+</div>
+<div class="field">
+    <label class="control-label" for="registerAddress">注册地址</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="registerAddress" wicket:id="registerAddress">
+    </div>
+</div>
+<div class="field">
+    <label class="control-label" for="operateAddress">经营地址</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="operateAddress" wicket:id="operateAddress">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="registerAsset">注册资本(万)</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="registerAsset" wicket:id="registerAsset">
+        <select class="form-control" id="currency" wicket:id="currency">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>人民币</option>
+                <option>美元</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="taxOrg">所属税务所</label>
+
+    <div class="input">
+        <select class="form-control" id="taxOrg" wicket:id="taxOrg">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>吊销未注销</option>
+                <option>吊销已注销</option>
+                <option>迁移</option>
+                <option>确立</option>
+                <option>注销</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="industryType">行业分类</label>
+
+    <div class="input">
+        <input type="text" class="form-control" id="industryType" wicket:id="industryType">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="region">所属区块</label>
+
+    <div class="input">
+        <select class="form-control" id="region" wicket:id="region">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>吊销未注销</option>
+                <option>吊销已注销</option>
+                <option>迁移</option>
+                <option>确立</option>
+                <option>注销</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="commercialStatus">工商状态</label>
+
+    <div class="input">
+        <select class="form-control" id="commercialStatus" wicket:id="commercialStatus">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>吊销未注销</option>
+                <option>吊销已注销</option>
+                <option>迁移</option>
+                <option>确立</option>
+                <option>注销</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="taxStatus">税务状态</label>
+
+    <div class="input">
+        <select class="form-control" id="taxStatus" wicket:id="taxStatus">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>非正常</option>
+                <option>正常</option>
+                <option>证件失效</option>
+                <option>注销</option>
+                <option>注销迁出</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="economyEntity">经济实体</label>
+
+    <div class="input">
+        <select class="form-control" id="economyEntity" wicket:id="economyEntity">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>工业</option>
+                <option>商贸</option>
+                <option>服务</option>
+                <option>建筑</option>
+                <option>房产</option>
+                <option>其它</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="economyNature">经济性质</label>
+
+    <div class="input">
+        <select class="form-control" id="economyNature" wicket:id="economyNature">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>私营企业</option>
+                <option>外资企业</option>
+                <option>集体行业</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+
+<div class="half field">
+    <label class="control-label" for="collectMethod">征收方式</label>
+
+    <div class="input">
+        <select class="form-control" id="collectMethod" wicket:id="collectMethod">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>查帐征收</option>
+                <option>核定征收</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="affiliateRegion">属地分类</label>
+
+    <div class="input">
+        <select class="form-control" id="affiliateRegion" wicket:id="affiliateRegion">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>注册型</option>
+                <option>在地型</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="taxNature">纳税性质</label>
+
+    <div class="input">
+        <select class="form-control" id="taxNature" wicket:id="taxNature">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>一般纳税人</option>
+                <option>一般纳税人</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="taxType">纳税种类</label>
+
+    <div class="input">
+        <select class="form-control" id="taxType" wicket:id="taxType">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>增值税</option>
+                <option>营业税</option>
+                <option>增值税加营业税</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field datepicker">
+    <label class="control-label" for="establishDate">成立日期</label>
+
+    <div class="input">
+        <input type="text" class="form-control" value="" id="establishDate" wicket:id="establishDate">
+    </div>
+</div>
+<div class="field datepicker">
+    <label class="control-label" for="operationStartYear">经营年限(年)</label>
+
+    <div class="input row">
+        <div class="col-sm-4">
+            <input type="text" class="form-control" value="" id="operationStartYear" wicket:id="operationStartYear">
+        </div>
+        <div class="col-sm-1">至</div>
+        <div class="col-sm-7">
+            <input type="text" class="form-control" value="" id="operationEndYear" wicket:id="operationEndYear">
+        </div>
+    </div>
+</div>
+
+<div class="field">
+    <label class="control-label" for="operationScope">经营范围</label>
+
+    <div class="input">
+        <textarea wicket:id="operationScope" class="form-control" rows="4" id="operationScope"></textarea>
+    </div>
+</div>
+<div class="field">
+    <label class="control-label" for="remarkables">备注</label>
+
+    <div class="input">
+        <textarea class="form-control" id="remarkables" rows="3" wicket:id="remarkables"></textarea>
+    </div>
+</div>
+</form>
+</wicket:panel>

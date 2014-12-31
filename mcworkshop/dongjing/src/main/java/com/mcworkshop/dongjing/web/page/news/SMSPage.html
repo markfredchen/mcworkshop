@@ -1,0 +1,99 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="row">
+        <form class="col-sm-12 form-horizontal" wicket:id="send-sms-form" role="form">
+            <div class="field" wicket:id="message-feedback-container">
+                <label class="control-label" for="message">请输入短信内容<span class="required">*</span></label>
+
+                <div class="input">
+                    <textarea wicket:id="message" class="form-control" rows="4" id="message"></textarea>
+                </div>
+            </div>
+            <div class="button-group">
+                <div class="radio pull-left">
+                    <label> <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>发给给所有企业
+                    </label>
+                </div>
+                <div class="radio pull-left">
+                    <label> <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">发给指定企业
+                    </label>
+                </div>
+                <div class="radio pull-left"><a wicket:id="added-company-dialog">已经添加企业</a></div>
+                <button type="button" wicket:id="submit-link" class="btn btn-success pull-right">发送</button>
+            </div>
+        </form>
+    </div>
+    <div class="collapse navbar-collapse top10">
+        <form class="navbar-form navbar-left" role="search" wicket:id="search-company-form">
+            <div class="form-group">
+                <label for="companyName">企业名称</label> <input id="companyName" type="text" class="form-control"
+                                                             wicket:id="companyName"> <label
+                    for="economyEntity">经济实体</label> <select class="form-control"
+                                                             id="economyEntity" wicket:id="economyEntity">
+                <wicket:remove>
+                    <option>请选择</option>
+                    <option>吊销未注销</option>
+                    <option>吊销已注销</option>
+                    <option>迁移</option>
+                    <option>确立</option>
+                    <option>注销</option>
+                </wicket:remove>
+            </select> <label for="economyNature">经济性质</label> <select class="form-control" id="economyNature"
+                                                                      wicket:id="economyNature">
+                <wicket:remove>
+                    <option>请选择</option>
+                    <option>吊销未注销</option>
+                    <option>吊销已注销</option>
+                    <option>迁移</option>
+                    <option>确立</option>
+                    <option>注销</option>
+                </wicket:remove>
+            </select>
+            </div>
+            <button type="submit" class="btn btn-primary" wicket:id="search-company">查询</button>
+        </form>
+    </div>
+    <div wicket:id="paging-container">
+        <table class="data-table table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>企业名称</th>
+                <th>经济实体</th>
+                <th>经济性质</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="company-list" class="data-row">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="economyEntity"></span></td>
+                <td><span wicket:id="economyNature"></span></td>
+                <td><a wicket:id="add-link">添加</a><a wicket:id="delete-link">移除</a></td>
+            </tr>
+            <tr wicket:id="empty-list">
+                <td colspan="4">未查询到所需企业。请更改查询条件，继续搜索</td>
+            </tr>
+            </tbody>
+        </table>
+        <div wicket:id="navigator"></div>
+    </div>
+    <div class="modal fade" id="added-companies" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="min-height:500px">
+                <div class="modal-body">
+                    <div wicket:id="related-company-list">
+                        <div wicket:id="relatedCompanies" class="col-sm-6">
+                            <div wicket:id="company-name" class="pull-left"></div>
+                            <a wicket:id="delete-icon" class="delete-icon"><img
+                                    src="/dongjing/static/dongjing/images/close-icon.png"/></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</wicket:extend>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title wicket:id="title">首页</title>
+<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../webapp/static/dongjing/css/dongjing.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+<style type="text/css">
+.header .logo {
+    background: url("../webapp/static/dongjing/images/logo.png") no-repeat
+        scroll;
+}
+body {
+    background:
+        url("../webapp/static/dongjing/images/background_bluewaves.jpg")
+        repeat scroll 50% 0/100% auto #2A97D0;
+}
+</style>
+</head>
+<body class="home">
+    <div class="page">
+        <div wicket:id="header" class="header"><wicket:panel>
+    <div class="header">
+        <div class="inner top">
+            <div class="logo"></div>
+        </div>
+        <div class="outter">
+            <div class="inner bottom">
+                  <wicket:child/>
+            </div>
+        </div>
+    </div>
+</wicket:panel></div>
+        <div class="main">
+            <wicket:child><wicket:extend>
+    <div class="inner">
+        <div class="login-panel">
+            <div class="login-header">
+                <h2><wicket:message key="dj.login.form.title">用户登录</wicket:message></h2>
+            </div>
+            <div class="login-main">
+                <form wicket:id="login-form" role="form" class="form-horizontal" id="login_form15" method="post" action="./?5-1.IFormSubmitListener-login~form"><div style="width:0px;height:0px;position:absolute;left:-100px;top:-100px;overflow:hidden"><input type="hidden" name="login_form15_hf_0" id="login_form15_hf_0" /></div>
+                    <div wicket:id="feedback-panel" class="feedback"><wicket:panel>
+  
+</wicket:panel></div>
+                    <div class="form-group field" wicket:id="username-feedback-border" id="username_feedback_border17">
+                        <label for="username" class="col-sm-offset-1 col-sm-2 control-label">
+                            <wicket:message key="dj.login.form.username">用户名</wicket:message>
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="text" name="username-feedback-border:username" wicket:id="username" maxlength="150" class="form-control" value=""></input>
+                        </div>
+                    </div>
+                    <div class="form-group field" wicket:id="password-feedback-border" id="password_feedback_border18">
+                        <label for="password" class="col-sm-offset-1 col-sm-2 control-label">
+                            <wicket:message key="dj.login.form.password">密码</wicket:message>
+                        </label>
+                        <div class="col-sm-7">
+                            <input type="password" name="password-feedback-border:password" wicket:id="password" maxlength="150" class="form-control" value=""></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-8 col-sm-2">
+                            <button class="submit-link btn btn-warning" wicket:id="submit-link" id="submit_link16">
+                                <wicket:message key="dj.login.form.submit">登录</wicket:message>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</wicket:extend></wicket:child>
+        </div>
+        <div></div>
+        <div wicket:id="footer" class="footer"><wicket:panel>
+    <div class="inner">
+        Powered by Wutai
+    </div>
+</wicket:panel></div>
+    </div>
+</body>
+</html>

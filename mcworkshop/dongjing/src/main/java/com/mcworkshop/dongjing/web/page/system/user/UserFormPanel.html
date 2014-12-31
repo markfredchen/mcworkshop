@@ -1,0 +1,113 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form wicket:id="user-form" role="form" class="form-horizontal">
+        <div wicket:id="feedback-panel"></div>
+        <div class="form-group username" wicket:id="username-feedback-border">
+            <label class="control-label col-sm-3" for="username">
+                <wicket:message key="user.form.username"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="username" id="username" wicket:id="username"
+                       maxlength="50"/>
+            </div>
+        </div>
+        <div class="form-group password" wicket:id="password-feedback-border">
+            <label class="control-label col-sm-3" for="password">
+                <wicket:message key="user.form.password"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="password" class="form-control" name="password" id="password" wicket:id="password"
+                       maxlength="60"/>
+            </div>
+        </div>
+        <div class="form-group passwordAgain" wicket:id="passwordAgain-feedback-border">
+            <label class="control-label col-sm-3" for="passwordAgain">
+                <wicket:message key="user.form.password.again"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="password" class="form-control" name="passwordAgain" id="passwordAgain"
+                       wicket:id="passwordAgain"
+                       maxlength="60"/>
+            </div>
+        </div>
+        <div class="form-group name" wicket:id="name-feedback-border">
+            <label class="control-label col-sm-3" for="contact.fullName">
+                <wicket:message key="user.form.name"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.fullName" id="contact.fullName"
+                       wicket:id="contact.fullName"
+                       maxlength="100"/>
+            </div>
+        </div>
+        <div class="form-group title" wicket:id="title-feedback-border">
+            <label class="control-label col-sm-3" for="contact.title">
+                <wicket:message key="user.form.title"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.title" id="contact.title"
+                       wicket:id="contact.title"
+                       maxlength="100"/>
+            </div>
+        </div>
+        <div class="form-group phone" wicket:id="phone-feedback-border">
+            <label class="control-label col-sm-3" for="contact.phone">
+                <wicket:message key="user.form.phone"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.phone" wicket:id="contact.phone"
+                       id="contact.phone"
+                       maxlength="20"/>
+            </div>
+        </div>
+        <div class="form-group cellPhone" wicket:id="cellPhone-feedback-border">
+            <label class="control-label col-sm-3" for="contact.cellPhone">
+                <wicket:message key="user.form.cell.phone"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.cellPhone" wicket:id="contact.cellPhone"
+                       id="contact.cellPhone"
+                       maxlength="20"/>
+            </div>
+        </div>
+        <div class="form-group emailAddress" wicket:id="emailAddress-feedback-border">
+            <label class="control-label col-sm-3" for="contact.emailAddress">
+                <wicket:message key="user.form.email.address"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.emailAddress" wicket:id="contact.emailAddress"
+                       id="contact.emailAddress"
+                       maxlength="100"/>
+            </div>
+        </div>
+        <div class="form-group department" wicket:id="department-feedback-border">
+            <label class="control-label col-sm-3" for="contact.department">
+                <wicket:message key="user.form.department"/>
+            </label>
+
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="contact.department" wicket:id="contact.department"
+                       id="contact.department"
+                       maxlength="45"/>
+            </div>
+        </div>
+        <div class="form-group role" wicket:id="role-feedback-border">
+            <label class="control-label col-sm-3" for="role">
+                <wicket:message key="user.form.role"/>
+            </label>
+
+            <div class="col-sm-9">
+                <select class="form-control" wicket:id="role" id="role">
+                <option>admin</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</wicket:panel>

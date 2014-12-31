@@ -1,0 +1,109 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form wicket:id="commercial-area-form" role="form" class="form-horizontal">
+        <div class="half field area">
+            <label class="control-label" for="area">经营面积</label>
+            <div class="input">
+                <input type="text" class="form-control" id="area" wicket:id="area"/><span class="unit">平方米</span>
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="ownership">所属产权</label>
+            <div class="input">
+                <input type="text" class="form-control" id="ownership" wicket:id="ownership">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="landUsage">土地性质</label>
+            <div class="input">
+                <select class="form-control" id="landUsage" wicket:id="landUsage">
+                    <wicket:remove>
+                        <option>请选择</option>
+                        <option>征用</option>
+                        <option>批租</option>
+                        <option>集体</option>
+                    </wicket:remove>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-12 section-title">宾馆</div>
+        <div class="half field">
+            <label class="control-label" for="sleepingRoomNumbers">客房间数</label>
+            <div class="input">
+                <input type="text" class="form-control" id="sleepingRoomNumbers" wicket:id="sleepingRoomNumbers">
+            </div>
+        </div>
+        <div class="col-sm-12 section-title">楼宇</div>
+        <div class="half field area">
+            <label class="control-label" for="usageArea">自用面积</label>
+            <div class="input">
+                <input type="text" class="form-control" id="usageArea" wicket:id="usageArea"/><span class="unit">平方米</span>
+            </div>
+        </div>
+        <div class="half field area">
+            <label class="control-label" for="rentArea">出租面积</label>
+            <div class="input">
+                <input type="text" class="form-control" id="rentArea" wicket:id="rentArea"/><span class="unit">平方米</span>
+            </div>
+        </div>
+        <div class="half field area">
+            <label class="control-label" for="spareArea">空置面积</label>
+            <div class="input">
+                <input type="text" class="form-control" id="spareArea" wicket:id="spareArea"/><span class="unit">平方米</span>
+            </div>
+        </div>
+        <div class="col-sm-12 section-title">企业</div>
+        <div class="half field area">
+            <label class="control-label" for="companyArea">占地面积</label>
+            <div class="input">
+                <input type="text" class="form-control" id="companyArea" wicket:id="companyArea"/><span class="unit">平方米</span>
+            </div>
+        </div>
+        <div wicket:id="land-use"></div>
+    </form>
+    
+    <form role="form" wicket:id="add-output-form" class="form-horizontal">
+    	<div class="col-sm-12 section-title">年产值记录</div>
+		<div class="half field datepicker">
+            <label class="control-label" for="year">年份</label>
+            <div class="input">
+                <input wicket:id="year" type="text" class="form-control" id="year">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="output">产值</label>
+            <div class="input">
+                <input type="text" class="form-control" id="output" wicket:id="output">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="profit">利润</label>
+            <div class="input">
+                <input type="text" class="form-control" id="profit" wicket:id="profit">
+            </div>
+        </div>
+        <div class="col-sm-12">
+        	<button class="add-button btn btn-primary" wicket:id="submit">保存</button>
+        </div>
+	</form>
+	<table class="data-table table table-hover table-bordered top10 col-sm-12" wicket:id="member-list-container">
+		<thead>
+			<tr>
+				<th>年份</th>
+				<th>产值</th>
+				<th>利润</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr wicket:id="member-list">
+				<td><span wicket:id="year"></span></td>
+				<td><span wicket:id="output"></span></td>
+				<td><span wicket:id="profit"></span></td>
+				<td><a class="padding5" wicket:id="update">修改</a><a class="padding5" wicket:id="delete">删除</a></td>
+			</tr>
+            <tr wicket:id="empty-member-list">
+                <td colspan="4">该企业还未添加产值信息</td>
+            </tr>
+		</tbody>
+	</table>
+</wicket:panel>

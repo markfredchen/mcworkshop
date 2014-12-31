@@ -1,0 +1,58 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="row">
+        <div class="section-title col-sm-12 pull-left">导出区块税收汇总报表</div>
+        <div class="col-sm-12">
+            <form class="navbar-form navbar-left" role="search" wicket:id="export-tax-form">
+                <div class="half field datepicker">
+                    <label class="control-label" for="export-month">评估时间</label>
+                    <div class="input">
+                        <input type="text" class="form-control" id="export-month" wicket:id="export-month">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="block">所属区块</label>
+                    <div class="input">
+                        <select class="form-control" id="block" wicket:id="block"></select>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" wicket:id="submit-link">选择</button>
+                </div>
+            </form>
+        </div>
+        <div class="section-title col-sm-12 pull-left">查看企业税收信息</div>
+        <div class="col-sm-12">
+            <form class="navbar-form navbar-left" role="search" wicket:id="search-company-text-form">
+
+                <div class="half field">
+                    <label class="control-label" for="name">企业名称</label>
+                    <div class="input">
+                        <input type="text" class="form-control" id="name" wicket:id="name" />
+                    </div>
+                </div>
+                <div class="half field datepicker">
+                    <label class="control-label" for="month">评估时间</label>
+                    <div class="input">
+                        <input type="text" class="form-control" id="month" wicket:id="month">
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" wicket:id="select-month">选择</button>
+                </div>
+            </form>
+            <div class="tax-detail" wicket:id="tax-detail"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="tax-feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span wicket:id="feedback"></span>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+</wicket:extend>

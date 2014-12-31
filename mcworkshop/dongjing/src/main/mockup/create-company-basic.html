@@ -1,0 +1,526 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title wicket:id="title">首页</title>
+<link rel="stylesheet" type="text/css" href="../../../../common-resources/src/main/webapp/static/common/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../../../common-resources/src/main/webapp/static/common/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" type="text/css" href="../webapp/static/dongjing/css/dongjing.css" />
+<script src="../../../../common-resources/src/main/webapp/static/common/js/jquery/jquery-1.10.2.js"></script>
+<script src="../../../../common-resources/src/main/webapp/static/common/js/bootstrap.js"></script>
+<script src="../../../../common-resources/src/main/webapp/static/common/js/bootstrap-datetimepicker.js"></script>
+<style type="text/css">
+.header .logo {
+	background: url("../webapp/static/dongjing/images/logo.png") no-repeat
+		scroll;
+}
+
+body {
+	background:
+		url("../webapp/static/dongjing/images/background_bluewaves.jpg")
+		repeat scroll 50% 0/100% auto #2A97D0;
+}
+
+#myTab.nav {
+	margin-left: 30px;
+	border-bottom: 0px;
+}
+
+.create-company-basic .main #myTab.nav.nav-tabs li a {
+	background-color: #EEEEEE;
+	border-bottom-width: 0px;
+}
+
+.create-company-basic .main #myTab.nav.nav-tabs li.active a {
+	background-color: #FFFFFF;
+	border-bottom-width: 0px;
+}
+
+.create-company-basic .main .right-content {
+	margin-left: 0px;
+	padding: 0px;
+	background: none;
+	border: none;
+}
+
+.create-company-basic .main .left-content {
+	margin-top: 60px;
+}
+</style>
+<script type="text/javascript">
+	function next(step) {
+		$("#" + step).tab("show");
+	};
+	$(document).ready(function() {
+		$("#materialDate").datetimepicker({
+            minView: 2,
+            autoclose: true,
+            initialDate: new Date(),
+            pickerPosition: 'top-right',
+            startDate: "2014-02-04"
+        });
+	});
+</script>
+</head>
+<body class="company-basic">
+    <div class="page">
+        <div wicket:id="header" class="header">
+            <wicket:panel>
+                <div class="header">
+                    <div class="inner top">
+                        <div class="logo"></div>
+                    </div>
+                    <div class="outter">
+                        <div class="inner bottom">
+                            <wicket:child>
+                                <wicket:extend>
+                                    <ul class="nav nav-pills">
+                                        <li class="dropdown"><a href="##">企业管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">企业基础信息</a></li>
+                                                <li><a href="##">企业安检信息</a></li>
+                                            </ul></li>
+                                        <li class="dropdown"><a href="##">税收管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">企业税收管理</a></li>
+                                            </ul></li>
+                                        <li class="dropdown"><a href="##">系统管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">用户管理</a></li>
+                                                <li><a href="##">用户权限管理</a></li>
+                                            </ul></li>
+                                    </ul>
+                                </wicket:extend>
+                            </wicket:child>
+                        </div>
+                    </div>
+                </div>
+            </wicket:panel>
+        </div>
+        <div class="main">
+            <wicket:child>
+                <wicket:extend>
+                    <div class="inner">
+                        <div class="left-content content-container col-sm-2">
+                            <div class="left-navi" wicket:id="left-navi">
+                                <wicket:panel xmlns:wicket="http://wicket.apache.org">
+                                    <ul>
+                                        <a href="#">用户管理</a>
+                                        <li>用户管理</li>
+                                    </ul>
+                                </wicket:panel>
+                            </div>
+                        </div>
+                        <div class="right-content content-container col-sm-10">
+                            <wicket:child>
+                                <wicket:extend>
+                                    <ul id="company-form-tab" class="nav nav-tabs">
+                                        <li class="active"><a id="basic" href="#basic-tab" data-toggle="tab">基础资料</a></li>
+                                        <li class=""><a id="detail" href="#detail-tab" data-toggle="tab">详细资料</a></li>
+                                        <li class=""><a id="other" href="#other-tab" data-toggle="tab">其他资料</a></li>
+                                        <li class=""><a id="custom" href="#profile-tab" data-toggle="tab">自定义</a></li>
+                                        <li class=""><a id="shareholder" href="#profile-tab" data-toggle="tab">股东情况</a></li>
+                                        <li class=""><a id="branch" href="#profile-tab" data-toggle="tab">分支机构</a></li>
+                                        <li class=""><a id="annual-check" href="#profile-tab" data-toggle="tab">年检记录</a></li>
+                                    </ul>
+                                    <div id="company-form" class="tab-content content-container col-sm-12">
+                                        <div class="tab-pane active fade in" id="basic-tab">
+                                            <form role="form" class="form-horizontal">
+                                                <div class="half field">
+                                                    <label class="control-label" for="company-doc-id">企业编号</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="company-doc-id">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-id">注册号</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-id">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="control-label" for="company-name">企业名称</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="company-name">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="company-short-name">企业简称</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="company-short-name">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="owner-name">法人姓名</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="owner-name">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="control-label" for="register-address">注册地址</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-address">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="control-label" for="operation-address">经营地址</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="operation-address">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">注册资本(万)</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-assets">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">分支数</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">企业状态</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">经济实体</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets">
+                                                            <option>请选择</option>
+                                                            <option>工业</option>
+                                                            <option>商贸</option>
+                                                            <option>服务</option>
+                                                            <option>建筑</option>
+                                                            <option>房产</option>
+                                                            <option>其它</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">企业分类</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">企业分类2</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">征收方式</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">所属地区</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets">
+                                                            <option>请选择</option>
+                                                            <option>注册型</option>
+                                                            <option>在地型</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">纳税性质</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">纳税种类</label>
+                                                    <div class="input">
+                                                        <select class="form-control" id="register-assets"></select>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="establish-date">成立日期</label>
+                                                    <div class="input datepicker materialDate" data-date="" data-date-format="yyyy-mm-dd">
+                                                        <input type="text" class="form-control" value="" id="materialDate" readonly>
+                                                        <span class="add-on glyphicon glyphicon-calendar"><i class="icon-th"></i></span>
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="doc-date">材料日期</label>
+                                                    <div class="input">
+                                                        <input type="text" value="" id="doc-date"> <span class="add-on"><i
+                                                            class="icon-th"></i></span>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-default" onclick="next('detail');">下一步</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="detail-tab">
+                                            <form role="form" class="form-horizontal">
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">执照字号</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-assets">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">企业标识</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">证照编号</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">信息卡号</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">法人代码</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-assets">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">机构代码</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="register-assets">经营方式</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="register-assets">
+                                                    </div>
+                                                </div>
+                                                <div class="half field">
+                                                    <label class="control-label" for="branch-numbers">一般纳税人批准日期</label>
+                                                    <div class="input">
+                                                        <input type="text" class="form-control" id="branch-numbers">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="control-label" for="operation-address">经营范围</label>
+                                                    <div class="input">
+                                                        <textarea class="form-control" rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <label class="control-label" for="operation-address">备注</label>
+                                                    <div class="input">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">税务信息</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">统一码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">税收管理码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">税务登记号</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">购买薄号</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">开户银行</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">银行帐号</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label class="control-label" for="operation-address">纳税专户</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="operation-address">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-default">下一步</button>
+                                            </form>
+                                        </div>
+                                        <div class="tab-pane fade" id="other-tab">
+                                            <form role="form" class="form-horizontal">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">法人资料</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">法人姓名</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">性别</label>
+                                                            <div class="input">
+                                                                <select class="form-control" id="branch-numbers">
+                                                                    <option>请选择</option>
+                                                                    <option>男</option>
+                                                                    <option>女</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">身份证号</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">邮政编码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label class="control-label" for="operation-address">家庭地址</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="operation-address">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">手机号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">电话号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">传真号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">电子邮箱</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">法人资料</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">法人姓名</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">性别</label>
+                                                            <div class="input">
+                                                                <select class="form-control" id="branch-numbers">
+                                                                    <option>请选择</option>
+                                                                    <option>男</option>
+                                                                    <option>女</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">身份证号</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">邮政编码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="field">
+                                                            <label class="control-label" for="operation-address">家庭地址</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="operation-address">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">手机号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">电话号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="register-assets">传真号码</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="register-assets">
+                                                            </div>
+                                                        </div>
+                                                        <div class="half field">
+                                                            <label class="control-label" for="branch-numbers">电子邮箱</label>
+                                                            <div class="input">
+                                                                <input type="text" class="form-control" id="branch-numbers">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-default">下一步</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </wicket:extend>
+                            </wicket:child>
+                        </div>
+                    </div>
+                </wicket:extend>
+            </wicket:child>
+        </div>
+        <div></div>
+        <div wicket:id="footer" class="footer">
+            <wicket:panel>
+                <div class="inner">Powered by Wutai</div>
+            </wicket:panel>
+        </div>
+    </div>
+</body>
+</html>

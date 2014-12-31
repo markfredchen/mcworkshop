@@ -1,0 +1,78 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="inner">
+        <div class="login-panel" wicket:id="login-panel">
+            <div class="login-header">
+                <wicket:message key="dj.login.form.title"/>
+            </div>
+            <div class="login-main">
+                <form wicket:id="login-form" role="form" class="form-horizontal">
+
+                    <div class="field username" wicket:id="username-feedback-border">
+                        <label for="username" class="col-sm-3 control-label username">
+                            <wicket:message key="dj.login.form.username"/>
+                        </label>
+
+                        <div class="col-sm-7">
+                            <input type="text" name="username" wicket:id="username" id="username"
+                                   maxlength="150" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="field password" wicket:id="password-feedback-border">
+                        <label for="password" class="col-sm-3 control-label password">
+                            <wicket:message key="dj.login.form.password"/>
+                        </label>
+
+                        <div class="col-sm-7">
+                            <input type="password" name="password" wicket:id="password" id="password"
+                                   maxlength="150" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-10 button-group">
+                            <button class="submit-link btn btn-primary"
+                                    wicket:id="submit-link">
+                                <wicket:message key="dj.login.form.submit"/>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="login-feedback" tabindex="-1"
+                         role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div wicket:id="feedback-panel" class="feedback"></div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                </form>
+            </div>
+        </div>
+        <div class="login-panel" wicket:id="landing-panel">
+            <div class="login-header">部门选择</div>
+            <div class="login-main">
+                <div class="column">
+                    <ul>
+                        <li><a wicket:id="jifaban">经发办</a></li>
+                        <li><a wicket:id="caiwusuo">财政所</a></li>
+                        <li><a wicket:id="anjiansuo">安监所</a></li>
+                        <li><a wicket:id="baikexing">百颗星</a></li>
+
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a wicket:id="jingguansuo">经管所</a></li>
+                        <li><a wicket:id="maoyicheng">贸易城</a></li>
+                        <li><a wicket:id="nongfugongsi">农副公司</a></li>
+                        <li><a wicket:id="zonghedangwei">综合党委</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</wicket:extend>

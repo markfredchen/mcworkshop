@@ -1,0 +1,42 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="collapse navbar-collapse">
+        <form class="navbar-form navbar-left" role="search" wicket:id="search-company-form">
+            <div class="form-group">
+                <label for="name">商业街名称/店铺名称</label>
+                <input id="name" type="text" class="form-control" wicket:id="name">
+                <label for="type">商业区类型</label>
+                <select class="form-control" id="type" wicket:id="type">
+                    <wicket:remove>
+                        <option>请选择</option>
+                        <option>吊销未注销</option>
+                        <option>吊销已注销</option>
+                        <option>迁移</option>
+                        <option>确立</option>
+                        <option>注销</option>
+                    </wicket:remove>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" wicket:id="search-company">查询</button>
+        </form>
+    </div>
+    <div wicket:id="paging-container">
+        <table class="data-table table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>商业街名称/店铺名称</th>
+                <th>商业区类型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="company-list" class="data-row">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="type"></span></td>
+            </tr>
+            <tr wicket:id="empty-list">
+                <td colspan="2">未查询到所需商业街名称/店铺名称。请更改查询条件，继续搜索</td>
+            </tr>
+            </tbody>
+        </table>
+        <div wicket:id="navigator"></div>
+    </div>
+</wicket:extend>

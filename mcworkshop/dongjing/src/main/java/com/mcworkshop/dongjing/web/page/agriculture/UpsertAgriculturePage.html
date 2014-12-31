@@ -1,0 +1,71 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <form class="col-sm-12 form-horizontal" role="form" wicket:id="upsert-agri-form">
+        <div class="half field">
+            <label class="control-label" for="farmerName">农场主姓名</label>
+
+            <div class="input">
+                <input id="farmerName" wicket:id="farmerName" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="contactNumber">联系方式</label>
+
+            <div class="input">
+                <input id="contactNumber" wicket:id="contactNumber" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="area">承包面积</label>
+
+            <div class="input">
+                <input id="area" wicket:id="area" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="address">承包地点</label>
+
+            <div class="input">
+                <input id="address" wicket:id="address" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">当前茬口安排情况</h3>
+            </div>
+            <div class="panel-body">
+                <div class="half field">
+                    <label class="control-label" for="paddyArea">水稻(亩)</label>
+
+                    <div class="input">
+                        <input id="paddyArea" wicket:id="paddyArea" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="wheatArea">二麦(亩)</label>
+
+                    <div class="input">
+                        <input id="wheatArea" wicket:id="wheatArea" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="greenArea">绿肥(亩)</label>
+
+                    <div class="input">
+                        <input id="greenArea" wicket:id="greenArea" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="assartArea">深翻(亩)</label>
+
+                    <div class="input">
+                        <input id="assartArea" wicket:id="assartArea" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary" wicket:id="submit-link">保存</button>
+            <button class="btn btn-default" wicket:id="cancel-link">取消</button>
+        </div>
+    </form>
+</wicket:extend>

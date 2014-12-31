@@ -1,0 +1,35 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="data-panel col-sm-4">
+        <table class="data-table table table-hover table-bordered" wicket:id="role-table">
+            <thead>
+            <tr>
+                <th>
+                    <wicket:message key="role.form.name"/>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="role-list">
+                <td><span wicket:id="name"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-panel col-sm-8">
+        <div wicket:id="role-form" class="role-form row"></div>
+        <div class="control-button-group top10" wicket:id="button-group">
+            <button type="button" wicket:id="create-link" class="btn btn-warning">
+                <wicket:message key="role.form.create"/>
+            </button>
+            <button type="button" wicket:id="delete-link" class="btn btn-danger">
+                <wicket:message key="role.form.delete"/>
+            </button>
+            <button type="button" wicket:id="update-link" class="btn btn-primary">
+                <wicket:message key="role.form.update"/>
+            </button>
+            <button type="button" wicket:id="reset-link" class="btn btn-default">
+                <wicket:message key="role.form.reset"/>
+            </button>
+        </div>
+    </div>
+</wicket:extend>

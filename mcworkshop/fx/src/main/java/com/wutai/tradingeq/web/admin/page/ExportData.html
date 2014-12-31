@@ -1,0 +1,27 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                 导出客户信息 
+            </h1>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>Email</th>
+                    <th>联系电话</th>
+                    <th>建议</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr wicket:id="contacts">
+                    <td wicket:id="name"></td>
+                    <td wicket:id="email"></td>
+                    <td wicket:id="phone"></td>
+                    <td wicket:id="comments"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</wicket:extend>

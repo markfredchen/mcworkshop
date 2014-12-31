@@ -1,0 +1,67 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form role="form" class="form-horizontal" wicket:id="party-form">
+        <h4>党支部信息</h4>
+        <div class="half field">
+            <label class="control-label" for="partyName">党支部名称</label>
+            <div class="input">
+                <input type="text" class="form-control" id="partyName" wicket:id="partyName"/>
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="partyLeader">党支部书记</label>
+            <div class="input">
+                <input type="text" class="form-control" id="partyLeader" wicket:id="partyLeader">
+            </div>
+        </div>
+    </form>
+    <form role="form" wicket:id="add-party-member-form" class="form-horizontal">
+        <h4>党支部成员</h4>
+        <div class="half field">
+            <label class="control-label" for="name">党员姓名</label>
+            <div class="input">
+                <input wicket:id="name" type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="gender">性别</label>
+            <div class="input">
+                <select class="form-control" id="gender" wicket:id="gender">
+                    <wicket:remove>
+                        <option>男</option>
+                        <option>女</option>
+                    </wicket:remove>
+                </select>
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="education">文化程度</label>
+            <div class="input">
+                <input type="text" class="form-control" id="education" wicket:id="education">
+            </div>
+        </div>
+        <button class="add-button btn btn-primary" wicket:id="submit">保存</button>
+    </form>
+    <table class="data-table table table-hover table-bordered" wicket:id="member-list-container">
+        <thead>
+            <tr>
+                <th>党员姓名</th>
+                <th>性别</th>
+                <th>文化程度</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr wicket:id="member-list">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="gender"></span></td>
+                <td><span wicket:id="education"></span></td>
+                <td><a class="padding5" wicket:id="update">修改</a><a class="padding5" wicket:id="delete">删除</a></td>
+            </tr>
+            <tr wicket:id="empty-member-list">
+                <td colspan="4">该企业还未添加党员</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</wicket:panel>

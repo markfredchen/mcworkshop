@@ -1,0 +1,43 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="collapse navbar-collapse">
+        <form class="navbar-form navbar-left" role="search" wicket:id="search-project-form">
+            <div class="form-group">
+                <label for="projectName">企业名称</label> <input id="projectName" type="text" class="form-control"
+                                                             wicket:id="projectName"> <label for="status">项目状态</label>
+                <select class="form-control"
+                        id="status">
+
+                    <option selected="selected" value="">----请选择----</option>
+                    <option value="0AUDITTED">已通过评估待供地</option>
+                    <option value="1CONFIRMED">已批未建</option>
+                    <option value="2PLANNED">拟开工</option>
+                    <option value="3STARTED">已开工未竣工</option>
+                    <option value="4FINISHED">拟投产</option>
+
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" wicket:id="search-project">查询</button>
+        </form>
+    </div>
+    <div wicket:id="paging-container">
+        <table class="data-table table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>企业名称</th>
+                <th>项目状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="project-list" class="data-row">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="status"></span></td>
+            </tr>
+            <tr wicket:id="empty-list">
+                <td colspan="3">未查询到所需项目。请更改查询条件，继续搜索</td>
+            </tr>
+            </tbody>
+        </table>
+        <div wicket:id="navigator"></div>
+    </div>
+    <button class="btn btn-primary" wicket:id="export-report-link">导出项目情况报表</button>
+</wicket:extend>

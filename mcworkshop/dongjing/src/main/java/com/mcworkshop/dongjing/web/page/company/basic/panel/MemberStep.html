@@ -1,0 +1,90 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+	<form role="form" wicket:id="member-form" class="form-horizontal">
+		<div class="col-sm-12 section-title">成员统计信息</div>
+		<div class="half field">
+            <label class="control-label" for="employeeNumber">职工人数</label>
+            <div class="input">
+                <input wicket:id="employeeNumber" type="text" class="form-control" id="employeeNumber">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="localEmployeeNumber">本市员工人数</label>
+            <div class="input">
+                <input type="text" class="form-control" id="localEmployeeNumber" wicket:id="localEmployeeNumber">
+            </div>
+        </div>
+	</form>
+	<form role="form" wicket:id="add-member-form" class="form-horizontal">
+		<div class="col-sm-12 section-title">高级技术人员信息</div>
+		<div class="half field">
+            <label class="control-label" for="name">成员姓名</label>
+            <div class="input">
+                <input wicket:id="name" type="text" class="form-control" id="name">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="position">职务</label>
+            <div class="input">
+                <input type="text" class="form-control" id="position" wicket:id="position">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="produceMethod">产生方式</label>
+            <div class="input">
+                <input type="text" class="form-control" id="produceMethod" wicket:id="produceMethod">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="idType">证件类型</label>
+            <div class="input">
+                <select class="form-control" id="idType" wicket:id="idType">
+                    <wicket:remove>
+                        <option>身份证</option>
+                        <option>护照</option>
+                    </wicket:remove>
+                </select>
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="idNo">证件号码</label>
+            <div class="input">
+                <input type="text" class="form-control" id="idNo" wicket:id="idNo">
+            </div>
+        </div>
+        <div class="half field">
+            <label class="control-label" for="certificate">国家认可职称</label>
+            <div class="input">
+                <input type="text" class="form-control" id="certificate" wicket:id="certificate">
+            </div>
+        </div>
+        <button class="add-button btn btn-primary" wicket:id="submit">保存</button>
+	</form>
+	<table class="data-table table table-hover table-bordered top10" wicket:id="member-list-container">
+		<thead>
+			<tr>
+				<th>成员姓名</th>
+				<th>职务</th>
+				<th>产生方式</th>
+				<th>证件类型</th>
+				<th>证件号码</th>
+				<th>国家认可职称</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr wicket:id="member-list">
+				<td><span wicket:id="name"></span></td>
+				<td><span wicket:id="postion"></span></td>
+				<td><span wicket:id="productMethon"></span></td>
+				<td><span wicket:id="idType"></span></td>
+				<td><span wicket:id="idNo"></span></td>
+				<td><span wicket:id="certificate"></span></td>
+				<td><a class="padding5" wicket:id="update">修改</a><a class="padding5" wicket:id="delete">删除</a></td>
+			</tr>
+            <tr wicket:id="empty-member-list">
+                <td colspan="7">该企业还未添加公司成员</td>
+            </tr>
+		</tbody>
+	</table>
+
+</wicket:panel>

@@ -1,0 +1,44 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <div class="panel panel-default" wicket:id="overall-report">
+        <div class="panel-heading">
+            <h3 class="panel-title" wicket:id="report-title">企业增值税排名</h3>
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-12" wicket:id="month-selector">
+                <label class="col-sm-2" style="margin-top: 8px">选择月份</label>
+
+                <div class="col-sm-4">
+                    <select wicket:id="year-select" class="form-control">
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                    </select>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary overall" data-toggle="modal"
+                            wicket:id="show-chart-btn">生成报表
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="modal fade bs-example-modal-lg" wicket:id="report-dialog" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" wicket:id="report-title">企业增值税排名</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div wicket:id="report-chart" class="report-chart"/>
+                        <div wicket:id="report-data" class="hide"/>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</wicket:panel>

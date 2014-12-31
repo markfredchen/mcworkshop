@@ -1,0 +1,90 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <div class="collapse navbar-collapse">
+        <form role="form" wicket:id="search-company-form" class="form-horizontal">
+            <div class="half field">
+                <label class="control-label" for="companyName">企业名称</label>
+
+                <div class="input">
+                    <input id="companyName" type="text" class="form-control" wicket:id="companyName">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="economyEntity">经济实体</label>
+
+                <div class="input">
+                    <select class="form-control" id="economyEntity" wicket:id="economyEntity">
+                        <wicket:remove>
+                            <option>请选择</option>
+                            <option>吊销未注销</option>
+                            <option>吊销已注销</option>
+                            <option>迁移</option>
+                            <option>确立</option>
+                            <option>注销</option>
+                        </wicket:remove>
+                    </select>
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="economyNature">经济性质</label>
+
+                <div class="input">
+                    <select class="form-control" id="economyNature" wicket:id="economyNature">
+                        <wicket:remove>
+                            <option>请选择</option>
+                            <option>吊销未注销</option>
+                            <option>吊销已注销</option>
+                            <option>迁移</option>
+                            <option>确立</option>
+                            <option>注销</option>
+                        </wicket:remove>
+                    </select>
+                </div>
+            </div>
+            <div class="half field" wicket:id="blockContainer">
+                <label class="control-label" for="block">所属区块</label>
+
+                <div class="input">
+                    <select class="form-control" id="block" wicket:id="block">
+                        <wicket:remove>
+                            <option>请选择</option>
+                            <option>吊销未注销</option>
+                            <option>吊销已注销</option>
+                            <option>迁移</option>
+                            <option>确立</option>
+                            <option>注销</option>
+                        </wicket:remove>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary pull-right" wicket:id="search-company"
+                    style="margin-right:40px">查询
+            </button>
+        </form>
+    </div>
+    <div wicket:id="paging-container" class="top10">
+        <table class="data-table table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>企业名称</th>
+                <th>经济实体</th>
+                <th>经济性质</th>
+                <th>所属区块</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="company-list" class="data-row">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="economyEntity"></span></td>
+                <td><span wicket:id="economyNature"></span></td>
+                <td><span wicket:id="block"></span></td>
+                <td><a class="padding5" wicket:id="view">查看</a><a class="padding5" wicket:id="update">修改</a></td>
+            </tr>
+            <tr wicket:id="empty-list">
+                <td colspan="5">未查询到所需企业。请更改查询条件，继续搜索</td>
+            </tr>
+            </tbody>
+        </table>
+        <div wicket:id="navigator"></div>
+    </div>
+</wicket:panel>

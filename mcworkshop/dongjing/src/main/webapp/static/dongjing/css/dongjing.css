@@ -1,0 +1,806 @@
+/**
+  * Copyright 2014 MCWorkshop Inc. All rights reserved.
+  * $Id$
+*/
+body {
+	margin: 0px;
+	min-width: 1000px;
+	height: 100%;
+	background-color: #F2F2F2;
+	font-size: 14px;
+	min-width: 1024px;
+	font-size: 14px;
+	font-family: 微软雅黑, 宋体, Helvetica, sans-serif;
+}
+
+body.home {
+	background-color: #109AD1;
+	background-image: none;
+}
+
+.top10 {
+	margin-top: 10px;
+}
+
+.radio {
+	margin-left: 10px;
+}
+
+.padding5 {
+	padding: 5px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.hide {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.glyphicon {
+	padding: 3px;
+}
+
+.outter {
+	width: 100%;
+}
+
+.inner {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.nopadding {
+	padding: 0px;
+	margin: 0px;
+}
+
+.header,.footer,.main {
+	width: 100%;
+	float: left;
+	margin: 0;
+}
+
+.header {
+	background-color: #F2F2F2;
+	height: 165px;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 1000;
+}
+
+.main {
+	min-height: 100%;
+	margin-top: 145px;
+}
+
+.header,.footer {
+	font-size: 16px;
+}
+
+.header .outter.top {
+	height: 96px;
+	background: url(/dongjing/static/dongjing/images/hytop.jpg);
+	background-position: 50% 50%;
+}
+
+.header .outter {
+	height: 41px;
+	background: url(/dongjing/static/dongjing/images/header-menu-bar.png);
+}
+
+.footer {
+	background-color: #262626;
+	display: none;
+	height: 30px;
+	font-size: 13px;
+	color: #989898;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 30px;
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	z-index: 1000;
+}
+
+.main,.main .inner {
+	min-height: 500px;
+}
+
+main {
+	margin-top: 125px;
+}
+
+.main .inner {
+	margin-top: 20px;
+}
+
+input[type="file"] {
+	margin-bottom: 20px;
+}
+/**
+*   Menu
+*/
+.header .user-menu {
+	float: right;
+	text-align: right;
+	width: 350px;
+	color: #428BCA;
+	font-size: 13px;
+	margin-right: 45px;
+}
+
+.header .user-menu .user-menu-section {
+	height: 25px;
+	padding: 3px 10px;
+	border-right: 1px solid #428BCA;
+	line-height: 25px;
+}
+
+.header .user-menu .user-menu-section.last {
+	border: none;
+}
+
+.header ul {
+	
+}
+
+.header .dropdown {
+	padding-top: 8px;
+	background: url(/dongjing/static/dongjing/images/menu-separator.png)
+		no-repeat 0px 1px;
+}
+
+.header .dropdown.first {
+	background: none;
+}
+
+.header .dropdown a {
+	margin: 0;
+	padding: 3px 10px 3px 13px;
+	color: #000;
+	font-size: 13px;
+}
+
+.header .dropdown a:hover {
+	color: #428BCA;
+}
+
+.header .dropdown .dropdown-menu {
+	margin: 0;
+	background-color: #EEE;
+}
+
+.header li.dropdown:hover .dropdown-menu {
+	display: block;
+}
+
+/**
+*   Left Nevigation
+*/
+.main .left-content.content-container {
+	margin-top: 8px;
+	padding: 20px 0px 0px 0px;
+	border: 0px;
+	width: 144px;
+	height: 323px;
+	background: url(/dongjing/static/dongjing/images/sjq.png);
+}
+
+.main .left-navi {
+	float: left;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.main ul.left-navi-menu {
+	padding-left: 0px;
+	color: #FFF;
+	margin-left: 0px;
+}
+
+.main ul.left-navi-menu li {
+	list-style: none;
+	background-image: url(/dongjing/static/dongjing/images/link-icon.png)
+		no-repeat;
+}
+
+.main ul.left-navi-menu li a {
+	background-color: #E5E5E5;
+	padding: 7px 15px 7px 10px;
+	margin-left: 0px;
+	border-bottom: 1px solid #1684C6;
+	float: left;
+	width: 100%;
+}
+
+.main ul.left-navi-menu li a:hover {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #1684C6;
+}
+
+.main .left-navi .left-navi-menu-title {
+	margin-top: 55px;
+	margin-bottom: 10px;
+	margin-left: 25px;
+	color: #FFF;
+}
+
+.main .right-content.content-container {
+	min-height: 500px;
+}
+
+.main .content-container {
+	padding: 15px;
+	background-color: #FFF;
+	border-radius: 6px;
+	border: 1px solid #DCDCDC;
+	float: left;
+}
+/**
+  * Error
+  */
+li.feedbackPanelERROR {
+	list-style: none;
+	color: #A94442;
+}
+
+.panel-body .feedback {
+	width: 700px;
+}
+
+/**
+*   Home Page
+*/
+.home .header {
+	height: 184px;
+	background: url(/dongjing/static/dongjing/images/top.jpg);
+	background-position: 50% 50%;
+	position: absolute;
+}
+
+.home .main {
+	height: 307px;
+	background: url(/dongjing/static/dongjing/images/bd.jpg);
+	background-position: 50% 50%;
+	min-height: 307px;
+	margin-top: 184px;
+	margin-bottom: 0px;
+}
+
+.home label {
+	font-size: 16px;
+}
+
+.home .header .outter {
+	display: none;
+}
+
+.home .main .login-panel {
+	background-color: #FBFAFB;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	float: right;
+	height: 250px;
+	padding: 10px 33px 25px 37px;
+	width: 515px;
+}
+
+.home .username {
+	background: url(/dongjing/static/dongjing/images/username.png) no-repeat
+		25px 12px;
+}
+
+.home .password {
+	background: url(/dongjing/static/dongjing/images/password.png) no-repeat
+		25px 12px;
+}
+
+.home .submit-link {
+	width: 150px;
+}
+
+.home .main .login-header {
+	border-bottom: 3px solid #DAD8D9;
+	color: #666666;
+	font-size: 28px;
+	font-weight: normal;
+	margin-bottom: 18px;
+	padding: 10px 0;
+}
+
+.home .button-group {
+	text-align: center;
+}
+
+.home .main .login-main form .feedback {
+	width: 445px min-height: 10px;
+}
+
+.home .main .login-main form .feedback ul {
+	margin: 0px;
+	font-size: 14px;
+}
+
+.home .main .login-main form .feedback ul li {
+	list-style: none;
+	padding-left: 40px;
+}
+
+.home .main .login-main form .field {
+	margin-bottom: 15px;
+	height: 34px;
+}
+
+/**
+*   Landing Page
+*/
+.welcome .main .right-content.content-container {
+	width: 100%;
+	background: url(/dongjing/static/dongjing/images/welcome.png);
+}
+
+.welcome .main .left-content.content-container,.landing .main .left-content.content-container
+	{
+	display: none;
+}
+
+.landing .main .module {
+	margin-top: 15px;
+	height: 100px
+}
+
+.landing .main .module-links a {
+	float: left;
+	width: 155px;
+}
+
+/**
+  * Company Basic Information
+  */
+.company-basic .main .nav,.security .main .nav {
+	margin-left: 30px;
+	border-bottom: 0px;
+}
+
+.company-basic .main .nav.nav-tabs li a,.security .main .nav.nav-tabs li a
+	{
+	background-color: #EEEEEE;
+	border-bottom-width: 0px;
+}
+
+.company-basic .main .nav.nav-tabs li.active a,.security .main .nav.nav-tabs li.active a
+	{
+	background-color: #FFFFFF;
+	border-bottom-width: 0px;
+}
+
+.company-basic .main .right-content,.security .main .right-content {
+	margin-left: 0px;
+	padding: 0px;
+	margin-bottom: 100px;
+	background: none;
+	border: none;
+}
+
+.company-basic .main .left-content,.security .main .left-content {
+	margin-top: 60px;
+}
+
+.company-basic-list .main .right-content .collapse {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.company-basic-list .main .right-content .collapse form {
+	padding: 0px;
+}
+
+.company-basic-list .main .right-content .collapse form label {
+	padding-left: 10px;
+}
+
+.company-basic-list .main .right-content .collapse form input {
+	
+}
+
+.company-basic-list .main .right-content .collapse button {
+	height: 27px;
+	padding: 3px 20px;
+	margin-left: 0px;
+}
+
+/**
+  * Wizard 
+  */
+.wizard-button-group {
+	height: 50px;
+	position: fixed;
+	bottom: 0px;
+	background-color: #CCC;
+	width: 802px;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 6px 6px 0px 0px;
+}
+
+.project .wizard-button-group {
+	width: 831px;
+	margin-left: -15px;
+}
+
+ul.pagination {
+	padding: 0px;
+	margin: 0px;
+}
+
+/**
+  * Form
+  */
+.main form .required {
+	color: #A94442;
+	margin-left: 5px;
+}
+
+.main .right-content form {
+	width: 800px;
+}
+
+.main .right-content form .half.field {
+	width: 380px;
+	float: left;
+}
+
+.main .right-content form label.control-label {
+	width: 120px;
+	margin-right: 15px;
+	padding-left: 15px;
+	float: left;
+	text-align: left;
+}
+
+.main .right-content form .half .input {
+	width: 245px;
+	float: left;
+}
+
+.main .right-content form .input {
+	width: 630px;
+	float: left;
+}
+
+.main .right-content form .input input {
+	float: left;
+}
+
+.main .right-content form .field {
+	width: 770px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.main .right-content form .form-control {
+	font-size: 14px;
+}
+
+.main .right-content form .panel {
+	float: left;
+	width: 770px;
+}
+
+.main .right-content form .panel .half.field {
+	width: 369px;
+}
+
+.main .right-content form .panel .half .input {
+	width: 230px;
+}
+
+.main .right-content form .panel .input {
+	width: 600px;
+}
+
+.main .right-content form .control-buttons {
+	float: left;
+}
+
+.main .right-content form .half.datepicker input {
+	width: 225px;
+}
+
+.project .main .right-content form .half.datepicker input {
+	width: 210px;
+}
+
+.main .right-content form .datepicker input {
+	width: 155px;
+}
+/**
+ *  Report Page
+ */
+.report .main .panel-body button,.report .main .panel-body input {
+	margin-top: 10px;
+}
+
+.report .main .panel-body button.btn-primary.ovarall {
+	margin-top: 0px;
+}
+
+/**
+ * System Pages  
+*/
+.system .user-form {
+	width: 100%;
+	float: left;
+}
+
+.system .form-control {
+	height: 28px;
+	font-size: 14px;
+}
+
+.system .table td {
+	height: 28px;
+	padding: 5px;
+}
+
+.system .data-panel {
+	height: 475px;
+	font-size: 14px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.system .data-panel .table {
+	margin: 0px;
+}
+
+.system form input,.system form select {
+	width: 300px;
+}
+
+.system from .datepicker input {
+	width: 250px;
+}
+
+.report #sales-tax-preview-modal table th {
+	text-align: center;
+	font-size: 12px;
+}
+
+.report #sales-tax-preview-modal table td {
+	font-size: 12px;
+}
+
+.report #sales-tax-preview-modal table td.number {
+	text-align: right;
+}
+
+.report #sales-tax-preview-modal table td.text {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.report #sales-tax-preview-modal table th.companyID,.report #sales-tax-preview-modal table td.companyID
+	{
+	width: 30px;
+}
+
+.report #sales-tax-preview-modal table th.taxer,.report #sales-tax-preview-modal table td.taxer
+	{
+	width: 200px;
+}
+
+.report #sales-tax-preview-modal table th.createdDate,.report #sales-tax-preview-modal table td.createdDate
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.totalTax,.report #sales-tax-preview-modal table td.totalTax
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.vat,.report #sales-tax-preview-modal table td.vat
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.operateTax,.report #sales-tax-preview-modal table td.vat
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.constructTax,.report #sales-tax-preview-modal table td.constructTax
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.comanyIncomeTax,.report #sales-tax-preview-modal table td.comanyIncomeTax
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.personalIncomeTax,.report #sales-tax-preview-modal table td.personalIncomeTax
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.constructTax,.report #sales-tax-preview-modal table td.constructTax
+	{
+	width: 60px;
+}
+
+.report #sales-tax-preview-modal table th.sales,.report #sales-tax-preview-modal table td.sales
+	{
+	width: 60px;
+}
+
+.report .sale-tax-preview-table {
+	height: 500px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.data-row {
+	cursor: pointer;
+}
+
+.company-tax-detail .data {
+	text-align: right;
+}
+
+.company-tax-detail .data-container {
+	margin-top: 15px;
+}
+
+.company-tax-detail .title {
+	line-height: 35px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.system form input[type="checkbox"] {
+	width: 20px;
+}
+
+.company-basic .main h4 {
+	margin-top: 10px;
+}
+
+.company-basic .main .input input.form-control.col-sm-6 {
+	width: 48%;
+}
+
+div#advanced-tab,div#member-tab {
+	min-height: 500px;
+}
+
+.page .main table th {
+	background-color: #E8EEF0;
+}
+
+div#report2 .modal-dialog {
+	width: 1000px
+}
+
+.add-button {
+	margin-left: 10px;
+}
+
+.section-title {
+	background-color: #EEE;
+	margin-bottom: 10px;
+	line-height: 30px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.company-suggestion {
+	background-color: #EEE;
+	border: 1px solid rgba(0, 0, 0, .15);
+	border-radius: 4px;
+}
+
+.company-suggestion ul {
+	list-style: none;
+	padding: 0px;
+}
+
+.company-suggestion .company-item {
+	padding: 3px 15px;
+}
+
+.company-suggestion ul li.selected {
+	background-color: #FFF;
+	color: #428bca;
+}
+
+.related-company-list {
+	background-color: #EEE;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.delete-icon {
+	margin-top: 7px;
+	margin-left: 7px;
+	float: left;
+}
+
+.system .main .right-content form{
+	width: auto;
+	
+}
+
+.system .main .right-content form select.form-control{
+	height: auto;
+	font-size: 12px;
+}
+
+
+.report-chart {
+	width: 558px;
+	height: 400px;
+	font-size: 12px;
+}
+
+
+.company-basic-list .data-row{
+	cursor: default;
+}
+
+.kf_qycn_com_cckf_list .kf_qycn_com_cckf_list_area{
+	float: left;
+}
+
+.kf_qycn_com_cckf_list .kf_qycn_com_cckf_list_area *{
+	float: left;
+}
+
+.kf_qycn_com_cckf_list .kf_qycn_com_cckf_clerk_list li{
+	height: 30px;
+}
+
+
+.login-main .column{
+	float: left;
+	width: 200px;
+}
+
+.is-rent-radio{
+	margin-bottom: 15px;
+}
+
+#registerAsset {
+	width: 125px;
+	border-radius: 4px 0px 0px 4px;
+}
+
+#currency {
+	width: 120px;
+	border-radius: 0px 4px 4px 0px;
+	border-left: 0px;
+}
+
+.area span.unit {
+	margin-top: 6px;
+	float: left;
+	font-weight: bold;
+	padding-left: 8px;
+}
+.area input {
+    width: 180px;
+}

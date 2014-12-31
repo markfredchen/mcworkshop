@@ -1,0 +1,39 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="data-panel col-sm-5">
+        <table class="data-table table table-hover table-bordered" wicket:id="user-table">
+            <thead>
+            <tr>
+                <th>
+                    <wicket:message key="user.form.username"/>
+                </th>
+                <th>
+                    <wicket:message key="user.form.name"/>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="user-list">
+                <td><span wicket:id="username"></span></td>
+                <td><span wicket:id="name"></span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="form-panel col-sm-7">
+        <div wicket:id="user-form" class="user-form"></div>
+        <div class="control-button-group" wicket:id="button-group">
+            <button type="button" wicket:id="create-link" class="btn btn-warning">
+                <wicket:message key="user.form.create"/>
+            </button>
+            <button type="button" wicket:id="delete-link" class="btn btn-danger">
+                <wicket:message key="user.form.delete"/>
+            </button>
+            <button type="button" wicket:id="update-link" class="btn btn-primary">
+                <wicket:message key="user.form.update"/>
+            </button>
+            <button type="button" wicket:id="reset-link" class="btn btn-default">
+                <wicket:message key="user.form.reset"/>
+            </button>
+        </div>
+    </div>
+</wicket:extend>

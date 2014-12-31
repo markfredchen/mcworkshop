@@ -1,0 +1,9 @@
+ALTER TABLE `dongjing`.`company` 
+ADD COLUMN `isO` BIT NULL AFTER `nDate`,
+ADD COLUMN `isP` BIT NULL AFTER `isO`,
+ADD COLUMN `isQ` BIT NULL AFTER `isP`,
+ADD COLUMN `numberOfO` INT NULL AFTER `isQ`,
+ADD COLUMN `numberOfP` INT NULL AFTER `numberOfO`,
+ADD COLUMN `numberOfQ` INT NULL AFTER `numberOfP`;
+
+

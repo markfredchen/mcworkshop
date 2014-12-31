@@ -1,0 +1,12 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form wicket:id="import-data-form">
+        <div wicket:id="feedback" class="feedback"/>
+        <div class="month-selector" wicket:id="month-selector">
+            选择月份：<select wicket:id="year-select"></select> <select wicket:id="month-select"></select>
+        </div>
+        <input type="file" wicket:id="tax-report-data"/>
+        <button class="btn btn-primary" type="submit" wicket:id="import-sale-tax-report">
+            <wicket:message key="report.data.import.button"/>
+        </button>
+    </form>
+</wicket:panel>

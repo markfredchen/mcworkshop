@@ -1,0 +1,91 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <div class="outter top">
+        <a wicket:id="home-link">
+            <div class="logo"></div>
+        </a>
+    </div>
+    <div class="outter">
+        <div class="inner bottom">
+            <ul class="nav nav-pills">
+                <li class="dropdown first" wicket:id="home-menu-link"><a href="##">首页</a></li>
+                <li class="dropdown" wicket:id="company-basic"><a href="##" wicket:id="company-basic-link">企业基础信息</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-company-basic-link">查询企业基础信息</a></li>
+                        <li><a wicket:id="create-company-basic-link">创建企业基础信息</a></li>
+                        <li><a wicket:id="import-company-basic-link">导入企业基础信息</a></li>
+                        <li><a wicket:id="export-company-basic-link">导出企业基础信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="company-tax"><a href="##" wicket:id="company-tax-link">企业税务信息</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-company-tax-link">查询企业税务信息</a></li>
+                        <li><a wicket:id="import-company-tax-link">导入企业税务信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="company-security"><a href="##"
+                                                                     wicket:id="company-security-link">企业安监信息</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-company-security-link">查询企业安监信息</a></li>
+                        <li><a wicket:id="create-company-security-link">创建企业安监信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="commercial-area"><a href="##" wicket:id="company-area-link">商业管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-commercial-area-link">查询商业街/区域</a></li>
+                        <li><a wicket:id="create-commercial-area-link">创建商业街/区域</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="agriculutre"><a href="##" wicket:id="company-agri-link">农业信息</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-agri-link">查询农业信息</a></li>
+                        <li><a wicket:id="create-agri-link">创建农业信息</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown" wicket:id="project"><a href="##" wicket:id="company-project-link">项目管理</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="search-project-link">查询项目信息</a></li>
+                        <li><a wicket:id="create-project-link">创建项目信息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="report"><a href="##" wicket:id="company-report-link">报表统计</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="financial-report">百颗星税务报表</a></li>
+                        <li><a wicket:id="overall-report">综合报表</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="information-issue"><a href="##"
+                                                                      wicket:id="company-info-issue-link">信息发布</a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="send-sms-link">短信群发</a></li>
+                        <li><a wicket:id="send-email-link">电子邮件群发</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" wicket:id="system-management"><a href="##" wicket:id="company-system-link">
+                    <wicket:message key="dj.menu.system.management"/>
+                </a>
+                    <ul class="dropdown-menu">
+                        <li><a wicket:id="system-user-link">
+                            <wicket:message key="dj.menu.system.user"/>
+                        </a></li>
+                        <li><a wicket:id="system-role-link">
+                            <wicket:message key="dj.menu.system.role"/>
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="inner">
+        <div class="user-menu">
+            <span class="user-menu-section"><span class="glyphicon glyphicon-info-sign"></span> <wicket:message
+                    key="dj.menu.header.salutation"/><span wicket:id="user-full-name"></span></span>
+            <span class="user-menu-section"><a data-toggle="modal" data-target="#change-pwd-dialog"
+                                               href="#">修改密码</a></span>
+            <span class="user-menu-section last"><a wicket:id="logout-link">
+                <wicket:message key="dj.menu.header.logout"/>
+            </a></span>
+        </div>
+    </div>
+
+</wicket:panel>

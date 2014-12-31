@@ -1,0 +1,16 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">导入企业基本数据</h3>
+        </div>
+        <div class="panel-body">
+            <form wicket:id="import-data-form">
+                <div wicket:id="feedback" class="feedback"/>
+                <input type="file" wicket:id="company-basic-import"/>
+                <button class="btn btn-primary" type="submit" wicket:id="import-company-basic">
+                    <wicket:message key="report.data.import.button"/>
+                </button>
+            </form>
+        </div>
+    </div>
+</wicket:extend>

@@ -1,0 +1,83 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">企业股东资料</h3>
+		</div>
+		<div class="panel-body">
+			<form role="form" wicket:id="add-cs-form" class="form-horizontal">
+				<div class="half field">
+					<label class="control-label" for="fullName">股东名称</label>
+					<div class="input">
+						<input type="text" class="form-control" id="fullName"
+							wicket:id="fullName">
+					</div>
+				</div>
+				<div class="half field">
+					<label class="control-label" for="shareRatio">出资比例</label>
+					<div class="input">
+						<input type="text" class="form-control" id="shareRatio"
+							wicket:id="shareRatio">
+					</div>
+				</div>
+				<div class="half field">
+					<label class="control-label" for="idType">证件类型</label>
+					<div class="input">
+						<input type="text" class="form-control" id="idType"
+							wicket:id="idType">
+					</div>
+				</div>
+				<div class="half field">
+					<label class="control-label" for="idCard">证件号码</label>
+					<div class="input">
+						<input type="text" class="form-control" id="idCard"
+							wicket:id="idCard">
+					</div>
+				</div>
+				<div class="field">
+					<label class="control-label" for="address">地址</label>
+					<div class="input">
+						<input type="text" class="form-control" id="address"
+							wicket:id="address">
+					</div>
+				</div>
+				<div class="half field">
+					<label class="control-label" for="phone">电话号码</label>
+					<div class="input">
+						<input type="text" class="form-control" id="phone"
+							wicket:id="phone">
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<button class="add-button btn btn-primary" wicket:id="submit">保存</button>
+				</div>
+			</form>
+			<table
+				class="data-table table table-hover table-bordered top10 col-sm-12"
+				wicket:id="cs-list-container">
+				<thead>
+					<tr>
+						<th>股东名称</th>
+						<th>出资比例</th>
+						<th>证件号码</th>
+						<th>电话号码</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="cs-list">
+						<td><span wicket:id="fullName"></span></td>
+						<td><span wicket:id="shareRatio"></span></td>
+						<td><span wicket:id="idCard"></span></td>
+						<td><span wicket:id="phone"></span></td>
+						<td><a class="padding5" wicket:id="update">修改</a><a
+							class="padding5" wicket:id="delete">删除</a></td>
+					</tr>
+					<tr wicket:id="empty-cs-list">
+						<td colspan="5">该企业还未添加企业股东资料</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</wicket:panel>

@@ -1,0 +1,98 @@
+<wicket:extend>
+    <div class="home-page">
+        <div class="top-container">    
+            <div class="top">
+                <a wicket:id="big-icon-news"><div class="news"><div class="icon-title"><wicket:message key="fx.header.navi.menu.smart.program.trade"/></div></div></a>
+                <a wicket:id="big-icon-lab"><div class="lab"><div class="icon-title"><wicket:message key="fx.header.navi.menu.lab"/></div></div></a>
+            </div>
+        </div>
+        <div class="bottom-container">
+	        <div class="bottom">
+		        <div class="menu">
+		            <div class="menu-title first selected" data-submenu="gallery-spt"><div class="title-icon-spt"></div><wicket:message key="fx.header.navi.menu.smart.program.trade"/></div>
+		            <div class="menu-title" data-submenu="gallery-edu"><div class="title-icon-edu"></div><wicket:message key="fx.header.navi.menu.education"/></div>
+		            <div class="menu-title" data-submenu="gallery-news"><div class="title-icon-news"></div><wicket:message key="fx.header.navi.menu.news"/></div>
+		            <div class="menu-title" data-submenu="gallery-about-us"><div class="title-icon-about-us"></div><wicket:message key="fx.header.navi.menu.about.us"/></div>
+		            <div class="menu-title last" data-submenu="gallery-qa"><div class="title-icon-qa"></div><wicket:message key="fx.header.navi.menu.qa"/></div>
+		        </div>
+		        <div class="menu-gallery">
+		            <div class="gallery-container">
+		                <div class="gallery-spt submenu-gallery" data-index="0">
+		                    <div class="left-navi-submenu">
+		                        <a wicket:id="tmbox-menu-link"><div class="submenu first selected" data-menu="gallery-spt" data-submenu-image="gallery-fx-tmbox"><span class="text"><wicket:message key="fx.header.navi.menu.sub.spt.fx.tmbox"/></span></div></a>
+		                        <a wicket:id="cta-menu-link"><div class="submenu" data-menu="gallery-spt" data-submenu-image="gallery-future-ea"><span class="text"><wicket:message key="fx.header.navi.menu.sub.spt.future.cta"/></span></div></a>
+		                    </div>
+		                    <div class="gallery">
+		                        <div class="gallery-inner gallery-spt-container">
+		                            <a wicket:id="tmbox-link"><div id="gallery-fx-tmbox" class="gallery-image" data-index="0"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.spt.fx.tmbox"/></div><div class="content"><wicket:message key="fx.home.gallery.spt.fx.tmbox.detail"/></div></div></div></a>
+		                            <a wicket:id="cta-link"><div id="gallery-future-ea" class="gallery-image" data-index="1"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.spt.us.stock.program"/></div><div class="content"><wicket:message key="fx.header.navi.menu.sub.spt.future.cta.detail"/></div></div></div></a>
+		                            <div class="empty"></div>
+		                            <div class="empty"></div>
+		                            <div class="empty"></div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="gallery-edu submenu-gallery" data-index="1">
+		                    <div class="left-navi-submenu">
+		                        <a wicket:id="fmi-menu-link"><div class="submenu first selected" data-menu="gallery-edu" data-submenu-image="gallery-fmi"><span class="text"><wicket:message key="fx.header.navi.menu.sub.edu.finance.market.intro"/></span></div></a>
+		                        <a wicket:id="ea-advanced-menu-link"><div class="submenu" data-menu="gallery-edu" data-submenu-image="gallery-ea-advanced"><span class="text"><wicket:message key="fx.header.navi.menu.sub.edu.ea.advanced"/></span></div></a>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                    </div>
+		                    <div class="gallery">
+		                        <div class="gallery-inner gallery-edu-container">
+		                            <a wicket:id="fmi-link"><div id="gallery-fmi" class="gallery-image" data-index="0"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.edu.finance.market.intro"/></div><div class="content"><wicket:message key="fx.header.navi.menu.sub.edu.finance.market.intro.detail"/></div></div></div></a>
+		                            <a wicket:id="ea-advanced-link"><div id="gallery-ea-advanced" class="gallery-image" data-index="1"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.edu.ea.advanced"/></div><div class="content"><wicket:message key="fx.header.navi.menu.sub.edu.ea.advanced.detail"/></div></div></div></a>
+		                        </div>
+		                    </div>
+		                </div>
+		                <div class="gallery-news submenu-gallery" data-index="2">
+		                    <div class="left-navi-submenu">
+		                    	<a wicket:id="new-product-menu-link"><div class="submenu first selected" data-menu="gallery-news" data-submenu-image="gallery-np"><span class="text"><wicket:message key="fx.header.navi.menu.sub.news.new.product"/></span></div></a>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                    </div>
+		                    <div class="gallery">
+		                    	<div class="gallery-inner gallery-news-container">
+			                    	<a wicket:id="new-product-link"><div id="gallery-np" class="gallery-image" data-index="0"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.news.new.product"/></div><div class="content"><wicket:message key="fx.home.gallery.spt.fx.tmbox.detail"/></div></div></div></a>
+			                    	<div id="gallery-na" class="gallery-image" data-index="1"><div class="gallery-content"><div class="title"><wicket:message key="fx.header.navi.menu.sub.news.new.activity"/></div><div class="content"><wicket:message key="fx.home.gallery.spt.fx.tmbox.detail"/></div></div></div>
+		                    	</div>
+		                    </div>
+		                </div>
+		                <div class="gallery-about-us submenu-gallery" data-index="3">
+		                    <div class="left-navi-submenu">
+		                    	<a wicket:id="contact-us-menu-link"><div class="submenu first selected" data-menu="gallery-about-us" data-submenu-image="gallery-contact-info"><span class="text"><wicket:message key="fx.header.navi.menu.sub.about.us.contact.info"/></span></div></a>
+		                    	<div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                    </div>
+		                    <div class="gallery">
+		                    	<div class="gallery-inner gallery-about-us-container">
+			                    	<a wicket:id="contact-us-link"><div id="gallery-contact-info" class="gallery-image" data-index="0"></div></a>
+		                    	</div>
+		                    </div>
+		                </div>
+		                <div class="gallery-qa submenu-gallery" data-index="4">
+		                    <div class="left-navi-submenu">
+		                    	<div class="submenu first selected" data-menu="gallery-qa" data-submenu-image="gallery-contact-question"><span class="text"><wicket:message key="fx.header.navi.menu.sub.qa.custom.question"/></span></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                        <div class="empty"></div>
+		                    </div>
+		                    <div class="gallery">
+		                    	<div class="gallery-inner gallery-qa-container">
+		                    		<div id="gallery-mission" class="gallery-image" data-index="0"></div>
+		                    	</div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+	        </div>
+        </div>        
+    </div>
+</wicket:extend>

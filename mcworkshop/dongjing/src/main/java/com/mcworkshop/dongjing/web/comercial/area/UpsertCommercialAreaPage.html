@@ -1,0 +1,238 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+<form class="col-sm-12 form-horizontal" role="form" wicket:id="upsert-area-form">
+<div class="field" wicket:id="name-feedback-container">
+    <label class="control-label" for="name">商业街名称/店铺名称<span class="required">*</span></label>
+
+    <div class="input">
+        <input id="name" type="text" class="form-control" wicket:id="name">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="type">商业区类型</label>
+
+    <div class="input">
+        <select class="form-control" id="type" wicket:id="type">
+            <wicket:remove>
+                <option>请选择</option>
+                <option>吊销未注销</option>
+            </wicket:remove>
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="scope">四至范围</label>
+
+    <div class="input">
+        <input id="scope" wicket:id="scope" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="residentialArea">周边居住小区</label>
+
+    <div class="input">
+        <input id="residentialArea" wicket:id="residentialArea" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="residentNumbers">所属小区人口</label>
+
+    <div class="input">
+        <input id="residentNumbers" wicket:id="residentNumbers" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="storePopulation">商铺人口</label>
+
+    <div class="input">
+        <input id="storePopulation" wicket:id="storePopulation" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="ownerEduProvinceAge">经营人员学历/原籍/年龄</label>
+
+    <div class="input">
+        <input id="ownerEduProvinceAge" wicket:id="ownerEduProvinceAge" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="start">起点</label>
+
+    <div class="input">
+        <input id="start" wicket:id="start" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="end">终点</label>
+
+    <div class="input">
+        <input id="end" wicket:id="end" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="length">长度(米)</label>
+
+    <div class="input">
+        <input id="length" wicket:id="length" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">建筑面积</div>
+<div class="half field">
+    <label class="control-label" for="totalArea">总面积</label>
+
+    <div class="input">
+        <input id="totalArea" wicket:id="totalArea" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="ownArea">自用面积</label>
+
+    <div class="input">
+        <input id="ownArea" wicket:id="ownArea" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="rentArea">出租面积</label>
+
+    <div class="input">
+        <input id="rentArea" wicket:id="rentArea" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="spareArea">空置面积</label>
+
+    <div class="input">
+        <input id="spareArea" wicket:id="spareArea" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="constructDescription">建设概况</label>
+
+    <div class="input">
+        <input id="constructDescription" wicket:id="constructDescription" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">零售设施</div>
+<div class="half field">
+    <label class="control-label" for="retailNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="retailNumber" wicket:id="retailNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="retailMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="retailMainBrands" wicket:id="retailMainBrands" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">餐饮设施</div>
+<div class="half field">
+    <label class="control-label" for="caterNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="caterNumber" wicket:id="caterNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="caterMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="caterMainBrands" wicket:id="caterMainBrands" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">休闲娱乐设施</div>
+<div class="half field">
+    <label class="control-label" for="entertainNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="entertainNumber" wicket:id="entertainNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="entertainMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="entertainMainBrands" wicket:id="entertainMainBrands" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">生活服务设施</div>
+<div class="half field">
+    <label class="control-label" for="serviceNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="serviceNumber" wicket:id="serviceNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="serviceMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="serviceMainBrands" wicket:id="serviceMainBrands" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">农贸市场</div>
+<div class="half field">
+    <label class="control-label" for="farmNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="farmNumber" wicket:id="farmNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="farmMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="farmMainBrands" wicket:id="farmMainBrands" type="text" class="form-control">
+    </div>
+</div>
+<div class="col-sm-12 section-title">其他商业设施</div>
+<div class="half field">
+    <label class="control-label" for="otherNumber">数量(家)</label>
+
+    <div class="input">
+        <input id="otherNumber" wicket:id="otherNumber" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="otherMainBrands">主要品牌</label>
+
+    <div class="input">
+        <input id="otherMainBrands" wicket:id="otherMainBrands" type="text" class="form-control">
+    </div>
+</div>
+
+<div class="half field">
+    <label class="control-label" for="annualIncoming">年营业收入(万元)</label>
+
+    <div class="input">
+        <input id="annualIncoming" wicket:id="annualIncoming" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="annualTax">年税收(万元)</label>
+
+    <div class="input">
+        <input id="annualTax" wicket:id="annualTax" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="comment">备注(有无证)</label>
+
+    <div class="input">
+        <input id="comment" wicket:id="comment" type="text" class="form-control">
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="totalCommercialEquipment">商业设施合计</label>
+
+    <div class="input">
+        <input id="totalCommercialEquipment" wicket:id="totalCommercialEquipment" type="text" class="form-control">
+    </div>
+</div>
+<div class="button-group col-sm-12">
+    <button class="btn btn-primary" wicket:id="submit-link">保存</button>
+    <button class="btn btn-default" wicket:id="cancel-link">取消</button>
+</div>
+</form>
+</wicket:extend>

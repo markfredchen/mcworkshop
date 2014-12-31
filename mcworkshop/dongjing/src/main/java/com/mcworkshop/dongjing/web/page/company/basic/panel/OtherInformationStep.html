@@ -1,0 +1,108 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form wicket:id="company-other-information-form" role="form" class="form-horizontal">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">法定代表人资料</h3>
+            </div>
+            <div class="panel-body">
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.fullName">姓名</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.fullName"
+                               wicket:id="ownerContact.fullName">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.gender">性别</label>
+
+                    <div class="input">
+                        <select class="form-control" id="ownerContact.gender" wicket:id="ownerContact.gender">
+                            <wicket:remove>
+                                <option>请选择</option>
+                                <option>男</option>
+                                <option>女</option>
+                            </wicket:remove>
+                        </select>
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.idCard">身份证号</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.idCard"
+                               wicket:id="ownerContact.idCard">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="control-label" for="ownerContact.address">家庭地址</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.address"
+                               wicket:id="ownerContact.address">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.cellPhone">手机号码</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.cellPhone"
+                               wicket:id="ownerContact.cellPhone">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.phone">电话号码</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.phone" wicket:id="ownerContact.phone">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.fax">传真号码</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.fax" wicket:id="ownerContact.fax">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="ownerContact.emailAddress">电子邮箱</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="ownerContact.emailAddress"
+                               wicket:id="ownerContact.emailAddress">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">联系资料</h3>
+            </div>
+            <div class="panel-body">
+                <div class="half field">
+                    <label class="control-label" for="register-assets">联系人姓名</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="register-assets" wicket:id="otherContact.fullName">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="postalCode">职务</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="postalCode" wicket:id="otherContact.postalCode">
+                    </div>
+                </div>
+                <div class="half field">
+                    <label class="control-label" for="phone">电话号码</label>
+
+                    <div class="input">
+                        <input type="text" class="form-control" id="phone" wicket:id="otherContact.phone">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div wicket:id="ns-form"></div>
+    <div wicket:id="cs-form"></div>
+</wicket:panel>

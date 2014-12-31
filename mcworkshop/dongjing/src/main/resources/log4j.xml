@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	<!--
+  Copyright 2009, OnVantage Inc. All rights reserved.
+  $Id: log4j.xml 3792 2011-08-04 07:26:54Z tristan.xu $
+-->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	<appender name="FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+		<param name="File" value="${log.dir}/dongjing.log" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd-HH" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c{1}] [%t] [%X{securityOID}] %m%n" />
+		</layout>
+	</appender>
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+        <errorHandler class="org.apache.log4j.helpers.OnlyOnceErrorHandler" />
+        <param name="Target" value="System.out" />
+        <param name="Encoding" value="UTF-8" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%c{1}] [%t] [%X{starciteToken}] [%X{securityOID}] %m%n" />
+        </layout>
+    </appender>
+	<logger name="org.apache.wicket">
+        <level value="ERROR" />
+    </logger>
+    <logger name="java.sql">
+        <level value="DEBUG" />
+    </logger>
+	<root>
+		<level value="${log.level}" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+</log4j:configuration>

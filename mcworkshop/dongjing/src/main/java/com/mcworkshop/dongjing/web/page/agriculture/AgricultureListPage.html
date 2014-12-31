@@ -1,0 +1,33 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="collapse navbar-collapse">
+        <form class="navbar-form navbar-left" role="search" wicket:id="search-company-form">
+            <div class="form-group">
+                <label for="companyName">农场主姓名</label>
+                <input id="companyName" type="text" class="form-control" wicket:id="companyName">
+            </div>
+            <button type="submit" class="btn btn-primary" wicket:id="search-company">查询</button>
+        </form>
+    </div>
+    <div wicket:id="paging-container">
+        <table class="data-table table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>农场主姓名</th>
+                <th>承包面积</th>
+                <th>联系方式</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="company-list" class="data-row">
+                <td><span wicket:id="name"></span></td>
+                <td><span wicket:id="area"></span></td>
+                <td><span wicket:id="contactNumber"></span></td>
+            </tr>
+            <tr wicket:id="empty-list">
+                <td colspan="3">未查询到所需企业。请更改查询条件，继续搜索</td>
+            </tr>
+            </tbody>
+        </table>
+        <div wicket:id="navigator"></div>
+    </div>
+</wicket:extend>

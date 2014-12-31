@@ -1,0 +1,143 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+
+	<div class="col-sm-12 section-title">厂房面积</div>
+	<div wicket:id="isRent" class="col-sm-12 is-rent-radio">
+		<div class="radio pull-left">
+			<label> <input type="radio" name="optionsRadios"
+				id="optionsRadios2" value="option1" wicket:id="notRent">自用
+			</label>
+		</div>
+		<div class="radio pull-left">
+			<label> <input type="radio" name="optionsRadios"
+				id="optionsRadios1" value="option2" wicket:id="isRent">租用
+			</label>
+		</div>
+	</div>
+	<div wicket:id="notRentContainer">
+		<div class="half field area">
+			<label class="control-label" for="factoryArea">占地面积</label>
+			<div class="input">
+				<input type="text" class="form-control" id="factoryArea"
+					wicket:id="factoryArea"/><span class="unit">平方米</span>
+			</div>
+		</div>
+		<div class="half field area">
+			<label class="control-label" for="factoryActualArea">建筑面积</label>
+			<div class="input">
+				<input type="text" class="form-control" id="factoryActualArea"
+					wicket:id="factoryActualArea"/><span class="unit">平方米</span>
+			</div>
+		</div>
+		<div class="half field area">
+			<label class="control-label" for="factoryUsageArea">自用面积</label>
+			<div class="input">
+				<input type="text" class="form-control" id="factoryUsageArea"
+					wicket:id="factoryUsageArea"/><span class="unit">平方米</span>
+			</div>
+		</div>
+		<div class="half field area">
+			<label class="control-label" for="factoryRentArea">出租面积</label>
+			<div class="input">
+				<input type="text" class="form-control" id="factoryRentArea"
+					wicket:id="factoryRentArea"/><span class="unit">平方米</span>
+			</div>
+		</div>
+		<div class="half field area">
+			<label class="control-label" for="factoryControlArea">空置面积</label>
+			<div class="input">
+				<input type="text" class="form-control" id="factoryControlArea"
+					wicket:id="factoryControlArea"/><span class="unit">平方米</span>
+			</div>
+		</div>
+		<table
+			class="data-table table table-hover table-bordered top10 col-sm-12"
+			wicket:id="rentee-list-container">
+			<thead>
+				<tr>
+					<th>承租方</th>
+					<th>租用面积</th>
+					<th>地址</th>
+					<th>租赁年限</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="rentee-list">
+					<td><span wicket:id="name"></span></td>
+					<td><span wicket:id="area"></span></td>
+					<td><span wicket:id="address"></span></td>
+					<td><span wicket:id="startDate"></span></td>
+				</tr>
+				<tr wicket:id="empty-rentee-list">
+					<td colspan="4">该企业还未添加企业股东资料</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div wicket:id="isRentContainer">
+		<form role="form" wicket:id="add-rentor-form" class="form-horizontal">
+			<div class="half field">
+				<label class="control-label" for="rentor">出租方</label>
+				<div class="input">
+					<input type="text" class="form-control" id="rentor"
+						wicket:id="rentor">
+				</div>
+			</div>
+			<div class="half field area">
+				<label class="control-label" for="area">租用面积</label>
+				<div class="input">
+					<input type="text" class="form-control" id="area"
+						wicket:id="area"/><span class="unit">平方米</span>
+				</div>
+			</div>
+			<div class="field">
+				<label class="control-label" for="address">地址</label>
+				<div class="input">
+					<input type="text" class="form-control" id="address"
+						wicket:id="address">
+				</div>
+			</div>
+			<div class="field datepicker">
+				<label class="control-label" for="startDate">租赁年限</label>
+				<div class="input row">
+					<div class="col-sm-4">
+						<input type="text" class="form-control" value=""
+							id="startDate" wicket:id="startDate">
+					</div>
+					<div class="col-sm-1">至</div>
+					<div class="col-sm-7">
+						<input type="text" class="form-control" value=""
+							id="endDate" wicket:id="endDate">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<button class="add-button btn btn-primary" wicket:id="submit">保存</button>
+			</div>
+		</form>
+		<table
+			class="data-table table table-hover table-bordered top10 col-sm-12"
+			wicket:id="rentor-list-container">
+			<thead>
+				<tr>
+					<th>出租方</th>
+					<th>租用面积</th>
+					<th>租赁年限</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="rentor-list">
+					<td><span wicket:id="rentor"></span></td>
+					<td><span wicket:id="area"></span></td>
+					<td><span wicket:id="startDate"></span></td>
+					<td><a class="padding5" wicket:id="update">修改</a><a
+						class="padding5" wicket:id="delete">删除</a></td>
+				</tr>
+				<tr wicket:id="empty-rentor-list">
+					<td colspan="4">该企业还未添加自然人股东资料</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+</wicket:panel>

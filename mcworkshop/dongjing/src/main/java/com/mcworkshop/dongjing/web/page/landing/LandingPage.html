@@ -1,0 +1,212 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+    <div class="row">
+        <div class="col-sm-12 company module" wicket:id="company-basic">
+            <div class="col-sm-offset-1 col-sm-3" wicket:id="cm_view">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="search-company-basic-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-search.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="search-company-basic-link">查询企业基础信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="cm_change">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="create-company-basic-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-create.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="create-company-basic-link">创建企业基础信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="cm_import">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="import-company-basic-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-import.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="import-company-basic-link">导入企业基础信息</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 tax module" wicket:id="company-tax">
+            <div class="col-sm-3" wicket:id="tax_view">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="search-company-tax-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-search.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="search-company-tax-link">查询企业税务信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="tax_import">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="import-company-tax-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-import.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="import-company-tax-link">导入企业税务信息</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="company-security">
+            <div class="col-sm-3" wicket:id="sm_view">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="search-company-security-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-search.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="search-company-security-link">查询企业安检信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="sm_change">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="create-company-security-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-create.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="create-company-security-link">创建企业安检信息</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="report">
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="financial-report-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-export.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="financial-report">百颗星税务报表</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="overall-report-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-export.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="overall-report">综合报表</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 system module" wicket:id="system-management">
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="system-user-img" class="col-sm-12 nopadding"> <img src="/dongjing/static/dongjing/images/icons/icon-user.png"
+                        class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="system-user"><wicket:message key="dj.landing.system.user" /></a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="system-role-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-permission.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="system-role"><wicket:message key="dj.landing.system.role" /></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="information-issue">
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="send-sms-link-img" class="col-sm-12 nopadding"> <img src="/dongjing/static/dongjing/images/icons/icon-sms.png"
+                        class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="send-sms-link">短信群发</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="send-email-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-email.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="send-email-link">电子邮件群发</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="project-management">
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="project-info-img" class="col-sm-12 nopadding"> <img src="/dongjing/static/dongjing/images/icons/icon-search.png"
+                        class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="project-info">项目信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="project-status-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-create.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="project-status">创建新项目</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="agriculture">
+            <div class="col-sm-3" wicket:id="agri-view">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="search-agri-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-search.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="search-agri-link">查询农业信息</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="agri-change">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="create-agri-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-create.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="create-agri-link">创建农业信息</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 security module" wicket:id="area">
+            <div class="col-sm-3" wicket:id="area-view">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="search-area-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-search.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="search-area-link">查询商业街/区域</a>
+                </div>
+            </div>
+            <div class="col-sm-3" wicket:id="area-change">
+                <div class="col-sm-12 module-icon">
+                    <a wicket:id="create-area-link-img" class="col-sm-12 nopadding"> <img
+                        src="/dongjing/static/dongjing/images/icons/icon-create.png" class="col-sm-12 nopadding" />
+                    </a>
+                </div>
+                <div class="col-sm-12 module-links">
+                    <a wicket:id="create-area-link">创建商业街/区域</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>

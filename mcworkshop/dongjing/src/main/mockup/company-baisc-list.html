@@ -1,0 +1,143 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title wicket:id="title">首页</title>
+<link rel="stylesheet" type="text/css" href="../../../../common-resources/src/main/webapp/static/common/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../../../../common-resources/src/main/webapp/static/common/css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" type="text/css" href="../webapp/static/dongjing/css/dongjing.css" />
+<script src="../../../../common-resources/src/main/webapp/static/common/js/jquery/jquery-1.10.2.js"></script>
+<script src="../../../../common-resources/src/main/webapp/static/common/js/bootstrap.js"></script>
+<script src="../../../../common-resources/src/main/webapp/static/common/js/bootstrap-datetimepicker.js"></script>
+<style type="text/css">
+.header .logo {
+    background: url("../webapp/static/dongjing/images/logo.png") no-repeat
+        scroll;
+}
+
+body {
+    background:
+        url("../webapp/static/dongjing/images/background_bluewaves.jpg")
+        repeat scroll 50% 0/100% auto #2A97D0;
+}
+
+#myTab.nav {
+    margin-left: 30px;
+    border-bottom: 0px;
+}
+
+.create-company-basic .main #myTab.nav.nav-tabs li a {
+    background-color: #EEEEEE;
+    border-bottom-width: 0px;
+}
+
+.create-company-basic .main #myTab.nav.nav-tabs li.active a {
+    background-color: #FFFFFF;
+    border-bottom-width: 0px;
+}
+
+.company-basic-list .main .right-content {
+    
+}
+
+.create-company-basic .main .left-content {
+    margin-top: 60px;
+}
+</style>
+<script type="text/javascript">
+    function next(step) {
+        $("#" + step).tab("show");
+    };
+    $(document).ready(function() {
+        $(".materialDate").datetimepicker({
+            format: DATE_PATTERN,
+            minView: 2,
+            autoclose: true,
+            initialDate: new Date(),
+            pickerPosition: 'top-right'
+        });
+    });
+</script>
+</head>
+<body class="company-basic-list">
+    <div class="page">
+        <div wicket:id="header" class="header">
+            <wicket:panel>
+                <div class="header">
+                    <div class="inner top">
+                        <div class="logo"></div>
+                    </div>
+                    <div class="outter">
+                        <div class="inner bottom">
+                            <wicket:child>
+                                <wicket:extend>
+                                    <ul class="nav nav-pills">
+                                        <li class="dropdown"><a href="##">企业管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">企业基础信息</a></li>
+                                                <li><a href="##">企业安检信息</a></li>
+                                            </ul></li>
+                                        <li class="dropdown"><a href="##">税收管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">企业税收管理</a></li>
+                                            </ul></li>
+                                        <li class="dropdown"><a href="##">系统管理</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="##">用户管理</a></li>
+                                                <li><a href="##">用户权限管理</a></li>
+                                            </ul></li>
+                                    </ul>
+                                </wicket:extend>
+                            </wicket:child>
+                        </div>
+                    </div>
+                </div>
+            </wicket:panel>
+        </div>
+        <div class="main">
+            <wicket:child>
+                <wicket:extend>
+                    <div class="inner">
+                        <div class="left-content content-container col-sm-2">
+                            <div class="left-navi" wicket:id="left-navi">
+                                <wicket:panel xmlns:wicket="http://wicket.apache.org">
+                                    <ul>
+                                        <a href="#">用户管理</a>
+                                        <li>用户管理</li>
+                                    </ul>
+                                </wicket:panel>
+                            </div>
+                        </div>
+                        <div class="right-content content-container col-sm-10">
+                            <wicket:child>
+                                <wicket:extend>
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <form class="navbar-form navbar-left" role="search">
+                                        <div class="form-group">
+                                          <label for="companyName">企业名称</label>
+                                          <input id="companyName" type="text" class="form-control" placeholder="Search">
+                                          <label for="companyName">企业编号</label>
+                                          <input id="companyName" type="text" class="form-control" placeholder="Search">
+                                          <label for="companyName">法人代码</label>
+                                          <input id="companyName" type="text" class="form-control" placeholder="Search">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                      </form>
+                                    </div>
+                                </wicket:extend>
+                            </wicket:child>
+                        </div>
+                    </div>
+                </wicket:extend>
+            </wicket:child>
+        </div>
+        <div></div>
+        <div wicket:id="footer" class="footer">
+            <wicket:panel>
+                <div class="inner">Powered by Wutai</div>
+            </wicket:panel>
+        </div>
+    </div>
+</body>
+</html>

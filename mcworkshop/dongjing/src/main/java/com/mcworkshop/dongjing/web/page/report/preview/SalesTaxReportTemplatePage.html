@@ -1,0 +1,60 @@
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="report-title">松江区洞泾私营经济小区企业经营情况统计表 {{year}}年{{month}}月</h4>
+    </div>
+    <div class="modal-body">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#industry" data-toggle="tab">实体型</a></li>
+            <li><a href="#commercial" data-toggle="tab">商贸型</a></li>
+            <li><a href="#other" data-toggle="tab">AB型</a></li>
+            <li><a href="#tax-categroized" data-toggle="tab">税收分类</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="industry">
+                <div class="sale-tax-preview-table">
+                    <table class="data-table table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="companyID">卡号</th>
+                                <th class="taxer">纳税人名称</th>
+                                <th class="createdDate">登记日期</th>
+                                <th class="totalTax">税款合计</th>
+                                <th class="vat">增值税</th>
+                                <th class="operateTax">营业税</th>
+                                <th class="constructTax">城建税</th>
+                                <th class="comanyIncomeTax">企业所得税</th>
+                                <th class="personalIncomeTax">个人所得税</th>
+                                <th class="constructTax">其它税</th>
+                                <th class="sales">销售额</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each sheet1.data}}
+                            <tr>
+                                <td class="text companyID">{{companyID}}</td>
+                                <td class="text taxer">{{taxer}}</td>
+                                <td class="date createdDate">{{createdDate}}</td>
+                                <td class="number totalTax">{{totalTax}}</td>
+                                <td class="number vat">{{vat}}</td>
+                                <td class="number operateTax">{{operateTax}}</td>
+                                <td class="number constructTax">{{constructTax}}</td>
+                                <td class="number comanyIncomeTax">{{comanyIncomeTax}}</td>
+                                <td class="number personalIncomeTax">{{personalIncomeTax}}</td>
+                                <td class="number otherTax">{{otherTax}}</td>
+                                <td class="number sales">{{sales}}</td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane" id="commercial">building</div>
+            <div class="tab-pane" id="other">building</div>
+            <div class="tab-pane" id="tax-categroized">building</div>
+        </div>
+    </div>
+</div>

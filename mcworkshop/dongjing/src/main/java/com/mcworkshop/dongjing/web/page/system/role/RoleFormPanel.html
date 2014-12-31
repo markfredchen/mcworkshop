@@ -1,0 +1,71 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <form wicket:id="role-form" role="form" class="form-horizontal col-sm-10">
+        <div wicket:id="feedback-panel"></div>
+        <div class="form-group name col-sm-12" wicket:id="name-feedback-border">
+            <label class="control-label col-sm-3" for="name">
+                <wicket:message key="role.form.name"/>
+            </label>
+
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="name" wicket:id="name" id="name" maxlength="50"/>
+            </div>
+        </div>
+        <hr/>
+        <div class="col-sm-12">
+            <input type="checkbox" wicket:id="isAdmin">
+            <wicket:message key="right.SYSTEM"/>
+            </input>
+        </div>
+        <div wicket:id="rights-choices" class="col-sm-12">
+            <div wicket:id="company-module-group">
+                <div class="section-title col-sm-12">企业基础信息模块</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="cm-change">创建修改企业基础信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="cm-view"/>查看企业基础信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="cm-import">导入企业基础信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="cm-export">导出企业基础信息</div>
+                <label class="control-label col-sm-3" for="name">管理区块</label>
+                <select class="col-sm-8 form-control" id="affiliate-block" wicket:id="affiliate-block">
+                    <option>请选择</option>
+                    <option>工业</option>
+                    <option>商贸</option>
+                    <option>服务</option>
+                    <option>建筑</option>
+                    <option>房产</option>
+                    <option>其它</option>
+                </select>
+
+                <div class="section-title col-sm-12 top10">企业税收信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="tax-change">创建修改企业税收信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="tax-view"/>查看企业税收信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="tax-import">导入企业税收信息</div>
+                <div class="section-title col-sm-12 top10">企业安检信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="security-change">创建修改企业安检信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="security-view"/>查看企业安检信息</div>
+                <div class="section-title col-sm-12 top10">商业管理</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="ca-change">创建修改商业街/区块</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="ca-view"/>查看商业街/区块</div>
+                <div class="section-title col-sm-12 top10">农业信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="agri-change">创建修改农业信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="agri-view"/>查看农业信息</div>
+                <div class="section-title col-sm-12 top10">项目信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="project-change">创建修改项目信息</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="project-view"/>查看项目信息</div>
+                <div class="section-title col-sm-12 top10">报表统计</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="report-bkx">百颗星税务报表</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="report-overall"/>综合报表</div>
+                <div class="section-title col-sm-12 top10">信息发布</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="info-sms">短信群发</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="info-email"/>邮件群发</div>
+                <div class="section-title col-sm-12 top10"></div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-jfb">经发办</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-czs">财政所</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-ajs">安监所</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-bkx">百颗星</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-jgs">经管所</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-myc">贸易城</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-nfgs">农副公司</div>
+                <div class="col-sm-12"><input type="checkbox" wicket:id="menu-zhdw">经发办</div>
+            </div>
+        </div>
+    </form>
+</wicket:panel>

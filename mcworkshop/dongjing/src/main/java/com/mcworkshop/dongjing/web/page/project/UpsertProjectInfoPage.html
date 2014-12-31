@@ -1,0 +1,345 @@
+<wicket:extend xmlns:wicket="http://wicket.apache.org">
+<form class="col-sm-12 form-horizontal" wicket:id="upsert-project" role="form">
+<div class="half field" wicket:id="status-feedback">
+    <label class="control-label" for="status">项目状态<span class="required">*</span></label>
+
+    <div class="input">
+        <select class="form-control" id="status" wicket:id="status">
+        </select>
+    </div>
+</div>
+<div class="half field">
+    <label class="control-label" for="isCommercial">行业类型</label>
+
+    <div class="input">
+        <select class="form-control" id="isCommercial" wicket:id="isCommercial">
+        </select>
+    </div>
+</div>
+<div class="field" wicket:id="name-feedback">
+    <label class="control-label" for="name">项目名称<span class="required">*</span></label>
+
+    <div class="input">
+        <input id="name" type="text" class="form-control" wicket:id="name">
+    </div>
+</div>
+<form class="col-sm-12 form-horizontal" wicket:id="add-company-form" role="form">
+    <div class="half field">
+        <label class="control-label" for="relatedCompany">相关企业</label>
+
+        <div class="input">
+            <input id="relatedCompany" type="text" class="form-control" wicket:id="relatedCompany">
+        </div>
+    </div>
+    <button class="btn btn-primary" wicket:id="add-company-link" style="margin-left: 10px;">添加</button>
+</form>
+<div wicket:id="related-company-list" class="related-company-list col-sm-12">
+    <div wicket:id="relatedCompanies" class="col-sm-4">
+        <div wicket:id="company-name" class="pull-left"></div>
+        <a wicket:id="delete-icon" class="delete-icon"><img src="/dongjing/static/dongjing/images/close-icon.png"/></a>
+    </div>
+
+</div>
+<div wicket:id="after-auditted">
+    <div class="half field">
+        <label class="control-label" for="product">主要产品</label>
+
+        <div class="input">
+            <input id="product" type="text" class="form-control" wicket:id="product">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="constructType">新建/改扩建</label>
+
+        <div class="input">
+            <select class="form-control" id="constructType" wicket:id="constructType">
+            </select>
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="area">面积(亩)</label>
+
+        <div class="input">
+            <input id="area" type="text" class="form-control" wicket:id="area">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="actualArea">本次开工/竣工/投产面积(亩)</label>
+
+        <div class="input">
+            <input id="actualArea" type="text" class="form-control" wicket:id="actualArea">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="constructionArea">建筑面积(平方米)</label>
+
+        <div class="input">
+            <input id="constructionArea" type="text" class="form-control" wicket:id="constructionArea">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="totalInvestment">计划总投资(万元)</label>
+
+        <div class="input">
+            <input id="totalInvestment" type="text" class="form-control" wicket:id="totalInvestment">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="fixInvestment">固定资产投资(万元)</label>
+
+        <div class="input">
+            <input id="fixInvestment" type="text" class="form-control" wicket:id="fixInvestment">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="sales">预计年销售收入(万元)</label>
+
+        <div class="input">
+            <input id="sales" type="text" class="form-control" wicket:id="sales">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="profit">预计利润(万元)</label>
+
+        <div class="input">
+            <input id="profit" type="text" class="form-control" wicket:id="profit">
+        </div>
+    </div>
+
+    <div class="half field">
+        <label class="control-label" for="tax">预计税收(万元)</label>
+
+        <div class="input">
+            <input id="tax" type="text" class="form-control" wicket:id="tax">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="numberOfBuilding">栋数及层数</label>
+
+        <div class="input">
+            <input id="numberOfBuilding" type="text" class="form-control" wicket:id="numberOfBuilding">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">项目进度</h3>
+        </div>
+        <div class="panel-body">
+            <div class="half field datepicker">
+                <label class="control-label" for="startDate">开工时间</label>
+
+                <div class="input">
+                    <input id="startDate" type="text" class="form-control" wicket:id="startDate">
+                </div>
+            </div>
+            <div class="half field datepicker">
+                <label class="control-label" for="endDate">竣工时间</label>
+
+                <div class="input">
+                    <input id="endDate" type="text" class="form-control" wicket:id="endDate">
+                </div>
+            </div>
+            <div class="half field datepicker">
+                <label class="control-label" for="produceDate">投产时间</label>
+
+                <div class="input">
+                    <input id="productDate" type="text" class="form-control" wicket:id="produceDate">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="progress">具体在办手续</label>
+
+                <div class="input">
+                    <input id="progress" type="text" class="form-control" wicket:id="progress">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="auditPassDate">碰到困难</label>
+
+                <div class="input">
+                    <input id="problem" type="text" class="form-control" wicket:id="problem">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="comment">备注</label>
+
+        <div class="input">
+            <input id="comment" type="text" class="form-control" wicket:id="comment">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">联系人信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="half field">
+                <label class="control-label" for="contactor">联系人</label>
+
+                <div class="input">
+                    <input id="contactor" type="text" class="form-control" wicket:id="contactor">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="phone">联系电话</label>
+
+                <div class="input">
+                    <input id="phone" type="text" class="form-control" wicket:id="phone">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="email">电子邮件</label>
+
+                <div class="input">
+                    <input id="email" type="text" class="form-control" wicket:id="email">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="fax">传真</label>
+
+                <div class="input">
+                    <input id="fax" type="text" class="form-control" wicket:id="fax">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div wicket:id="auditted">
+    <div class="half field">
+        <label class="control-label" for="product">主要产品</label>
+
+        <div class="input">
+            <input id="product" type="text" class="form-control" wicket:id="product">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="area">面积(亩)</label>
+
+        <div class="input">
+            <input id="area" type="text" class="form-control" wicket:id="area">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="constructionArea">建筑面积(平方米)</label>
+
+        <div class="input">
+            <input id="constructionArea" type="text" class="form-control" wicket:id="constructionArea">
+        </div>
+    </div>
+
+    <div class="half field datepicker">
+        <label class="control-label" for="auditPassDate">评估通过时间(年份)</label>
+
+        <div class="input">
+            <input id="auditPassDate" type="text" class="form-control" wicket:id="auditPassDate">
+        </div>
+    </div>
+    <div class="half field">
+        <label class="control-label" for="comment">备注</label>
+
+        <div class="input">
+            <input id="comment" type="text" class="form-control" wicket:id="comment">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">总投资</h3>
+        </div>
+        <div class="panel-body">
+            <div class="half field">
+                <label class="control-label" for="domesticInvestment">内资(万元)</label>
+
+                <div class="input">
+                    <input id="domesticInvestment" type="text" class="form-control" wicket:id="domesticInvestment">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="foreignInvestment">外资(万美元)</label>
+
+                <div class="input">
+                    <input id="foreignInvestment" type="text" class="form-control" wicket:id="foreignInvestment">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="fixInvestment">其中固定资产投资(万元)</label>
+
+                <div class="input">
+                    <input id="fixInvestment" type="text" class="form-control" wicket:id="fixInvestment">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">预计产出效益(万元)</h3>
+        </div>
+        <div class="panel-body">
+            <div class="half field">
+                <label class="control-label" for="sales">销售收入</label>
+
+                <div class="input">
+                    <input id="sales" type="text" class="form-control" wicket:id="sales">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="profit">利润</label>
+
+                <div class="input">
+                    <input id="profit" type="text" class="form-control" wicket:id="profit">
+                </div>
+            </div>
+
+            <div class="half field">
+                <label class="control-label" for="tax">上缴税收</label>
+
+                <div class="input">
+                    <input id="tax" type="text" class="form-control" wicket:id="tax">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">联系人信息</h3>
+        </div>
+        <div class="panel-body">
+            <div class="half field">
+                <label class="control-label" for="contactor">联系人</label>
+
+                <div class="input">
+                    <input id="contactor" type="text" class="form-control" wicket:id="contactor">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="phone">联系电话</label>
+
+                <div class="input">
+                    <input id="phone" type="text" class="form-control" wicket:id="phone">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="email">电子邮件</label>
+
+                <div class="input">
+                    <input id="email" type="text" class="form-control" wicket:id="email">
+                </div>
+            </div>
+            <div class="half field">
+                <label class="control-label" for="fax">传真</label>
+
+                <div class="input">
+                    <input id="fax" type="text" class="form-control" wicket:id="fax">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</form>
+<div class="wizard-button-group">
+    <button type="button" wicket:id="cancel-link" class="btn btn-default">取消</button>
+    <button type="button" wicket:id="submit-link" class="btn btn-success">保存</button>
+</div>
+</wicket:extend>
