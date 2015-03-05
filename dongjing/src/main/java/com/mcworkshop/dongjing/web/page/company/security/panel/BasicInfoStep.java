@@ -42,42 +42,23 @@ public class BasicInfoStep extends WizardContentPanel<Security> {
 		datePickerOption.setMaxView(View.DECADE);
 		datePickerOption.setLanguage("zh-CN");
 		form = new Form<Security>("basic-info");
-		form.add(new FormFieldValidationContainer("name-feedback-container",
+        form.add(new FormFieldValidationContainer("name-feedback-container",
 				new RequiredTextField<String>("name")));
-		form.add(new DropDownChoice<EconomyEntity>("economyEntity",
-				SystemEnumeration.getInstance().getKeysByType(
-						EconomyEntity.class),
-				new SystemEnumerationDropdownChoiceRender()));
-		form.add(new TextField<String>("major"));
-		form.add(new TextField<String>("reportDepartment"));
-		form.add(new DateTextField("safeCertificateValidDate", DATE_PATTERN)
-				.add(new DatetimePickerPlugin(datePickerOption)));
-		form.add(new DropDownChoice<Boolean>("isContractedCompany", Arrays
-				.asList(Boolean.TRUE, Boolean.FALSE),
-				new YesOrNoDrowdownChoiceRender()));
-		form.add(new TextField<String>("safeLevel"));
-		form.add(new DateTextField("assetDate", DATE_PATTERN)
-				.add(new DatetimePickerPlugin(datePickerOption)));
-		form.add(new TextField<String>("safeManageOrg"));
-		form.add(new TextField<Integer>("safeMemberFullTime"));
-		form.add(new TextField<Integer>("safeMemberParttime"));
-		form.add(new TextField<Integer>("fireControlMembers"));
-		form.add(new DateTextField("fireControlCertificateDate", DATE_PATTERN)
-				.add(new DatetimePickerPlugin(datePickerOption)));
-		form.add(new DropDownChoice<Boolean>("isEnvAssessPass", Arrays.asList(
-				Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender()));
-		form.add(new TextField<String>("dirtyWaterMgn"));
-		form.add(new DropDownChoice<Boolean>("isPassStandard", Arrays.asList(
-				Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender()));
-		form.add(new TextField<String>("safeNo"));
-		form.add(new DropDownChoice<Boolean>("isDCProduceOrg", Arrays.asList(
-				Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender()));
-		form.add(new DropDownChoice<DangerousChemistryType>("dcType",
-				SystemEnumeration.getInstance().getKeysByType(
-						DangerousChemistryType.class),
-				new SystemEnumerationDropdownChoiceRender()));
-		form.add(new TextField<String>("dcCategroy"));
-		form.add(new TextField<Integer>("dcNumber"));
+        form.add(new DropDownChoice<Boolean>("isEmergencyPassStandard", Arrays.asList(
+                Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isEmergencyPassStandard")));
+        form.add(new DropDownChoice<Boolean>("isSecurityStandardPassed", Arrays.asList(
+                Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isSecurityStandardPassed")));
+        form.add(new TextField<String>("fireController"));
+        form.add(new DropDownChoice<Boolean>("isEnvAssessPass", Arrays.asList(
+                Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isEnvAssessPass")));
+        form.add(new DropDownChoice<Boolean>("isDirtyWaterMgn", Arrays.asList(
+                Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isDirtyWaterMgn")));
+        form.add(new DropDownChoice<Boolean>("isDCProduceOrg", Arrays.asList(
+                Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender()));
+        form.add(new DropDownChoice<DangerousChemistryType>("dcType",
+                SystemEnumeration.getInstance().getKeysByType(
+                        DangerousChemistryType.class),
+                new SystemEnumerationDropdownChoiceRender()));
 		add(form);
 	}
 

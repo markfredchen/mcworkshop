@@ -65,10 +65,9 @@ public interface DJService {
 
 	void deleteCompanyMember(Long memberID);
 
-	public List<Security> searchSecurityInfo(String name,
-			EconomyEntity economyEntity, long fetch, long start);
+	public List<Security> searchSecurityInfo(String name, long fetch, long start);
 
-	int getSecurityInfoTotalCount(String name, EconomyEntity economyEntity);
+	int getSecurityInfoTotalCount(String name);
 
 	public List<AgricultureInfo> searchAgricultureInfo(String name, long fetch,
 			long start);

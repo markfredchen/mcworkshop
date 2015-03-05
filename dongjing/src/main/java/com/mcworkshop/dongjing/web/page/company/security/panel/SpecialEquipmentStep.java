@@ -29,8 +29,6 @@ public class SpecialEquipmentStep extends WizardContentPanel<Security> {
 		form.add(new TextField<Integer>("indoorFacility"));
 		form.add(new TextField<Integer>("boiler"));
 		form.add(new TextField<Integer>("pressureContainer"));
-		form.add(new TextField<Integer>("pressurePipe"));
-		form.add(new TextField<Integer>("pipeLength"));
 		form.add(new TextField<Integer>("specialOthers"));
 	}
 

@@ -14,9 +14,18 @@ public class YesOrNoDrowdownChoiceRender implements IChoiceRenderer<Boolean> {
 
     private static final long serialVersionUID = 1L;
 
+    private String prefix = "";
+
+    public YesOrNoDrowdownChoiceRender() {
+    }
+
+    public YesOrNoDrowdownChoiceRender(String prefix) {
+        this.prefix = prefix + ".";
+    }
+
     @Override
     public Object getDisplayValue(Boolean object) {
-        return WicketMessageUtil.getResourceString("YesOrNoDrowdownChoiceRender." + object.toString().toUpperCase());
+        return WicketMessageUtil.getResourceString(prefix + "YesOrNoDrowdownChoiceRender." + object.toString().toUpperCase());
     }
 
     @Override

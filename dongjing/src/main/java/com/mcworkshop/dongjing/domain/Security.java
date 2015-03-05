@@ -17,51 +17,33 @@ public class Security extends DomainObject {
 
 	private Long securityInfoID;
 	private String name;
-	private EconomyEntity economyEntity;
-	private String major;
-	private String reportDepartment;
-	private Date safeCertificateValidDate;
-	private Boolean isContractedCompany;
-	private String safeLevel;
-	private Date assetDate;
-	private String safeManageOrg;
-	private Integer safeMemberFullTime;
-	private Integer safeMemberParttime;
-	private Integer fireControlMembers;
-	private Date fireControlCertificateDate;
-	private Boolean isEnvAssessPass;
-	private String dirtyWaterMgn;
-	private Boolean isPassStandard;
-	private String safeNo;
-	private Integer elevator;
-	private Integer crane;
-	private Integer recreationFacility;
-	private Integer indoorFacility;
-	private Integer boiler;
-	private Integer pressureContainer;
-	private Integer pressurePipe;
-	private Integer pipeLength;
-	private Integer specialOthers;
+    private Boolean isEmergencyPassStandard;
+    private Boolean isSecurityStandardPassed;
+    private String fireController;
+    private Boolean isEnvAssessPass;
+    private String isDirtyWaterMgn;
+    private Boolean isDCProduceOrg;
+    private DangerousChemistryType dcType;
 
-	private Date mgnCertValidDate;
-	private String safeManagerName;
-	private Date traningValidDate;
-	private Integer electronist;
-	private Integer boilist;
-	private Integer electrowelder;
-	private Integer climbConstructor;
-	private Integer forklifter;
-	private Integer driver;
-	private Integer elevateOperator;
-	private Integer trainingOther;
-	private Integer employeeNumber;
-	private Integer employeeTrainee;
-	private Integer farmerNumber;
-	private Integer farmerTrainee;
-	private Boolean isDCProduceOrg;
-	private DangerousChemistryType dcType;
-	private String dcCategroy;
-	private Integer dcNumber;
+    private Integer elevator;
+    private Integer crane;
+    private Integer recreationFacility;
+    private Integer indoorFacility;
+    private Integer boiler;
+    private Integer pressureContainer;
+    private Integer specialOthers;
+
+    private String companyHead;
+    private String safeManagerName;
+    private Integer electronist;
+    private Integer boilist;
+    private Integer electrowelder;
+    private Integer climbConstructor;
+    private Integer forklifter;
+    private Integer driver;
+    private Integer elevateOperator;
+    private Integer trainingOther;
+
 
 	public Long getSecurityInfoID() {
 		return securityInfoID;
@@ -79,101 +61,13 @@ public class Security extends DomainObject {
 		this.name = name;
 	}
 
-	public EconomyEntity getEconomyEntity() {
-		return economyEntity;
-	}
+    public Boolean getIsSecurityStandardPassed() {
+        return isSecurityStandardPassed;
+    }
 
-	public void setEconomyEntity(EconomyEntity economyEntity) {
-		this.economyEntity = economyEntity;
-	}
-
-	public String getMajor() {
-		return major;
-	}
-
-	public void setMajor(String major) {
-		this.major = major;
-	}
-
-	public String getReportDepartment() {
-		return reportDepartment;
-	}
-
-	public void setReportDepartment(String reportDepartment) {
-		this.reportDepartment = reportDepartment;
-	}
-
-	public Date getSafeCertificateValidDate() {
-		return safeCertificateValidDate;
-	}
-
-	public void setSafeCertificateValidDate(Date safeCertificateValidDate) {
-		this.safeCertificateValidDate = safeCertificateValidDate;
-	}
-
-	public Boolean getIsContractedCompany() {
-		return isContractedCompany;
-	}
-
-	public void setIsContractedCompany(Boolean isContractedCompany) {
-		this.isContractedCompany = isContractedCompany;
-	}
-
-	public String getSafeLevel() {
-		return safeLevel;
-	}
-
-	public void setSafeLevel(String safeLevel) {
-		this.safeLevel = safeLevel;
-	}
-
-	public Date getAssetDate() {
-		return assetDate;
-	}
-
-	public void setAssetDate(Date assetDate) {
-		this.assetDate = assetDate;
-	}
-
-	public String getSafeManageOrg() {
-		return safeManageOrg;
-	}
-
-	public void setSafeManageOrg(String safeManageOrg) {
-		this.safeManageOrg = safeManageOrg;
-	}
-
-	public Integer getSafeMemberFullTime() {
-		return safeMemberFullTime;
-	}
-
-	public void setSafeMemberFullTime(Integer safeMemberFullTime) {
-		this.safeMemberFullTime = safeMemberFullTime;
-	}
-
-	public Integer getSafeMemberParttime() {
-		return safeMemberParttime;
-	}
-
-	public void setSafeMemberParttime(Integer safeMemberParttime) {
-		this.safeMemberParttime = safeMemberParttime;
-	}
-
-	public Integer getFireControlMembers() {
-		return fireControlMembers;
-	}
-
-	public void setFireControlMembers(Integer fireControlMembers) {
-		this.fireControlMembers = fireControlMembers;
-	}
-
-	public Date getFireControlCertificateDate() {
-		return fireControlCertificateDate;
-	}
-
-	public void setFireControlCertificateDate(Date fireControlCertificateDate) {
-		this.fireControlCertificateDate = fireControlCertificateDate;
-	}
+    public void setIsSecurityStandardPassed(Boolean isSecurityStandardPassed) {
+        this.isSecurityStandardPassed = isSecurityStandardPassed;
+    }
 
 	public Boolean getIsEnvAssessPass() {
 		return isEnvAssessPass;
@@ -183,28 +77,12 @@ public class Security extends DomainObject {
 		this.isEnvAssessPass = isEnvAssessPass;
 	}
 
-	public String getDirtyWaterMgn() {
-		return dirtyWaterMgn;
+	public Boolean getIsEmergencyPassStandard() {
+		return isEmergencyPassStandard;
 	}
 
-	public void setDirtyWaterMgn(String dirtyWaterMgn) {
-		this.dirtyWaterMgn = dirtyWaterMgn;
-	}
-
-	public Boolean getIsPassStandard() {
-		return isPassStandard;
-	}
-
-	public void setIsPassStandard(Boolean isPassStandard) {
-		this.isPassStandard = isPassStandard;
-	}
-
-	public String getSafeNo() {
-		return safeNo;
-	}
-
-	public void setSafeNo(String safeNo) {
-		this.safeNo = safeNo;
+	public void setIsEmergencyPassStandard(Boolean isEmergencyPassStandard) {
+		this.isEmergencyPassStandard = isEmergencyPassStandard;
 	}
 
 	public Integer getElevator() {
@@ -253,54 +131,6 @@ public class Security extends DomainObject {
 
 	public void setPressureContainer(Integer pressureContainer) {
 		this.pressureContainer = pressureContainer;
-	}
-
-	public Integer getPressurePipe() {
-		return pressurePipe;
-	}
-
-	public void setPressurePipe(Integer pressurePipe) {
-		this.pressurePipe = pressurePipe;
-	}
-
-	public Integer getPipeLength() {
-		return pipeLength;
-	}
-
-	public void setPipeLength(Integer pipeLength) {
-		this.pipeLength = pipeLength;
-	}
-
-	public Integer getSpecialOthers() {
-		return specialOthers;
-	}
-
-	public void setSpecialOthers(Integer specialOthers) {
-		this.specialOthers = specialOthers;
-	}
-
-	public Date getMgnCertValidDate() {
-		return mgnCertValidDate;
-	}
-
-	public void setMgnCertValidDate(Date mgnCertValidDate) {
-		this.mgnCertValidDate = mgnCertValidDate;
-	}
-
-	public String getSafeManagerName() {
-		return safeManagerName;
-	}
-
-	public void setSafeManagerName(String safeManagerName) {
-		this.safeManagerName = safeManagerName;
-	}
-
-	public Date getTraningValidDate() {
-		return traningValidDate;
-	}
-
-	public void setTraningValidDate(Date traningValidDate) {
-		this.traningValidDate = traningValidDate;
 	}
 
 	public Integer getElectronist() {
@@ -367,38 +197,6 @@ public class Security extends DomainObject {
 		this.trainingOther = trainingOther;
 	}
 
-	public Integer getEmployeeNumber() {
-		return employeeNumber;
-	}
-
-	public void setEmployeeNumber(Integer employeeNumber) {
-		this.employeeNumber = employeeNumber;
-	}
-
-	public Integer getEmployeeTrainee() {
-		return employeeTrainee;
-	}
-
-	public void setEmployeeTrainee(Integer employeeTrainee) {
-		this.employeeTrainee = employeeTrainee;
-	}
-
-	public Integer getFarmerNumber() {
-		return farmerNumber;
-	}
-
-	public void setFarmerNumber(Integer farmerNumber) {
-		this.farmerNumber = farmerNumber;
-	}
-
-	public Integer getFarmerTrainee() {
-		return farmerTrainee;
-	}
-
-	public void setFarmerTrainee(Integer farmerTrainee) {
-		this.farmerTrainee = farmerTrainee;
-	}
-
 	public Boolean getIsDCProduceOrg() {
 		return isDCProduceOrg;
 	}
@@ -407,37 +205,44 @@ public class Security extends DomainObject {
 		this.isDCProduceOrg = isDCProduceOrg;
 	}
 
-	public DangerousChemistryType getDcType() {
+    public String getFireController() {
+        return fireController;
+    }
+
+    public void setFireController(String fireController) {
+        this.fireController = fireController;
+    }
+
+    public String getIsDirtyWaterMgn() {
+        return isDirtyWaterMgn;
+    }
+
+    public void setIsDirtyWaterMgn(String isDirtyWaterMgn) {
+        this.isDirtyWaterMgn = isDirtyWaterMgn;
+    }
+
+    public String getCompanyHead() {
+        return companyHead;
+    }
+
+    public void setCompanyHead(String companyHead) {
+        this.companyHead = companyHead;
+    }
+
+    public String getSafeManagerName() {
+        return safeManagerName;
+    }
+
+    public void setSafeManagerName(String safeManagerName) {
+        this.safeManagerName = safeManagerName;
+    }
+
+    public DangerousChemistryType getDcType() {
 		return dcType;
 	}
 
 	public void setDcType(DangerousChemistryType dcType) {
 		this.dcType = dcType;
-	}
-
-	public String getDcCategroy() {
-		return dcCategroy;
-	}
-
-	public void setDcCategroy(String dcCategroy) {
-		this.dcCategroy = dcCategroy;
-	}
-
-	public Integer getDcNumber() {
-		return dcNumber;
-	}
-
-	public void setDcNumber(Integer dcNumber) {
-		this.dcNumber = dcNumber;
-	}
-
-	public Long getEconomyEntityID() {
-		return SystemEnumeration.getInstance().getIdByKey(economyEntity);
-	}
-
-	public void setEconomyEntityID(Long economyEntityID) {
-		this.economyEntity = SystemEnumeration.getInstance().getKeyById(
-				EconomyEntity.class, economyEntityID);
 	}
 
 	public Long getDcTypeID() {
@@ -448,4 +253,13 @@ public class Security extends DomainObject {
 		this.dcType = SystemEnumeration.getInstance().getKeyById(
 				DangerousChemistryType.class, dcTypeID);
 	}
+
+    public Integer getSpecialOthers() {
+        return specialOthers;
+    }
+
+    public void setSpecialOthers(Integer specialOthers) {
+        this.specialOthers = specialOthers;
+    }
+
 }

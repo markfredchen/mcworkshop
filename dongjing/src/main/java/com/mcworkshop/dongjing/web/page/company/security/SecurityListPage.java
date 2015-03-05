@@ -44,7 +44,6 @@ public class SecurityListPage extends DJContentBasePage {
 
 	private final WebMarkupContainer listContainer;
 	private final TextField<String> companyNameTextField;
-	private final DropDownChoice<EconomyEntity> economyEntityChoice;
 
 	public SecurityListPage(PageParameters params) {
 		super(params);
@@ -52,18 +51,12 @@ public class SecurityListPage extends DJContentBasePage {
 		add(searchForm);
 		searchForm.add(companyNameTextField = new TextField<String>(
 				"companyName", new Model<String>()));
-		searchForm.add(economyEntityChoice = new DropDownChoice<EconomyEntity>(
-				"economyEntity", new Model<EconomyEntity>(), SystemEnumeration
-						.getInstance().getKeysByType(EconomyEntity.class),
-				new SystemEnumerationDropdownChoiceRender()));
 		searchForm.add(new AjaxSubmitLink("search-company") {
 			private static final long serialVersionUID = 1L;
 
 			@Override
 			protected void onSubmit(AjaxRequestTarget target, Form<?> form) {
 				provider.setCompanyName(companyNameTextField.getValue());
-				provider.setEconomyEntity(economyEntityChoice
-						.getConvertedInput());
 				target.add(listContainer);
 			}
 		});
@@ -77,13 +70,6 @@ public class SecurityListPage extends DJContentBasePage {
 			protected void populateItem(final Item<Security> item) {
 				Security company = item.getModelObject();
 				item.add(new Label("name", company.getName()));
-				if (company.getEconomyEntity() != null) {
-					item.add(new Label("economyEntity", WicketMessageUtil
-							.getResourceString(company.getEconomyEntity()
-									.getMessageKey())));
-				} else {
-					item.add(new Label("economyEntity", ""));
-				}
 				AjaxLink<Void> updateLink;
 				item.add(updateLink = new AjaxLink<Void>("update") {
 

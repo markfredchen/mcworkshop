@@ -695,14 +695,11 @@ public class DJServiceImpl implements DJService {
     }
 
     @Override
-    public List<Security> searchSecurityInfo(String name,
-                                             EconomyEntity economyEntity, long fetch, long start) {
+    public List<Security> searchSecurityInfo(String name, long fetch, long start) {
         SearchCriteria criteria = new SearchCriteria();
         criteria.getFields().add(
                 SecurityInfoSearchField.SECURITY_INFO_ID.value());
         criteria.getFields().add(SecurityInfoSearchField.NAME.value());
-        criteria.getFields()
-                .add(SecurityInfoSearchField.ECONOMY_ENTITY.value());
         if (!Strings.isEmpty(name)) {
             SearchFilter nameFilter = new SearchFilter();
             nameFilter.setFilterRestriction(Restriction.AND);
@@ -710,16 +707,6 @@ public class DJServiceImpl implements DJService {
             nameFilter.setSearchField("name");
             nameFilter.setValue(name);
             criteria.getFilters().add(nameFilter);
-        }
-        if (economyEntity != null) {
-            SearchFilter economyEntityFilter = new SearchFilter();
-            economyEntityFilter.setFilterRestriction(Restriction.AND);
-            economyEntityFilter.setClauseRestriction(Restriction.EQUAL);
-            economyEntityFilter.setSearchField("economyEntityID");
-            economyEntityFilter.setValue(SystemEnumeration.getInstance()
-                    .getIdByKey(economyEntity).toString());
-            economyEntityFilter.setValueClass(Long.class);
-            criteria.getFilters().add(economyEntityFilter);
         }
         criteria.setFetch(fetch);
         criteria.setStartIndex(start);
@@ -730,21 +717,17 @@ public class DJServiceImpl implements DJService {
             Security security = new Security();
             security.setSecurityInfoID((Long) map.get("securityInfoID"));
             security.setName((String) map.get("name"));
-            security.setEconomyEntityID((Long) map.get("economyEntityID"));
             securities.add(security);
         }
         return securities;
     }
 
     @Override
-    public int getSecurityInfoTotalCount(String name,
-                                         EconomyEntity economyEntity) {
+    public int getSecurityInfoTotalCount(String name) {
         SearchCriteria criteria = new SearchCriteria();
         criteria.getFields().add(
                 SecurityInfoSearchField.SECURITY_INFO_ID.value());
         criteria.getFields().add(SecurityInfoSearchField.NAME.value());
-        criteria.getFields()
-                .add(SecurityInfoSearchField.ECONOMY_ENTITY.value());
         if (!Strings.isEmpty(name)) {
             SearchFilter nameFilter = new SearchFilter();
             nameFilter.setFilterRestriction(Restriction.AND);
@@ -752,16 +735,6 @@ public class DJServiceImpl implements DJService {
             nameFilter.setSearchField("name");
             nameFilter.setValue(name);
             criteria.getFilters().add(nameFilter);
-        }
-        if (economyEntity != null) {
-            SearchFilter economyEntityFilter = new SearchFilter();
-            economyEntityFilter.setFilterRestriction(Restriction.AND);
-            economyEntityFilter.setClauseRestriction(Restriction.EQUAL);
-            economyEntityFilter.setSearchField("economyEntityID");
-            economyEntityFilter.setValue(SystemEnumeration.getInstance()
-                    .getIdByKey(economyEntity).toString());
-            economyEntityFilter.setValueClass(Long.class);
-            criteria.getFilters().add(economyEntityFilter);
         }
         return this.sm.getSecurityInfoTotalCount(criteria);
     }

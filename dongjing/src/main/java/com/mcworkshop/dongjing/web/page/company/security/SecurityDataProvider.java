@@ -22,7 +22,6 @@ public class SecurityDataProvider implements IDataProvider<Security> {
 	private static final long serialVersionUID = 1L;
 
 	private String companyName;
-	private EconomyEntity economyEntity;
 
 	@Inject
 	private DJService service;
@@ -31,9 +30,8 @@ public class SecurityDataProvider implements IDataProvider<Security> {
 		this.service = service;
 	}
 
-	public SecurityDataProvider(String companyName, EconomyEntity economyEntity) {
+	public SecurityDataProvider(String companyName) {
 		this.companyName = companyName;
-		this.economyEntity = economyEntity;
 	}
 
 	@Override
@@ -44,13 +42,13 @@ public class SecurityDataProvider implements IDataProvider<Security> {
 
 	@Override
 	public Iterator<? extends Security> iterator(long first, long count) {
-		return service.searchSecurityInfo(companyName, economyEntity, count,
+		return service.searchSecurityInfo(companyName, count,
 				first).iterator();
 	}
 
 	@Override
 	public long size() {
-		return service.getSecurityInfoTotalCount(companyName, economyEntity);
+		return service.getSecurityInfoTotalCount(companyName);
 	}
 
 	@Override
@@ -66,12 +64,5 @@ public class SecurityDataProvider implements IDataProvider<Security> {
 		this.companyName = companyName;
 	}
 
-	public EconomyEntity getEconomyEntity() {
-		return economyEntity;
-	}
-
-	public void setEconomyEntity(EconomyEntity economyEntity) {
-		this.economyEntity = economyEntity;
-	}
 
 }

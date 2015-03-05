@@ -1,21 +1,22 @@
 <wicket:panel xmlns:wicket="http://wicket.apache.org">
     <form role="form" class="form-horizontal" wicket:id="training-info">
-        <div class="half field datepicker">
-            <label class="control-label" for="mgnCertValidDate">单位负责人证书有效期至</label>
-            <div class="input">
-                <input type="text" class="form-control" id="mgnCertValidDate" wicket:id="mgnCertValidDate">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">管理人员</h3>
             </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="safeManagerName">安全生产管理员姓名</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeManagerName" wicket:id="safeManagerName">
-            </div>
-        </div>
-        <div class="half field datepicker">
-            <label class="control-label" for="traningValidDate">证书有效期至</label>
-            <div class="input">
-                <input type="text" class="form-control" id="traningValidDate" wicket:id="traningValidDate">
+            <div class="panel-body">
+                <div class="field">
+                    <label class="control-label" for="companyHead">单位负责人姓名</label>
+                    <div class="input">
+                        <input type="text" class="form-control" id="companyHead" wicket:id="companyHead">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="control-label" for="safeManagerName">安全生产管理员姓名</label>
+                    <div class="input">
+                        <input type="text" class="form-control" id="safeManagerName" wicket:id="safeManagerName">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">
@@ -69,30 +70,6 @@
                     <label class="control-label" for="trainingOther">其他</label>
                     <div class="input">
                         <input type="text" class="form-control" id="trainingOther" wicket:id="trainingOther">
-                    </div>
-                </div>
-                <div class="half field">
-                    <label class="control-label" for="employeeNumber">职工人数</label>
-                    <div class="input">
-                        <input type="text" class="form-control" id="employeeNumber" wicket:id="employeeNumber">
-                    </div>
-                </div>
-                <div class="half field">
-                    <label class="control-label" for="employeeTrainee">已培训</label>
-                    <div class="input">
-                        <input type="text" class="form-control" id="employeeTrainee" wicket:id="employeeTrainee">
-                    </div>
-                </div>
-                <div class="half field">
-                    <label class="control-label" for="farmerNumber">农民人数</label>
-                    <div class="input">
-                        <input type="text" class="form-control" id="farmerNumber" wicket:id="farmerNumber">
-                    </div>
-                </div>
-                <div class="half field">
-                    <label class="control-label" for="farmerTrainee">已培训</label>
-                    <div class="input">
-                        <input type="text" class="form-control" id="farmerTrainee" wicket:id="farmerTrainee">
                     </div>
                 </div>
             </div>

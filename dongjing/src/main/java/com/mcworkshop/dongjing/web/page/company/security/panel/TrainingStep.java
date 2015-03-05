@@ -34,11 +34,8 @@ public class TrainingStep extends WizardContentPanel<Security> {
 
 		form = new Form<Security>("training-info");
 		add(form);
-		form.add(new DateTextField("mgnCertValidDate", DATE_PATTERN)
-				.add(new DatetimePickerPlugin(datePickerOption)));
+        form.add(new TextField<String>("companyHead"));
 		form.add(new TextField<String>("safeManagerName"));
-		form.add(new DateTextField("traningValidDate", DATE_PATTERN)
-				.add(new DatetimePickerPlugin(datePickerOption)));
 		form.add(new TextField<Integer>("electronist"));
 		form.add(new TextField<Integer>("boilist"));
 		form.add(new TextField<Integer>("electrowelder"));
@@ -47,10 +44,6 @@ public class TrainingStep extends WizardContentPanel<Security> {
 		form.add(new TextField<Integer>("driver"));
 		form.add(new TextField<Integer>("elevateOperator"));
 		form.add(new TextField<Integer>("trainingOther"));
-		form.add(new TextField<Integer>("employeeNumber"));
-		form.add(new TextField<Integer>("employeeTrainee"));
-		form.add(new TextField<Integer>("farmerNumber"));
-		form.add(new TextField<Integer>("farmerTrainee"));
 	}
 
 	@Override

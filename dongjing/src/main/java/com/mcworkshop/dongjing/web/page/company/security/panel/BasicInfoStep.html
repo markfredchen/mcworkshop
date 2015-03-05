@@ -6,156 +6,101 @@
                 <input type="text" class="form-control" id="name" wicket:id="name">
             </div>
         </div>
-        <div class="half field">
-            <label class="control-label" for="economyEntity">经济实体</label>
-            <div class="input">
-                <select class="form-control" id="economyEntity" wicket:id="economyEntity">
-                        <option>请选择</option>
-                        <option>工业</option>
-                        <option>商贸</option>
-                        <option>服务</option>
-                        <option>建筑</option>
-                        <option>房产</option>
-                        <option>其它</option>
-                </select>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">应急预案备案管理</h3>
             </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="major">专业</label>
-            <div class="input">
-                <input type="text" class="form-control" id="major" wicket:id="major"/>
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="reportDepartment">上级部门</label>
-            <div class="input">
-                <input type="text" class="form-control" id="reportDepartment" wicket:id="reportDepartment">
-            </div>
-        </div>
-        <div class="half field datepicker">
-            <label class="control-label" for="safeCertificateValidDate">安全许可证有效日期</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeCertificateValidDate" wicket:id="safeCertificateValidDate">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="isContractedCompany">是否签约单位</label>
-            <div class="input">
-                <select class="form-control" id="isContractedCompany" wicket:id="isContractedCompany">
+            <div class="panel-body">
+                <label class="control-label" for="isEmergencyPassStandard">应急预案备案管理</label>
+                <div class="input">
+                    <select class="form-control" id="isEmergencyPassStandard" wicket:id="isEmergencyPassStandard">
                         <option>请选择</option>
                         <option>是</option>
                         <option>否</option>
-                </select>
+                    </select>
+                </div>
             </div>
         </div>
-        <div class="half field">
-            <label class="control-label" for="safeLevel">安全生产评估等级</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeLevel" wicket:id="safeLevel">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">安全生产标准化管理</h3>
             </div>
-        </div>
-        <div class="half field datepicker">
-            <label class="control-label" for="assetDate">评估时间</label>
-            <div class="input">
-                <input type="text" class="form-control" id="assetDate" wicket:id="assetDate">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="safeManageOrg">安全生产管理机构</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeManageOrg" wicket:id="safeManageOrg">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="safeMemberFullTime">安全生产管理人员 - 专职人数</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeMemberFullTime" wicket:id="safeMemberFullTime">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="safeMemberParttime">安全生产管理人员 - 兼职人数</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeMemberParttime" wicket:id="safeMemberParttime">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="fireControlMembers">消防管理员人数</label>
-            <div class="input">
-                <input type="text" class="form-control" id="fireControlMembers" wicket:id="fireControlMembers">
-            </div>
-        </div>
-        <div class="half field datepicker">
-            <label class="control-label" for="fireControlCertificateDate">证书有效期</label>
-            <div class="input">
-                <input type="text" class="form-control" id="fireControlCertificateDate" wicket:id="fireControlCertificateDate">
-            </div>
-        </div>
-         <div class="half field">
-            <label class="control-label" for="isEnvAssessPass">环境评价通过情况</label>
-            <div class="input">
-                <select class="form-control" id="isEnvAssessPass" wicket:id="isEnvAssessPass">
+            <div class="panel-body">
+                <label class="control-label" for="isSecurityStandardPassed">安全生产标准化管理</label>
+                <div class="input">
+                    <select class="form-control" id="isSecurityStandardPassed" wicket:id="isSecurityStandardPassed">
                         <option>请选择</option>
                         <option>是</option>
                         <option>否</option>
-                </select>
+                    </select>
+                </div>
             </div>
         </div>
-        <div class="half field">
-            <label class="control-label" for="dirtyWaterMgn">污水纳管完成情况</label>
-            <div class="input">
-                <input type="text" class="form-control" id="dirtyWaterMgn" wicket:id="dirtyWaterMgn">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">消防管理</h3>
+            </div>
+            <div class="panel-body">
+                <label class="control-label" for="fireController">消防管理员</label>
+                <div class="input">
+                    <input type="text" class="form-control" id="fireController" wicket:id="fireController"/>
+                </div>
             </div>
         </div>
-        <div class="half field">
-            <label class="control-label" for="isPassStandard">是否通过应急预案备案管理及安全生产标准化制度管理</label>
-            <div class="input">
-                <select class="form-control" id="isPassStandard" wicket:id="isPassStandard">
-                        <option>请选择</option>
-                        <option>是</option>
-                        <option>否</option>
-                </select>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">环境保护管理</h3>
+            </div>
+            <div class="panel-body">
+                <div class="field">
+                    <label class="control-label" for="isEnvAssessPass">环境评价</label>
+                    <div class="input">
+                        <select class="form-control" id="isEnvAssessPass" wicket:id="isEnvAssessPass">
+                            <option>请选择</option>
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="control-label" for="isDirtyWaterMgn">污水纳管</label>
+                    <div class="input">
+                        <select class="form-control" id="isDirtyWaterMgn" wicket:id="isDirtyWaterMgn">
+                            <option>请选择</option>
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="half field">
-            <label class="control-label" for="safeNo">编号</label>
-            <div class="input">
-                <input type="text" class="form-control" id="safeNo" wicket:id="safeNo">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">危险化学品管理</h3>
             </div>
-        </div>
-        
-        <div class="half field">
-            <label class="control-label" for="isDCProduceOrg">危险化学品生产经营单位</label>
-            <div class="input">
-                <select class="form-control" id="isDCProduceOrg" wicket:id="isDCProduceOrg">
-                        <option>请选择</option>
-                        <option>是</option>
-                        <option>否</option>
-                </select>
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="dcType">类型</label>
-            <div class="input">
-                <select class="form-control" id="dcType" wicket:id="dcType">
-                        <option>请选择</option>
-                        <option>生产</option>
-                        <option>经营</option>
-                        <option>储存</option>
-                        <option>运输</option>
-                        <option>使用处置</option>
-                </select>
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="dcCategroy">危险化学品种类</label>
-            <div class="input">
-                <input type="text" class="form-control" id="dcCategroy" wicket:id="dcCategroy">
-            </div>
-        </div>
-        <div class="half field">
-            <label class="control-label" for="dcNumber">数量</label>
-            <div class="input">
-                <input type="text" class="form-control" id="dcNumber" wicket:id="dcNumber">
+            <div class="panel-body">
+                <div class="field">
+                    <label class="control-label" for="isDCProduceOrg">危险化学品生产经营单位</label>
+                    <div class="input">
+                        <select class="form-control" id="isDCProduceOrg" wicket:id="isDCProduceOrg">
+                            <option>请选择</option>
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="control-label" for="dcType">类型</label>
+                    <div class="input">
+                        <select class="form-control" id="dcType" wicket:id="dcType">
+                            <option>请选择</option>
+                            <option>是</option>
+                            <option>否</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
