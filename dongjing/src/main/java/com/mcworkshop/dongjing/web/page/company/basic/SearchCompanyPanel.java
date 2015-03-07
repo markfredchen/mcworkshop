@@ -2,6 +2,18 @@
 // $Id: SearchCompanyPanel.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.web.page.company.basic;
 
+import com.google.inject.Inject;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
+import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.authorization.Roles;
+import com.mcworkshop.dongjing.domain.AffiliateBlock;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.EconomyEntity;
+import com.mcworkshop.dongjing.domain.EconomyNature;
+import com.mcworkshop.dongjing.security.ACLBlockUtil;
+import com.mcworkshop.dongjing.service.DJService;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
@@ -16,19 +28,6 @@ import org.apache.wicket.markup.repeater.Item;
 import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import com.google.inject.Inject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.authorization.Roles;
-import com.mcworkshop.dongjing.domain.AffiliateBlock;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.EconomyNature;
-import com.mcworkshop.dongjing.security.ACLBlockUtil;
-import com.mcworkshop.dongjing.service.DJService;
 
 /**
  * @author $Author: mchen $

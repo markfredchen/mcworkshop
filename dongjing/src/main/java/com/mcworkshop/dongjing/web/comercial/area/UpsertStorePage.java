@@ -2,11 +2,10 @@
 // $Id: UpsertStorePage.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.web.comercial.area;
 
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 
 /**
  * @author $Author: mchen $

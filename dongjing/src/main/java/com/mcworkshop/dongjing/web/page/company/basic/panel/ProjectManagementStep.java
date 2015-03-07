@@ -2,15 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.util.Arrays;
-
-import org.apache.wicket.extensions.markup.html.form.DateTextField;
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.NumberTextField;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.ResourceModel;
-
 import com.mcworkshop.common.web.component.dropdownchoice.YesOrNoDrowdownChoiceRender;
 import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
 import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
@@ -18,6 +9,14 @@ import com.mcworkshop.common.web.component.form.datetimepicker.View;
 import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
 import com.mcworkshop.common.web.util.WicketMessageUtil;
 import com.mcworkshop.dongjing.domain.Company;
+import org.apache.wicket.extensions.markup.html.form.DateTextField;
+import org.apache.wicket.markup.html.form.DropDownChoice;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.NumberTextField;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.ResourceModel;
+
+import java.util.Arrays;
 
 /**
  * @author $Author$

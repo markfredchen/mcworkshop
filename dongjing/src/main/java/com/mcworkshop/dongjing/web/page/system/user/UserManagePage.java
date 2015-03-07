@@ -2,8 +2,16 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.system.user;
 
-import java.util.List;
-
+import com.google.inject.Inject;
+import com.mcworkshop.common.exception.DuplicateDomainResourceException;
+import com.mcworkshop.common.exception.ExceptionUtil;
+import com.mcworkshop.common.web.util.FeedbackMessageUtil;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.authorization.Roles;
+import com.mcworkshop.dongjing.domain.User;
+import com.mcworkshop.dongjing.service.SecurityService;
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
+import com.mcworkshop.dongjing.web.page.system.left.navigation.SystemLeftNavigationPanel;
 import org.apache.wicket.AttributeModifier;
 import org.apache.wicket.ajax.AjaxEventBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -22,16 +30,7 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import com.google.inject.Inject;
-import com.mcworkshop.common.exception.DuplicateDomainResourceException;
-import com.mcworkshop.common.exception.ExceptionUtil;
-import com.mcworkshop.common.web.util.FeedbackMessageUtil;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.authorization.Roles;
-import com.mcworkshop.dongjing.domain.User;
-import com.mcworkshop.dongjing.service.SecurityService;
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
-import com.mcworkshop.dongjing.web.page.system.left.navigation.SystemLeftNavigationPanel;
+import java.util.List;
 
 /**
  * @author $Author$

@@ -2,6 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.agriculture;
 
+import com.google.inject.Inject;
+import com.mcworkshop.common.web.util.WebUtil;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.AgricultureInfo;
+import com.mcworkshop.dongjing.persistence.DJServiceMapper;
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.SubmitLink;
 import org.apache.wicket.markup.html.form.TextField;
@@ -10,13 +16,6 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import com.google.inject.Inject;
-import com.mcworkshop.common.web.util.WebUtil;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.AgricultureInfo;
-import com.mcworkshop.dongjing.persistence.DJServiceMapper;
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 
 /**
  * @author $Author$

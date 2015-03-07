@@ -2,11 +2,18 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.news;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
+import com.google.inject.Inject;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
+import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
+import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.EconomyEntity;
+import com.mcworkshop.dongjing.domain.EconomyNature;
+import com.mcworkshop.dongjing.service.DJService;
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
+import com.mcworkshop.dongjing.web.page.company.basic.CompanyDataProvider;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
@@ -26,18 +33,10 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import com.google.inject.Inject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
-import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.EconomyNature;
-import com.mcworkshop.dongjing.service.DJService;
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
-import com.mcworkshop.dongjing.web.page.company.basic.CompanyDataProvider;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author $Author$

@@ -2,12 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.model.IModel;
-import org.apache.wicket.model.ResourceModel;
-
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
 import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
@@ -15,6 +9,11 @@ import com.mcworkshop.common.web.component.form.datetimepicker.View;
 import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
 import com.mcworkshop.dongjing.domain.Company;
 import com.mcworkshop.dongjing.domain.Gender;
+import org.apache.wicket.markup.html.form.DropDownChoice;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.ResourceModel;
 
 /**
  * @author $Author$

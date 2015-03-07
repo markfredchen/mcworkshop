@@ -2,8 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.domain;
 
-import java.util.Date;
-
 import com.mcworkshop.common.domain.DomainObject;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 

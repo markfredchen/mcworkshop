@@ -2,12 +2,11 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.building;
 
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import org.apache.wicket.markup.html.panel.EmptyPanel;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 
 /**
  * @author $Author$

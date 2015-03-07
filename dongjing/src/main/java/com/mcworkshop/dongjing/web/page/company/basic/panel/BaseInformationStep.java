@@ -2,41 +2,24 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import org.apache.wicket.extensions.markup.html.form.DateTextField;
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.RequiredTextField;
-import org.apache.wicket.markup.html.form.TextArea;
-import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.LoadableDetachableModel;
-import org.apache.wicket.model.ResourceModel;
-
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.dropdownchoice.YesOrNoDrowdownChoiceRender;
 import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
 import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
 import com.mcworkshop.common.web.component.form.datetimepicker.View;
 import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
 import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
-import com.mcworkshop.dongjing.domain.AffiliateBlock;
-import com.mcworkshop.dongjing.domain.AffiliateRegion;
-import com.mcworkshop.dongjing.domain.CommercialStatus;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.Currency;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.EconomyNature;
-import com.mcworkshop.dongjing.domain.TaxCollectMethod;
-import com.mcworkshop.dongjing.domain.TaxNature;
-import com.mcworkshop.dongjing.domain.TaxOrg;
-import com.mcworkshop.dongjing.domain.TaxStatus;
-import com.mcworkshop.dongjing.domain.TaxType;
+import com.mcworkshop.dongjing.domain.*;
 import com.mcworkshop.dongjing.security.ACLBlockUtil;
+import org.apache.wicket.extensions.markup.html.form.DateTextField;
+import org.apache.wicket.markup.html.form.*;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.LoadableDetachableModel;
+import org.apache.wicket.model.ResourceModel;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author $Author$

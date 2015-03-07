@@ -2,22 +2,16 @@
 // $Id$
 package com.mcworkshop.dongjing.web.comercial.area;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-
+import com.google.inject.Inject;
+import com.mcworkshop.dongjing.domain.CommercialArea;
+import com.mcworkshop.dongjing.service.DJService;
 import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteSettings;
 import org.apache.wicket.extensions.ajax.markup.html.autocomplete.AutoCompleteTextField;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.util.convert.ConversionException;
 import org.apache.wicket.util.convert.IConverter;
 
-import com.google.inject.Inject;
-import com.mcworkshop.dongjing.domain.CommercialArea;
-import com.mcworkshop.dongjing.service.DJService;
+import java.util.*;
 
 /**
  * @author $Author$

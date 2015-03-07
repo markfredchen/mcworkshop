@@ -2,8 +2,15 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.util.List;
-
+import com.google.inject.Inject;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
+import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.Gender;
+import com.mcworkshop.dongjing.domain.PartyMember;
+import com.mcworkshop.dongjing.persistence.DJServiceMapper;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
@@ -19,15 +26,7 @@ import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.ResourceModel;
 
-import com.google.inject.Inject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.Gender;
-import com.mcworkshop.dongjing.domain.PartyMember;
-import com.mcworkshop.dongjing.persistence.DJServiceMapper;
+import java.util.List;
 
 /**
  * @author $Author$

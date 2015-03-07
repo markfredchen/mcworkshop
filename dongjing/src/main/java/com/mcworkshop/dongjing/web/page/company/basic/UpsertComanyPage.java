@@ -2,19 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.ibatis.exceptions.PersistenceException;
-import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.exception.ExceptionUtil;
 import com.mcworkshop.common.web.component.wizard.Wizard;
@@ -28,13 +15,19 @@ import com.mcworkshop.dongjing.service.DJService;
 import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import com.mcworkshop.dongjing.web.layout.MenuHeaderPanel;
 import com.mcworkshop.dongjing.web.page.company.CompanyLeftNaviPanel;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.AdvanceManagementStep;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.BaseInformationStep;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.CommercialAreaInfo;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.MemberStep;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.OtherInformationStep;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.PartyStep;
-import com.mcworkshop.dongjing.web.page.company.basic.panel.ProjectManagementStep;
+import com.mcworkshop.dongjing.web.page.company.basic.panel.*;
+import org.apache.ibatis.exceptions.PersistenceException;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author $Author$

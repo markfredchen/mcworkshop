@@ -2,15 +2,14 @@
 // $Id$
 package com.mcworkshop.dongjing.service.report;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.util.CellRangeAddress;
-
 import com.mcworkshop.common.web.report.CellStyleWrapper;
 import com.mcworkshop.common.web.report.ReportUtil;
 import com.mcworkshop.dongjing.domain.TaxData;
 import com.mcworkshop.dongjing.service.report.model.TaxOrgData;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.util.CellRangeAddress;
 
 /**
  * @author $Author$

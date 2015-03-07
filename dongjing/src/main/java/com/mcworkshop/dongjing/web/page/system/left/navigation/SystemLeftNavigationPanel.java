@@ -2,11 +2,10 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.system.left.navigation;
 
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
-import org.apache.wicket.markup.html.panel.Panel;
-
 import com.mcworkshop.dongjing.web.page.system.role.RoleManagePage;
 import com.mcworkshop.dongjing.web.page.system.user.UserManagePage;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
+import org.apache.wicket.markup.html.panel.Panel;
 
 /**
  * @author $Author$

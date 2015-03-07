@@ -2,27 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.ajax.markup.html.AjaxLink;
-import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
-import org.apache.wicket.extensions.markup.html.form.DateTextField;
-import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.list.ListItem;
-import org.apache.wicket.markup.html.list.ListView;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.IModel;
-import org.apache.wicket.model.LoadableDetachableModel;
-import org.apache.wicket.model.Model;
-import org.apache.wicket.model.ResourceModel;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
@@ -35,6 +14,25 @@ import com.mcworkshop.dongjing.domain.AnnualOutput;
 import com.mcworkshop.dongjing.domain.Company;
 import com.mcworkshop.dongjing.domain.LandUsage;
 import com.mcworkshop.dongjing.persistence.DJServiceMapper;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxLink;
+import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
+import org.apache.wicket.extensions.markup.html.form.DateTextField;
+import org.apache.wicket.markup.html.WebMarkupContainer;
+import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.DropDownChoice;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.list.ListItem;
+import org.apache.wicket.markup.html.list.ListView;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.LoadableDetachableModel;
+import org.apache.wicket.model.Model;
+import org.apache.wicket.model.ResourceModel;
+
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author $Author$

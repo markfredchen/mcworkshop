@@ -2,18 +2,17 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.report.preview;
 
-import java.util.List;
-
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.util.NumberUtil;
 import com.mcworkshop.common.web.service.page.JSONServicePage;
 import com.mcworkshop.common.web.util.WebUtil;
 import com.mcworkshop.dongjing.domain.TaxData;
 import com.mcworkshop.dongjing.service.DJService;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * @author $Author$

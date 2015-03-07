@@ -2,12 +2,11 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.tax;
 
+import com.mcworkshop.dongjing.domain.TaxData;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.AbstractReadOnlyModel;
 import org.apache.wicket.model.CompoundPropertyModel;
-
-import com.mcworkshop.dongjing.domain.TaxData;
 
 /**
  * @author $Author$

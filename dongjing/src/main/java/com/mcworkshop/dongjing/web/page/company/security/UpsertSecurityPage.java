@@ -2,17 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.security;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.wicket.ajax.AjaxRequestTarget;
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.web.component.wizard.Wizard;
 import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
@@ -25,6 +14,16 @@ import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import com.mcworkshop.dongjing.web.page.company.security.panel.BasicInfoStep;
 import com.mcworkshop.dongjing.web.page.company.security.panel.SpecialEquipmentStep;
 import com.mcworkshop.dongjing.web.page.company.security.panel.TrainingStep;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author $Author$

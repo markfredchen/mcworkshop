@@ -2,9 +2,20 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.security.panel;
 
-import java.util.Arrays;
-
-import org.apache.wicket.extensions.markup.html.form.DateTextField;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
+import com.mcworkshop.common.web.component.dropdownchoice.YesOrNoDrowdownChoiceRender;
+import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
+import com.mcworkshop.common.web.component.form.datetimepicker.View;
+import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
+import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.DangerousChemistryType;
+import com.mcworkshop.dongjing.domain.Security;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.RequiredTextField;
@@ -12,38 +23,32 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.ResourceModel;
 
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.dropdownchoice.YesOrNoDrowdownChoiceRender;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
-import com.mcworkshop.common.web.component.form.datetimepicker.View;
-import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
-import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.DangerousChemistryType;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.Security;
+import java.util.Arrays;
 
 /**
  * @author $Author$
- * 
  */
 public class BasicInfoStep extends WizardContentPanel<Security> {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private static final String DATE_PATTERN = "MM-dd-yyyy";
-	private DatetimePickerOption datePickerOption = new DatetimePickerOption();
+    private static final Log log = LogFactory.getLog(BasicInfoStep.class);
 
-	public BasicInfoStep(IModel<Security> model) {
-		super(model);
-		datePickerOption.setMinView(View.MONTH);
-		datePickerOption.setMaxView(View.DECADE);
-		datePickerOption.setLanguage("zh-CN");
-		form = new Form<Security>("basic-info");
+    private static final String DATE_PATTERN = "MM-dd-yyyy";
+    private DatetimePickerOption datePickerOption = new DatetimePickerOption();
+
+    private DropDownChoice<Boolean> isDCProduceOrg;
+    private DropDownChoice<DangerousChemistryType> dcType;
+
+
+    public BasicInfoStep(IModel<Security> model) {
+        super(model);
+        datePickerOption.setMinView(View.MONTH);
+        datePickerOption.setMaxView(View.DECADE);
+        datePickerOption.setLanguage("zh-CN");
+        form = new Form<Security>("basic-info");
         form.add(new FormFieldValidationContainer("name-feedback-container",
-				new RequiredTextField<String>("name")));
+                new RequiredTextField<String>("name")));
         form.add(new DropDownChoice<Boolean>("isEmergencyPassStandard", Arrays.asList(
                 Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isEmergencyPassStandard")));
         form.add(new DropDownChoice<Boolean>("isSecurityStandardPassed", Arrays.asList(
@@ -53,33 +58,45 @@ public class BasicInfoStep extends WizardContentPanel<Security> {
                 Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isEnvAssessPass")));
         form.add(new DropDownChoice<Boolean>("isDirtyWaterMgn", Arrays.asList(
                 Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender("isDirtyWaterMgn")));
-        form.add(new DropDownChoice<Boolean>("isDCProduceOrg", Arrays.asList(
+        form.add(isDCProduceOrg = new DropDownChoice<Boolean>("isDCProduceOrg", Arrays.asList(
                 Boolean.TRUE, Boolean.FALSE), new YesOrNoDrowdownChoiceRender()));
-        form.add(new DropDownChoice<DangerousChemistryType>("dcType",
+        form.add(dcType = new DropDownChoice<DangerousChemistryType>("dcType",
                 SystemEnumeration.getInstance().getKeysByType(
                         DangerousChemistryType.class),
                 new SystemEnumerationDropdownChoiceRender()));
-		add(form);
-	}
+        isDCProduceOrg.add(new AjaxFormComponentUpdatingBehavior("onchange") {
+            @Override
+            protected void onUpdate(AjaxRequestTarget target) {
+                Boolean isDCProduceOrgValue = ((Security)BasicInfoStep.this.getDefaultModelObject()).getIsDCProduceOrg();
+                dcType.setEnabled(isDCProduceOrgValue);
+                target.add(dcType);
 
-	@Override
-	protected String getTabID() {
-		return "basic";
-	}
+            }
+        });
+        Security s = ((Security)getDefaultModelObject());
+        dcType.setOutputMarkupId(true);
+        dcType.setEnabled(s != null && s.getIsDCProduceOrg() != null && Boolean.valueOf(s.getIsDCProduceOrg()));
+        add(form);
+    }
 
-	@Override
-	protected String getTabContentID() {
-		return "basic-tab";
-	}
+    @Override
+    protected String getTabID() {
+        return "basic";
+    }
 
-	@Override
-	protected ResourceModel getTabTitle() {
-		return WicketMessageUtil.getResourceModel("security.form.tab.basic");
-	}
+    @Override
+    protected String getTabContentID() {
+        return "basic-tab";
+    }
 
-	@Override
-	public void disablePanel() {
-		form.setEnabled(false);
-	}
+    @Override
+    protected ResourceModel getTabTitle() {
+        return WicketMessageUtil.getResourceModel("security.form.tab.basic");
+    }
+
+    @Override
+    public void disablePanel() {
+        form.setEnabled(false);
+    }
 
 }

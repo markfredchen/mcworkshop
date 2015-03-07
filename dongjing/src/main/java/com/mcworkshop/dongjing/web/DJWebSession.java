@@ -2,16 +2,15 @@
 // $Id$
 package com.mcworkshop.dongjing.web;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.mcworkshop.common.web.BaseWebSession;
+import com.mcworkshop.dongjing.domain.User;
 import org.apache.wicket.protocol.http.WebSession;
 import org.apache.wicket.request.Request;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mcworkshop.common.web.BaseWebSession;
-import com.mcworkshop.dongjing.domain.User;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author $Author$

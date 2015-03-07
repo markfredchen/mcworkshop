@@ -2,8 +2,23 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.project;
 
-import java.util.Arrays;
-
+import com.google.inject.Inject;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
+import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
+import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
+import com.mcworkshop.common.web.component.form.datetimepicker.View;
+import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
+import com.mcworkshop.common.web.util.WebUtil;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.ConstructType;
+import com.mcworkshop.dongjing.domain.Project;
+import com.mcworkshop.dongjing.domain.ProjectStatus;
+import com.mcworkshop.dongjing.service.DJService;
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
+import com.mcworkshop.dongjing.web.page.building.BuildingPage;
+import com.mcworkshop.dongjing.web.page.company.tax.CompanySuggestionTextFeild;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormComponentUpdatingBehavior;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
@@ -24,23 +39,7 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 
-import com.google.inject.Inject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
-import com.mcworkshop.common.web.component.form.datetimepicker.View;
-import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
-import com.mcworkshop.common.web.util.WebUtil;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.ConstructType;
-import com.mcworkshop.dongjing.domain.Project;
-import com.mcworkshop.dongjing.domain.ProjectStatus;
-import com.mcworkshop.dongjing.service.DJService;
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
-import com.mcworkshop.dongjing.web.page.building.BuildingPage;
-import com.mcworkshop.dongjing.web.page.company.tax.CompanySuggestionTextFeild;
+import java.util.Arrays;
 
 /**
  * @author $Author$

@@ -2,10 +2,9 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
+import com.mcworkshop.dongjing.domain.TaxData;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-
-import com.mcworkshop.dongjing.domain.TaxData;
 
 /**
  * @author $Author$

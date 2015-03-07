@@ -2,11 +2,10 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.Map;
-
+import com.mcworkshop.dongjing.domain.Contact;
 import org.apache.ibatis.jdbc.SQL;
 
-import com.mcworkshop.dongjing.domain.Contact;
+import java.util.Map;
 
 /**
  * @author $Author$

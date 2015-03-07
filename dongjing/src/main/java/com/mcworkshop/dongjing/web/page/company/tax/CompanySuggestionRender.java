@@ -2,10 +2,9 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.tax;
 
+import com.mcworkshop.dongjing.domain.Company;
 import org.apache.wicket.extensions.ajax.markup.html.autocomplete.IAutoCompleteRenderer;
 import org.apache.wicket.request.Response;
-
-import com.mcworkshop.dongjing.domain.Company;
 
 /**
  * @author $Author$

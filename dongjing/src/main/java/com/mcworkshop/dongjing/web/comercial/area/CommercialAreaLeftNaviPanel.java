@@ -2,11 +2,10 @@
 // $Id: CommercialAreaLeftNaviPanel.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.web.comercial.area;
 
+import com.mcworkshop.dongjing.authorization.Roles;
 import org.apache.wicket.authroles.authorization.strategies.role.metadata.MetaDataRoleAuthorizationStrategy;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.Panel;
-
-import com.mcworkshop.dongjing.authorization.Roles;
 
 /**
  * @author $Author: mchen $

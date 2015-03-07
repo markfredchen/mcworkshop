@@ -2,6 +2,16 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.home;
 
+import com.google.inject.Inject;
+import com.mcworkshop.common.exception.AuthenticationException;
+import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
+import com.mcworkshop.dongjing.authorization.Roles;
+import com.mcworkshop.dongjing.domain.User;
+import com.mcworkshop.dongjing.service.SecurityService;
+import com.mcworkshop.dongjing.web.DJWebSession;
+import com.mcworkshop.dongjing.web.layout.DJBasePage;
+import com.mcworkshop.dongjing.web.layout.HeaderPanel;
+import com.mcworkshop.dongjing.web.page.landing.WelcomePage;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
@@ -15,17 +25,6 @@ import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.ResourceModel;
-
-import com.google.inject.Inject;
-import com.mcworkshop.common.exception.AuthenticationException;
-import com.mcworkshop.common.web.component.validation.FormFieldValidationContainer;
-import com.mcworkshop.dongjing.authorization.Roles;
-import com.mcworkshop.dongjing.domain.User;
-import com.mcworkshop.dongjing.service.SecurityService;
-import com.mcworkshop.dongjing.web.DJWebSession;
-import com.mcworkshop.dongjing.web.layout.DJBasePage;
-import com.mcworkshop.dongjing.web.layout.HeaderPanel;
-import com.mcworkshop.dongjing.web.page.landing.WelcomePage;
 
 /**
  * @author $Author$

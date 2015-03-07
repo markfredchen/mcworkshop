@@ -2,21 +2,13 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.One;
-import org.apache.ibatis.annotations.Options;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
-import org.apache.ibatis.exceptions.PersistenceException;
-
 import com.mcworkshop.dongjing.domain.Contact;
 import com.mcworkshop.dongjing.domain.User;
+import org.apache.ibatis.annotations.*;
+import org.apache.ibatis.exceptions.PersistenceException;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author $Author$

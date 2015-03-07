@@ -2,13 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.Map;
-
+import com.mcworkshop.dongjing.domain.TaxData;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectProvider;
 
-import com.mcworkshop.dongjing.domain.TaxData;
+import java.util.Map;
 
 /**
  * @author $Author$

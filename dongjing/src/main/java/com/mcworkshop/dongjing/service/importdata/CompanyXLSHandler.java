@@ -2,23 +2,16 @@
 // $Id$
 package com.mcworkshop.dongjing.service.importdata;
 
+import com.mcworkshop.dongjing.domain.*;
+import com.mcworkshop.dongjing.service.DJService;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+import org.apache.wicket.util.string.Strings;
+
 import java.io.InputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.apache.wicket.util.string.Strings;
-
-import com.mcworkshop.dongjing.domain.AffiliateBlock;
-import com.mcworkshop.dongjing.domain.AffiliateRegion;
-import com.mcworkshop.dongjing.domain.CommercialStatus;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.EconomyNature;
-import com.mcworkshop.dongjing.domain.TaxOrg;
-import com.mcworkshop.dongjing.service.DJService;
 
 /**
  * @author $Author$

@@ -2,15 +2,14 @@
 // $Id$
 package com.mcworkshop.dongjing.authorization;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
+import com.mcworkshop.dongjing.domain.User;
+import com.mcworkshop.dongjing.web.DJWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.IRoleCheckingStrategy;
 import org.apache.wicket.authroles.authorization.strategies.role.Roles;
 
-import com.mcworkshop.dongjing.domain.User;
-import com.mcworkshop.dongjing.web.DJWebSession;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @author $Author$

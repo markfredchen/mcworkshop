@@ -2,10 +2,9 @@
 // $Id$
 package com.mcworkshop.dongjing.domain;
 
-import org.apache.wicket.util.string.Strings;
-
 import com.mcworkshop.common.domain.Contact;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
+import org.apache.wicket.util.string.Strings;
 
 /**
  * @author $Author$

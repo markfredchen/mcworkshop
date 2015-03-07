@@ -2,17 +2,6 @@
 // $Id: UpsertCommercialAreaPage.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.web.comercial.area;
 
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.RequiredTextField;
-import org.apache.wicket.markup.html.form.SubmitLink;
-import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
@@ -23,6 +12,12 @@ import com.mcworkshop.dongjing.domain.CommercialArea;
 import com.mcworkshop.dongjing.domain.CommercialAreaType;
 import com.mcworkshop.dongjing.persistence.CommercialAreaMapper;
 import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
+import org.apache.wicket.markup.html.form.*;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * @author $Author: mchen $

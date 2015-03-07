@@ -1,7 +1,9 @@
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.util.List;
-
+import com.google.inject.Inject;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.CompanyShareholder;
+import com.mcworkshop.dongjing.persistence.DJServiceMapper;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
@@ -16,10 +18,7 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 
-import com.google.inject.Inject;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.CompanyShareholder;
-import com.mcworkshop.dongjing.persistence.DJServiceMapper;
+import java.util.List;
 
 /**
  * @author Markfred

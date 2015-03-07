@@ -2,11 +2,11 @@
 // $Id$
 package com.mcworkshop.dongjing.service;
 
-import java.util.List;
-
 import com.mcworkshop.common.domain.Role;
 import com.mcworkshop.common.exception.AuthenticationException;
 import com.mcworkshop.dongjing.domain.User;
+
+import java.util.List;
 
 /**
  * @author $Author$

@@ -2,16 +2,15 @@
 // $Id: MockMailManager.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.service.email.impl;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.commons.mail.Email;
-import org.apache.commons.mail.EmailException;
-
 import com.mcworkshop.common.configuration.Config;
 import com.mcworkshop.dongjing.configuration.DJConfigurationKey;
 import com.mcworkshop.dongjing.service.email.Mail;
 import com.mcworkshop.dongjing.service.email.MailFactory;
 import com.mcworkshop.dongjing.service.email.MailManager;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.commons.mail.Email;
+import org.apache.commons.mail.EmailException;
 
 /**
  * @author $Author: mchen $

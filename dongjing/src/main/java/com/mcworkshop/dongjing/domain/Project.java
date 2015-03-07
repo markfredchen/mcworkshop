@@ -2,12 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.domain;
 
+import com.mcworkshop.common.domain.DomainObject;
+import com.mcworkshop.common.sysenum.SystemEnumeration;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import com.mcworkshop.common.domain.DomainObject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
 
 /**
  * @author $Author$

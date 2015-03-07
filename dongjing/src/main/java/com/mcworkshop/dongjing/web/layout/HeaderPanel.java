@@ -2,10 +2,9 @@
 // $Id$
 package com.mcworkshop.dongjing.web.layout;
 
+import com.mcworkshop.dongjing.web.page.landing.LandingPage;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.Panel;
-
-import com.mcworkshop.dongjing.web.page.landing.LandingPage;
 
 /**
  * @author $Author$

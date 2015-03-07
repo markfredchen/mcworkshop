@@ -1,8 +1,8 @@
 package com.mcworkshop.dongjing.domain;
 
-import java.util.Date;
-
 import com.mcworkshop.common.domain.DomainObject;
+
+import java.util.Date;
 
 /**
  * @author Markfred

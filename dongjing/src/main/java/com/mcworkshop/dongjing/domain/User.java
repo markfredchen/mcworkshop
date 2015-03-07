@@ -2,9 +2,8 @@
 // $Id$
 package com.mcworkshop.dongjing.domain;
 
-import org.apache.wicket.util.lang.Objects;
-
 import com.mcworkshop.common.domain.Role;
+import org.apache.wicket.util.lang.Objects;
 
 /**
  * @author $Author$

@@ -2,18 +2,11 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.Date;
-
+import com.mcworkshop.dongjing.service.report.model.*;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.SelectProvider;
 
-import com.mcworkshop.dongjing.service.report.model.AffiliationRegionCount;
-import com.mcworkshop.dongjing.service.report.model.AffiliationRegionRegAssets;
-import com.mcworkshop.dongjing.service.report.model.AffiliationRegionSales;
-import com.mcworkshop.dongjing.service.report.model.AffiliationRegionTaxData;
-import com.mcworkshop.dongjing.service.report.model.EconomyEntityCount;
-import com.mcworkshop.dongjing.service.report.model.EconomyEntityRegAssets;
-import com.mcworkshop.dongjing.service.report.model.EconomyEntityTaxData;
+import java.util.Date;
 
 /**
  * @author $Author$

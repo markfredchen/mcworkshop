@@ -2,13 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.web.layout;
 
+import com.mcworkshop.common.web.layout.BasePage;
+import com.mcworkshop.dongjing.constants.WebConstants;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.head.JavaScriptHeaderItem;
 import org.apache.wicket.markup.html.panel.Panel;
-
-import com.mcworkshop.common.web.layout.BasePage;
-import com.mcworkshop.dongjing.constants.WebConstants;
 
 /**
  * @author $Author$

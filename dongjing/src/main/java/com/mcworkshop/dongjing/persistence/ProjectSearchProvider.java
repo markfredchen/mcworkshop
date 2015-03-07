@@ -2,13 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.Map;
-
-import org.apache.ibatis.jdbc.SQL;
-
 import com.mcworkshop.common.search.Restriction;
 import com.mcworkshop.common.search.SearchCriteria;
 import com.mcworkshop.common.search.SearchFilter;
+import org.apache.ibatis.jdbc.SQL;
+
+import java.util.Map;
 
 /**
  * @author $Author$

@@ -2,13 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.exceptions.PersistenceException;
-import org.mybatis.guice.transactional.Transactional;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.domain.Role;
 import com.mcworkshop.common.domain.UserStatus;
@@ -23,6 +16,12 @@ import com.mcworkshop.common.util.PasswordUtil;
 import com.mcworkshop.dongjing.domain.Contact;
 import com.mcworkshop.dongjing.domain.User;
 import com.mcworkshop.dongjing.persistence.DJSecurityMapper;
+import org.apache.ibatis.exceptions.PersistenceException;
+import org.mybatis.guice.transactional.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author $Author$

@@ -2,16 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.apache.wicket.Page;
-import org.apache.wicket.Session;
-import org.apache.wicket.authroles.authorization.strategies.role.RoleAuthorizationStrategy;
-import org.apache.wicket.request.Request;
-import org.apache.wicket.request.Response;
-import org.apache.wicket.settings.IExceptionSettings;
-import org.mybatis.guice.MyBatisModule;
-
 import com.mcworkshop.common.configuration.Config;
 import com.mcworkshop.common.model.ServiceModel;
 import com.mcworkshop.common.security.BaseSecurityServiceImpl;
@@ -22,21 +12,8 @@ import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.web.BaseWebApplication;
 import com.mcworkshop.dongjing.authorization.RoleChecker;
 import com.mcworkshop.dongjing.configuration.DJConfigurationKey;
-import com.mcworkshop.dongjing.persistence.CommercialAreaMapper;
-import com.mcworkshop.dongjing.persistence.DJSecurityMapper;
-import com.mcworkshop.dongjing.persistence.DJServiceMapper;
-import com.mcworkshop.dongjing.persistence.EconomyEntityTaxMapper;
-import com.mcworkshop.dongjing.persistence.KPIReportMapper;
-import com.mcworkshop.dongjing.persistence.RegionTaxMapper;
-import com.mcworkshop.dongjing.persistence.SecurityMapper;
-import com.mcworkshop.dongjing.persistence.TaxOrgReportMapper;
-import com.mcworkshop.dongjing.persistence.TotalTaxDataMapper;
-import com.mcworkshop.dongjing.service.DJService;
-import com.mcworkshop.dongjing.service.DJServiceImpl;
-import com.mcworkshop.dongjing.service.ReportService;
-import com.mcworkshop.dongjing.service.ReportServiceImpl;
-import com.mcworkshop.dongjing.service.SecurityService;
-import com.mcworkshop.dongjing.service.SecurityServiceImpl;
+import com.mcworkshop.dongjing.persistence.*;
+import com.mcworkshop.dongjing.service.*;
 import com.mcworkshop.dongjing.service.email.MailManager;
 import com.mcworkshop.dongjing.web.page.building.BuildingPage;
 import com.mcworkshop.dongjing.web.page.company.basic.CompanyListPage;
@@ -50,6 +27,15 @@ import com.mcworkshop.dongjing.web.page.report.preview.SalesTaxReportServicePage
 import com.mcworkshop.dongjing.web.page.report.preview.SalesTaxReportTemplatePage;
 import com.mcworkshop.dongjing.web.page.system.role.RoleManagePage;
 import com.mcworkshop.dongjing.web.page.system.user.UserManagePage;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.wicket.Page;
+import org.apache.wicket.Session;
+import org.apache.wicket.authroles.authorization.strategies.role.RoleAuthorizationStrategy;
+import org.apache.wicket.request.Request;
+import org.apache.wicket.request.Response;
+import org.apache.wicket.settings.IExceptionSettings;
+import org.mybatis.guice.MyBatisModule;
 
 /**
  * @author $Author$

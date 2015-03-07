@@ -2,12 +2,12 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.report.form;
 
-import java.util.Calendar;
-import java.util.List;
-
 import com.mcworkshop.common.web.report.BaseReport;
 import com.mcworkshop.dongjing.domain.TaxData;
 import com.mcworkshop.dongjing.service.report.TotalTaxReport;
+
+import java.util.Calendar;
+import java.util.List;
 
 /**
  * @author $Author$

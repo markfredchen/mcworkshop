@@ -2,15 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.landing;
 
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.authroles.authorization.strategies.role.metadata.MetaDataRoleAuthorizationStrategy;
-import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.link.BookmarkablePageLink;
-import org.apache.wicket.markup.html.panel.EmptyPanel;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.mcworkshop.dongjing.authorization.Roles;
 import com.mcworkshop.dongjing.web.comercial.area.CommercialAreaListPage;
 import com.mcworkshop.dongjing.web.comercial.area.UpsertCommercialAreaPage;
@@ -32,6 +23,14 @@ import com.mcworkshop.dongjing.web.page.report.CompanyTaxMonthlyReportPage;
 import com.mcworkshop.dongjing.web.page.report.OverallReportPage;
 import com.mcworkshop.dongjing.web.page.system.role.RoleManagePage;
 import com.mcworkshop.dongjing.web.page.system.user.UserManagePage;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.authroles.authorization.strategies.role.metadata.MetaDataRoleAuthorizationStrategy;
+import org.apache.wicket.markup.html.WebMarkupContainer;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
+import org.apache.wicket.markup.html.panel.EmptyPanel;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * @author $Author$

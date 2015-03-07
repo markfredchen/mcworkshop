@@ -2,10 +2,10 @@
 // $Id$
 package com.mcworkshop.dongjing.service.importdata;
 
-import java.io.Serializable;
-
 import com.mcworkshop.dongjing.domain.Company;
 import com.mcworkshop.dongjing.domain.TaxData;
+
+import java.io.Serializable;
 
 /**
  * @author $Author$

@@ -2,18 +2,17 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic;
 
-import java.util.Iterator;
-
-import org.apache.wicket.markup.repeater.data.IDataProvider;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.IModel;
-
 import com.google.inject.Inject;
 import com.mcworkshop.dongjing.domain.AffiliateBlock;
 import com.mcworkshop.dongjing.domain.Company;
 import com.mcworkshop.dongjing.domain.EconomyEntity;
 import com.mcworkshop.dongjing.domain.EconomyNature;
 import com.mcworkshop.dongjing.service.DJService;
+import org.apache.wicket.markup.repeater.data.IDataProvider;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.IModel;
+
+import java.util.Iterator;
 
 /**
  * @author $Author$

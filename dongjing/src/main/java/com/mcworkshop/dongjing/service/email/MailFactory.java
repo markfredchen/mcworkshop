@@ -2,16 +2,15 @@
 // $Id: MailFactory.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.service.email;
 
-import java.util.Map;
-
+import com.mcworkshop.common.configuration.Config;
+import com.mcworkshop.dongjing.configuration.DJConfigurationKey;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 
-import com.mcworkshop.common.configuration.Config;
-import com.mcworkshop.dongjing.configuration.DJConfigurationKey;
+import java.util.Map;
 
 /**
  * @author $Author: mchen $

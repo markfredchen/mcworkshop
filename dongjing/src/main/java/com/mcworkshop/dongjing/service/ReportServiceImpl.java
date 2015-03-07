@@ -2,11 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.service;
 
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-import java.util.Map;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.dongjing.domain.AffiliateBlock;
@@ -19,6 +14,11 @@ import com.mcworkshop.dongjing.persistence.TotalTaxDataMapper;
 import com.mcworkshop.dongjing.service.report.model.EconomyEntityTaxData;
 import com.mcworkshop.dongjing.service.report.model.KPIReportData;
 import com.mcworkshop.dongjing.service.report.model.TaxOrgData;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author $Author$

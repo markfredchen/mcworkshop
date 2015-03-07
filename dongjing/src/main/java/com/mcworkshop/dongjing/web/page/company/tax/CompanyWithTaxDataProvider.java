@@ -2,15 +2,14 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.tax;
 
-import java.util.Iterator;
-
+import com.google.inject.Inject;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.service.DJService;
 import org.apache.wicket.markup.repeater.data.IDataProvider;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 
-import com.google.inject.Inject;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.service.DJService;
+import java.util.Iterator;
 
 /**
  * @author $Author$

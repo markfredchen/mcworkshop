@@ -1,0 +1,1 @@
+delete from sysenums where sysEnumID in (1202, 1206, 1303);

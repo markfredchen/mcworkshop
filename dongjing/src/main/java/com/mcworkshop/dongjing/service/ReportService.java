@@ -2,13 +2,13 @@
 // $Id$
 package com.mcworkshop.dongjing.service;
 
-import java.util.List;
-
 import com.mcworkshop.dongjing.domain.AffiliateBlock;
 import com.mcworkshop.dongjing.domain.TaxData;
 import com.mcworkshop.dongjing.service.report.model.EconomyEntityTaxData;
 import com.mcworkshop.dongjing.service.report.model.KPIReportData;
 import com.mcworkshop.dongjing.service.report.model.TaxOrgData;
+
+import java.util.List;
 
 /**
  * @author $Author$

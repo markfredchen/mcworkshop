@@ -2,11 +2,11 @@
 // $Id$
 package com.mcworkshop.dongjing.domain;
 
-import java.text.DecimalFormat;
-
 import com.mcworkshop.common.domain.DomainObject;
 import com.mcworkshop.common.sysenum.SystemEnumeration;
 import com.mcworkshop.common.util.NumberUtil;
+
+import java.text.DecimalFormat;
 
 /**
  * @author $Author$

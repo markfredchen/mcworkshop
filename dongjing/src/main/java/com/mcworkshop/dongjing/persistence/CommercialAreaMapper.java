@@ -2,17 +2,12 @@
 // $Id: CommercialAreaMapper.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.List;
-import java.util.Map;
-
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.SelectProvider;
-import org.apache.ibatis.annotations.Update;
-
 import com.mcworkshop.common.search.SearchCriteria;
 import com.mcworkshop.dongjing.domain.CommercialArea;
+import org.apache.ibatis.annotations.*;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author $Author: mchen $

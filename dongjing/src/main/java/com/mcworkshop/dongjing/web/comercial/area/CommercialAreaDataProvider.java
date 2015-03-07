@@ -2,16 +2,15 @@
 // $Id: CommercialAreaDataProvider.java 143 2014-08-02 17:12:12Z mchen $
 package com.mcworkshop.dongjing.web.comercial.area;
 
-import java.util.Iterator;
-
-import org.apache.wicket.markup.repeater.data.IDataProvider;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.IModel;
-
 import com.google.inject.Inject;
 import com.mcworkshop.dongjing.domain.CommercialArea;
 import com.mcworkshop.dongjing.domain.CommercialAreaType;
 import com.mcworkshop.dongjing.service.DJService;
+import org.apache.wicket.markup.repeater.data.IDataProvider;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.IModel;
+
+import java.util.Iterator;
 
 /**
  * @author $Author: mchen $

@@ -2,14 +2,13 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.security.panel;
 
+import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.domain.Security;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.ResourceModel;
-
-import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.domain.Security;
 
 /**
  * @author $Author$

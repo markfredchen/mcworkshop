@@ -2,9 +2,9 @@
 // $Id$
 package com.mcworkshop.dongjing.persistence;
 
-import java.util.Map;
-
 import org.apache.ibatis.jdbc.SQL;
+
+import java.util.Map;
 
 /**
  * @author $Author$

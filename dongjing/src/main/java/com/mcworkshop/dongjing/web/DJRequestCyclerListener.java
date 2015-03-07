@@ -2,11 +2,10 @@
 // $Id$
 package com.mcworkshop.dongjing.web;
 
-import org.apache.wicket.Page;
-
 import com.mcworkshop.common.web.BaseRequestCycleListener;
 import com.mcworkshop.dongjing.web.page.error.ErrorPage;
 import com.mcworkshop.dongjing.web.page.home.HomePage;
+import org.apache.wicket.Page;
 
 /**
  * @author $Author$

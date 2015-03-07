@@ -2,13 +2,19 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.security;
 
+import com.google.inject.Inject;
+import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
+import com.mcworkshop.common.web.util.WicketMessageUtil;
+import com.mcworkshop.dongjing.authorization.Roles;
+import com.mcworkshop.dongjing.domain.Security;
+import com.mcworkshop.dongjing.service.DJService;
+import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.authroles.authorization.strategies.role.metadata.MetaDataRoleAuthorizationStrategy;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.Panel;
@@ -17,17 +23,6 @@ import org.apache.wicket.markup.repeater.data.DataView;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
-
-import com.google.inject.Inject;
-import com.mcworkshop.common.sysenum.SystemEnumeration;
-import com.mcworkshop.common.web.component.dropdownchoice.SystemEnumerationDropdownChoiceRender;
-import com.mcworkshop.common.web.component.pagination.PaginationNavigator;
-import com.mcworkshop.common.web.util.WicketMessageUtil;
-import com.mcworkshop.dongjing.authorization.Roles;
-import com.mcworkshop.dongjing.domain.EconomyEntity;
-import com.mcworkshop.dongjing.domain.Security;
-import com.mcworkshop.dongjing.service.DJService;
-import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 
 /**
  * @author $Author$

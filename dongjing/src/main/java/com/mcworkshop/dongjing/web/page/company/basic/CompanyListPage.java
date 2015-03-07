@@ -2,16 +2,15 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.basic;
 
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.mcworkshop.common.web.util.WicketMessageUtil;
 import com.mcworkshop.dongjing.authorization.Roles;
 import com.mcworkshop.dongjing.web.layout.DJContentBasePage;
 import com.mcworkshop.dongjing.web.layout.MenuHeaderPanel;
 import com.mcworkshop.dongjing.web.page.company.CompanyLeftNaviPanel;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 /**
  * @author $Author$

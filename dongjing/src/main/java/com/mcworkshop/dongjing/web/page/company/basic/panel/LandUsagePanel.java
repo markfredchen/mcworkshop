@@ -1,8 +1,13 @@
 package com.mcworkshop.dongjing.web.page.company.basic.panel;
 
-import java.text.SimpleDateFormat;
-import java.util.List;
-
+import com.google.inject.Inject;
+import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
+import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
+import com.mcworkshop.common.web.component.form.datetimepicker.View;
+import com.mcworkshop.dongjing.domain.Company;
+import com.mcworkshop.dongjing.domain.RentStatus;
+import com.mcworkshop.dongjing.persistence.DJServiceMapper;
+import com.mcworkshop.dongjing.web.page.company.tax.CompanySuggestionTextFeild;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.form.AjaxFormChoiceComponentUpdatingBehavior;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
@@ -21,14 +26,8 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.model.Model;
 
-import com.google.inject.Inject;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerOption;
-import com.mcworkshop.common.web.component.form.datetimepicker.DatetimePickerPlugin;
-import com.mcworkshop.common.web.component.form.datetimepicker.View;
-import com.mcworkshop.dongjing.domain.Company;
-import com.mcworkshop.dongjing.domain.RentStatus;
-import com.mcworkshop.dongjing.persistence.DJServiceMapper;
-import com.mcworkshop.dongjing.web.page.company.tax.CompanySuggestionTextFeild;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
  * @author Markfred

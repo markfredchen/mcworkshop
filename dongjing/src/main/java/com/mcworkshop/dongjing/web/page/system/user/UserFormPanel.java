@@ -2,21 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.system.user;
 
-import org.apache.wicket.markup.html.form.DropDownChoice;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.FormComponent;
-import org.apache.wicket.markup.html.form.IChoiceRenderer;
-import org.apache.wicket.markup.html.form.PasswordTextField;
-import org.apache.wicket.markup.html.form.RequiredTextField;
-import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.form.validation.AbstractFormValidator;
-import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.CompoundPropertyModel;
-import org.apache.wicket.model.Model;
-import org.apache.wicket.validation.validator.EmailAddressValidator;
-import org.apache.wicket.validation.validator.StringValidator;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.domain.Role;
 import com.mcworkshop.common.util.BeanUtil;
@@ -24,6 +9,14 @@ import com.mcworkshop.common.web.component.validation.FormFieldValidationContain
 import com.mcworkshop.common.web.util.WicketMessageUtil;
 import com.mcworkshop.dongjing.domain.User;
 import com.mcworkshop.dongjing.service.SecurityService;
+import org.apache.wicket.markup.html.form.*;
+import org.apache.wicket.markup.html.form.validation.AbstractFormValidator;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.CompoundPropertyModel;
+import org.apache.wicket.model.Model;
+import org.apache.wicket.validation.validator.EmailAddressValidator;
+import org.apache.wicket.validation.validator.StringValidator;
 
 /**
  * @author $Author$

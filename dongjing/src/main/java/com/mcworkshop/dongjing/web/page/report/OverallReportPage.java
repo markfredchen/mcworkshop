@@ -2,17 +2,6 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.report;
 
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
-import org.apache.wicket.markup.head.IHeaderResponse;
-import org.apache.wicket.markup.head.JavaScriptHeaderItem;
-import org.apache.wicket.markup.html.panel.Panel;
-import org.apache.wicket.model.ResourceModel;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.google.inject.Inject;
 import com.mcworkshop.common.web.util.WicketMessageUtil;
 import com.mcworkshop.dongjing.service.DJService;
@@ -21,6 +10,16 @@ import com.mcworkshop.dongjing.web.page.report.panel.EconomyEntityVATReport;
 import com.mcworkshop.dongjing.web.page.report.panel.EconomyNaturePersonalIncomingTaxReport;
 import com.mcworkshop.dongjing.web.page.report.panel.EconomyNatureVATPieChart;
 import com.mcworkshop.dongjing.web.page.report.panel.VATRankReport;
+import org.apache.wicket.markup.head.IHeaderResponse;
+import org.apache.wicket.markup.head.JavaScriptHeaderItem;
+import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.model.ResourceModel;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
+
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * @author $Author$

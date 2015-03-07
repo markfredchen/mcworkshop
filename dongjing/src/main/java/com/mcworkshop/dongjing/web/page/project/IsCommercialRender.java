@@ -2,9 +2,8 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.project;
 
-import org.apache.wicket.markup.html.form.IChoiceRenderer;
-
 import com.mcworkshop.common.web.util.WicketMessageUtil;
+import org.apache.wicket.markup.html.form.IChoiceRenderer;
 
 /**
  * @author $Author$

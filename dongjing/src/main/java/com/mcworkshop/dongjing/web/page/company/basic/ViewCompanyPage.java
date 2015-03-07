@@ -1,11 +1,10 @@
 package com.mcworkshop.dongjing.web.page.company.basic;
 
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.request.mapper.parameter.PageParameters;
-
 import com.mcworkshop.common.web.component.wizard.WizardContentPanel;
 import com.mcworkshop.dongjing.authorization.Roles;
 import com.mcworkshop.dongjing.domain.Company;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.request.mapper.parameter.PageParameters;
 
 @AuthorizeInstantiation({ Roles.CM })
 public class ViewCompanyPage extends UpsertComanyPage {

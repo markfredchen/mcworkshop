@@ -2,11 +2,10 @@
 // $Id$
 package com.mcworkshop.dongjing.web.page.company.security;
 
+import com.mcworkshop.dongjing.authorization.Roles;
 import org.apache.wicket.authroles.authorization.strategies.role.metadata.MetaDataRoleAuthorizationStrategy;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.markup.html.panel.Panel;
-
-import com.mcworkshop.dongjing.authorization.Roles;
 
 /**
  * @author $Author$
