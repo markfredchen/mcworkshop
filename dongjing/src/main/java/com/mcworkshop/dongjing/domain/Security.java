@@ -19,7 +19,7 @@ public class Security extends DomainObject {
     private Boolean isSecurityStandardPassed;
     private String fireController;
     private Boolean isEnvAssessPass;
-    private String isDirtyWaterMgn;
+    private Boolean isDirtyWaterMgn;
     private Boolean isDCProduceOrg;
     private DangerousChemistryType dcType;
 
@@ -211,11 +211,11 @@ public class Security extends DomainObject {
         this.fireController = fireController;
     }
 
-    public String getIsDirtyWaterMgn() {
+    public Boolean getIsDirtyWaterMgn() {
         return isDirtyWaterMgn;
     }
 
-    public void setIsDirtyWaterMgn(String isDirtyWaterMgn) {
+    public void setIsDirtyWaterMgn(Boolean isDirtyWaterMgn) {
         this.isDirtyWaterMgn = isDirtyWaterMgn;
     }
 
