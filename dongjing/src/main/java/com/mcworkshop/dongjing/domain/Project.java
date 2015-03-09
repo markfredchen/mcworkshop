@@ -284,7 +284,7 @@ public class Project extends DomainObject {
 		return SystemEnumeration.getInstance().getIdByKey(this.constructType);
 	}
 
-	public void setConstructType(Long constructTypeID) {
+	public void setConstructTypeID(Long constructTypeID) {
 		this.constructType = SystemEnumeration.getInstance().getKeyById(
 				ConstructType.class, constructTypeID);
 	}
