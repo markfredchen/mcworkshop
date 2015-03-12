@@ -40,7 +40,6 @@ public class TaxDataXLSHandler extends BaseXLSHandler<TaxData> {
 		if (thisColumn < 0) {
 		} else if (thisColumn == 0) {
 			data.getCompany().setName(thisStr);
-			;
 		} else if (thisColumn == 1) {
 			data.setIndustry(thisStr);
 		} else if (thisColumn == 2) {

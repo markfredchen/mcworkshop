@@ -20,8 +20,8 @@ import java.util.Map;
  */
 public interface DJServiceMapper {
 
-	@Insert("INSERT INTO companySaleTaxData(year,month,companyID,industry,accSales,sales,vat,operateTax,expenseTax,domesticIncomingTax,foreignIncomingTax,housingTax,stampTax,trafficTax,landVAT,landUseTax,personalIncomingTax,constructionTax,veichleTax,riverTax,educationTax,cultureTax,otherTax,economyNatureID,economyEntityID,taxOrgID,affiliateRegionID, isMYC, passDate, noOfDeveloper, devBudget)"
-			+ "VALUES(#{year}, #{month}, #{company.companyID}, #{industry}, #{accSales}, #{sales}, #{vat}, #{operateTax}, #{expenseTax}, #{domesticIncomingTax}, #{foreignIncomingTax}, #{housingTax}, #{stampTax}, #{trafficTax}, #{landVAT}, #{landUseTax}, #{personalIncomingTax}, #{constructionTax}, #{veichleTax}, #{riverTax}, #{educationTax}, #{cultureTax}, #{otherTax}, #{economyNatureID},#{economyEntityID}, #{taxOrgID}, #{affiliateRegionID}, #{isMYC}, #{passDate}, #{noOfDeveloper}, #{devBudget})")
+	@Insert("INSERT INTO companySaleTaxData(year,month,companyID,industry,accSales,sales,vat,operateTax,expenseTax,domesticIncomingTax,foreignIncomingTax,housingTax,stampTax,trafficTax,landVAT,landUseTax,personalIncomingTax,constructionTax,veichleTax,riverTax,educationTax,cultureTax,otherTax,economyNatureID,economyEntityID,taxOrgID,affiliateRegionID, isMYC)"
+			+ " VALUES(#{year}, #{month}, #{company.companyID}, #{industry}, #{accSales}, #{sales}, #{vat}, #{operateTax}, #{expenseTax}, #{domesticIncomingTax}, #{foreignIncomingTax}, #{housingTax}, #{stampTax}, #{trafficTax}, #{landVAT}, #{landUseTax}, #{personalIncomingTax}, #{constructionTax}, #{veichleTax}, #{riverTax}, #{educationTax}, #{cultureTax}, #{otherTax}, #{economyNatureID},#{economyEntityID}, #{taxOrgID}, #{affiliateRegionID}, #{isMYC})")
 	void importTaxData(TaxData data);
 
 	@Select("SELECT * FROM company WHERE establishDate BETWEEN #{startDate} AND #{endDate}")
