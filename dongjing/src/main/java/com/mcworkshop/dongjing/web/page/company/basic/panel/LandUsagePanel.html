@@ -24,8 +24,7 @@
 		<div class="half field area">
 			<label class="control-label" for="factoryActualArea">建筑面积</label>
 			<div class="input">
-				<input type="text" class="form-control" id="factoryActualArea"
-					wicket:id="factoryActualArea"/><span class="unit">平方米</span>
+				<div id="factoryActualArea" wicket:id="factoryActualArea"></div><span class="unit">平方米</span>
 			</div>
 		</div>
 		<div class="half field area">
@@ -35,7 +34,7 @@
 					wicket:id="factoryUsageArea"/><span class="unit">平方米</span>
 			</div>
 		</div>
-		<div class="half field area">
+		<div class="half field area hide">
 			<label class="control-label" for="factoryRentArea">出租面积</label>
 			<div class="input">
 				<input type="text" class="form-control" id="factoryRentArea"
@@ -63,7 +62,7 @@
 			<tbody>
 				<tr wicket:id="rentee-list">
 					<td><span wicket:id="name"></span></td>
-					<td><span wicket:id="area"></span></td>
+					<td><span wicket:id="area" class="rentArea"></span></td>
 					<td><span wicket:id="address"></span></td>
 					<td><span wicket:id="startDate"></span></td>
 				</tr>
@@ -140,4 +139,40 @@
 		</table>
 
 	</div>
+    <script type="text/javascript">
+        function ChangeSelfUsageFactoryActualArea(){
+            var area = 0;
+            if(!isNaN(parseDouble($('#factoryUsageArea').val()))){
+                area += parseDouble($('#factoryUsageArea').val());
+            }
+            if(!isNaN(parseDouble($('#factoryRentArea').val()))){
+                area += parseFloat($('#factoryRentArea').val());
+            }
+            if(!isNaN(parseDouble($('#factoryControlArea').val()))){
+                area += parseDouble($('#factoryControlArea').val());
+            }
+            $('.rentArea').each(function () {
+                if(!isNaN(parseDouble($(this).html()))) {
+                    area += parseDouble($(this).html());
+                }
+            });
+            return area;
+        };
+        function parseDouble(element) {
+            return parseFloat(element.replace(/(,)+/g, ''));
+
+        }
+        $(document).ready(function () {
+            $('#factoryUsageArea').change(function() {
+                $('#factoryActualArea').html(ChangeSelfUsageFactoryActualArea());
+            });
+            $('#factoryRentArea').change(function() {
+                $('#factoryActualArea').html(ChangeSelfUsageFactoryActualArea());
+            });
+            $('#factoryControlArea').change(function() {
+                $('#factoryActualArea').html(ChangeSelfUsageFactoryActualArea());
+            });
+
+        });
+    </script>
 </wicket:panel>

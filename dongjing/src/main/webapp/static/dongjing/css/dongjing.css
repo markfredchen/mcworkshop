@@ -804,3 +804,8 @@ div#report2 .modal-dialog {
 .area input {
     width: 180px;
 }
+
+div#factoryActualArea {
+    float: left;
+    line-height: 34px;
+}

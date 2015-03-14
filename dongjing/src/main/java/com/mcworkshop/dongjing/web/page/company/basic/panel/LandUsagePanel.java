@@ -58,7 +58,7 @@ public class LandUsagePanel extends Panel {
 		add(isRent);
 		final WebMarkupContainer notRentContainer = new WebMarkupContainer("notRentContainer");
 		notRentContainer.setOutputMarkupId(true);
-		notRentContainer.add(new TextField<Double>("factoryActualArea"));
+		notRentContainer.add(new Label("factoryActualArea", model.getObject().getActualArea().toString()));
 		notRentContainer.add(new TextField<Double>("factoryArea"));
 		notRentContainer.add(new TextField<Double>("factoryUsageArea"));
 		notRentContainer.add(new TextField<Double>("factoryRentArea"));
