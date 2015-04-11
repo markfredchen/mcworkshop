@@ -22,8 +22,10 @@ import com.mcworkshop.dongjing.web.page.news.EmailPage;
 import com.mcworkshop.dongjing.web.page.news.SMSPage;
 import com.mcworkshop.dongjing.web.page.project.ProjectListPage;
 import com.mcworkshop.dongjing.web.page.project.UpsertProjectInfoPage;
+import com.mcworkshop.dongjing.web.page.report.CompanyAreaReport;
 import com.mcworkshop.dongjing.web.page.report.CompanyTaxMonthlyReportPage;
 import com.mcworkshop.dongjing.web.page.report.OverallReportPage;
+import com.mcworkshop.dongjing.web.page.report.ProjectApplicationReport;
 import com.mcworkshop.dongjing.web.page.system.role.RoleManagePage;
 import com.mcworkshop.dongjing.web.page.system.user.UserManagePage;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -122,8 +124,12 @@ public class MenuHeaderPanel extends Panel {
                 "financial-report", CompanyTaxMonthlyReportPage.class);
         BookmarkablePageLink<Void> overallReportLink = new BookmarkablePageLink<Void>(
                 "overall-report", OverallReportPage.class);
+        BookmarkablePageLink<Void> projectApplyStatusLink = new BookmarkablePageLink<Void>("project-apply-status-report", ProjectApplicationReport.class);
+        BookmarkablePageLink<Void> companyAreaReportLink = new BookmarkablePageLink<Void>("company-area-report-link", CompanyAreaReport.class);
         report.add(taxReportLink);
         report.add(overallReportLink);
+        report.add(projectApplyStatusLink);
+        report.add(companyAreaReportLink);
         MetaDataRoleAuthorizationStrategy.authorize(taxReportLink, RENDER,
                 Roles.RM_BKX);
         MetaDataRoleAuthorizationStrategy.authorize(overallReportLink, RENDER,

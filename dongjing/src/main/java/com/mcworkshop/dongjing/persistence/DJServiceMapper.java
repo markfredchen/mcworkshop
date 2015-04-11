@@ -5,6 +5,8 @@ package com.mcworkshop.dongjing.persistence;
 import com.mcworkshop.common.search.SearchCriteria;
 import com.mcworkshop.dongjing.domain.*;
 import com.mcworkshop.dongjing.persistence.po.AnnualOutputPO;
+import com.mcworkshop.dongjing.persistence.po.CompanyAreaPO;
+import com.mcworkshop.dongjing.persistence.po.ProjectApplyStatus;
 import com.mcworkshop.dongjing.persistence.po.RentStatusPO;
 import com.mcworkshop.dongjing.service.report.model.OverallMonthData;
 import com.mcworkshop.dongjing.service.report.model.OverallYearData;
@@ -382,4 +384,34 @@ public interface DJServiceMapper {
     @Select("SELECT * FROM member")
     List<CompanyMember> getAllCompanyMembers();
 
+
+	@Select("SELECT isACount, isBCount, isCCount, isDCount, isECount, isFCount, isGCount, isHCount, isICount, isJCount, isKCount, isLCount, isMCount, isNCount, isOCount, isPCount, isQCount, isRCount, isSCount, isTCount, isUCount, isVCount, isWCount\n" +
+			"FROM (SELECT count(*) AS isACount FROM company WHERE isA = '1') AS A\n" +
+			"JOIN (SELECT count(*) AS isBCount FROM company WHERE isB = '1') AS B\n" +
+			"JOIN (SELECT count(*) AS isCCount FROM company WHERE isC = '1') AS C\n" +
+			"JOIN (SELECT count(*) AS isDCount FROM company WHERE isD = '1') AS D\n" +
+			"JOIN (SELECT count(*) AS isECount FROM company WHERE isE = '1') AS E\n" +
+			"JOIN (SELECT count(*) AS isFCount FROM company WHERE isF = '1') AS F\n" +
+			"JOIN (SELECT count(*) AS isGCount FROM company WHERE isG = '1') AS G\n" +
+			"JOIN (SELECT count(*) AS isHCount FROM company WHERE isH = '1') AS H\n" +
+			"JOIN (SELECT count(*) AS isICount FROM company WHERE isI = '1') AS I\n" +
+			"JOIN (SELECT count(*) AS isJCount FROM company WHERE isJ = '1') AS J\n" +
+			"JOIN (SELECT count(*) AS isKCount FROM company WHERE isK = '1') AS K\n" +
+			"JOIN (SELECT count(*) AS isLCount FROM company WHERE isL = '1') AS L\n" +
+			"JOIN (SELECT count(*) AS isMCount FROM company WHERE isM = '1') AS M\n" +
+			"JOIN (SELECT count(*) AS isNCount FROM company WHERE isN = '1') AS N\n" +
+			"JOIN (SELECT count(*) AS isOCount FROM company WHERE isO = '1') AS O\n" +
+			"JOIN (SELECT count(*) AS isPCount FROM company WHERE isP = '1') AS P\n" +
+			"JOIN (SELECT count(*) AS isQCount FROM company WHERE isQ = '1') AS Q\n" +
+			"JOIN (SELECT count(*) AS isRCount FROM company WHERE isR = '1') AS R\n" +
+			"JOIN (SELECT count(*) AS isSCount FROM company WHERE isS = '1') AS S\n" +
+			"JOIN (SELECT count(*) AS isTCount FROM company WHERE isT = '1') AS T\n" +
+			"JOIN (SELECT count(*) AS isUCount FROM company WHERE isU = '1') AS U\n" +
+			"JOIN (SELECT count(*) AS isVCount FROM company WHERE isV = '1') AS V\n" +
+			"JOIN (SELECT count(*) AS isWCount FROM company WHERE isW = '1') AS W")
+	ProjectApplyStatus getProjectApplyStatus();
+
+	@Select("select sum(factoryArea) as factoryArea, sum(factoryUsageArea) as factoryUsageArea, sum(factoryControlArea) as factoryControlArea, b.factoryRentArea " +
+			"from company join (select sum(area) as factoryRentArea from rentrelation) as b")
+	CompanyAreaPO getCompanyAreaReport();
 }
