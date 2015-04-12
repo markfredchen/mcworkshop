@@ -795,13 +795,15 @@ div#report2 .modal-dialog {
 	border-left: 0px;
 }
 
-.area span.unit {
+.area span.unit,
+.output span.unit{
 	margin-top: 6px;
 	float: left;
 	font-weight: bold;
 	padding-left: 8px;
 }
-.area input {
+.area input,
+.output input{
     width: 180px;
 }
 

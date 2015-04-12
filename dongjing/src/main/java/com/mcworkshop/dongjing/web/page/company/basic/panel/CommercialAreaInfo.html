@@ -69,16 +69,16 @@
                 <input wicket:id="year" type="text" class="form-control" id="year">
             </div>
         </div>
-        <div class="half field">
+        <div class="half field output">
             <label class="control-label" for="output">产值</label>
             <div class="input">
-                <input type="text" class="form-control" id="output" wicket:id="output">
+                <input type="text" class="form-control" id="output" wicket:id="output"><span class="unit">万元</span>
             </div>
         </div>
-        <div class="half field">
+        <div class="half field output">
             <label class="control-label" for="profit">利润</label>
             <div class="input">
-                <input type="text" class="form-control" id="profit" wicket:id="profit">
+                <input type="text" class="form-control" id="profit" wicket:id="profit"><span class="unit">万元</span>
             </div>
         </div>
         <div class="col-sm-12">
@@ -97,8 +97,8 @@
 		<tbody>
 			<tr wicket:id="member-list">
 				<td><span wicket:id="year"></span></td>
-				<td><span wicket:id="output"></span></td>
-				<td><span wicket:id="profit"></span></td>
+				<td><span wicket:id="output"></span><span class="unit">万元</span></td>
+				<td><span wicket:id="profit"><span class="unit">万元</span></span></td>
 				<td><a class="padding5" wicket:id="update">修改</a><a class="padding5" wicket:id="delete">删除</a></td>
 			</tr>
             <tr wicket:id="empty-member-list">
