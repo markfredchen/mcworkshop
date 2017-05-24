@@ -502,16 +502,18 @@ public class CompanyListReport extends BaseReport<List<Company>> {
             StringBuilder rentDuration = new StringBuilder();
             for (int i = 0; i < rentees.size(); i++) {
                 RentStatus rs = rentees.get(i);
-                if (i != 0) {
-                    name.append("\n");
-                    area.append("\n");
-                    address.append("\n");
-                    rentDuration.append("\n");
+                if (rs != null) {
+                    if (i != 0) {
+                        name.append("\n");
+                        area.append("\n");
+                        address.append("\n");
+                        rentDuration.append("\n");
+                    }
+                    name.append(getString(rs.getRentee().getName()));
+                    area.append(formatDouble(rs.getArea()));
+                    address.append(getString(rs.getAddress()));
+                    rentDuration.append(formatDateRange(rs.getStartDate(), rs.getEndDate()));
                 }
-                name.append(getString(rs.getRentee().getName()));
-                area.append(formatDouble(rs.getArea()));
-                address.append(getString(rs.getAddress()));
-                rentDuration.append(formatDateRange(rs.getStartDate(), rs.getEndDate()));
             }
             createContentCell(contentTextWrapperStyle, row, startIndex++, name.toString());
             createContentCell(contentTextWrapperStyle, row, startIndex++, area.toString());
