@@ -509,7 +509,9 @@ public class CompanyListReport extends BaseReport<List<Company>> {
                         address.append("\n");
                         rentDuration.append("\n");
                     }
-                    name.append(getString(rs.getRentee().getName()));
+                    if (rs.getRentee() != null) {
+                        name.append(getString(rs.getRentee().getName()));
+                    }
                     area.append(formatDouble(rs.getArea()));
                     address.append(getString(rs.getAddress()));
                     rentDuration.append(formatDateRange(rs.getStartDate(), rs.getEndDate()));
